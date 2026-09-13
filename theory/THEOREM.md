@@ -2,6 +2,11 @@
 
 This is the precise statement used throughout the repository. [The derivation](PROOF.md) fixes the conventions and explains its proof dependencies; [the worked example](../docs/WORKED_EXAMPLE.md) evaluates it for a boundary qubit pair. Natural logarithms are used.
 
+This is the **CHECK** entrance. The result below requires no educational detour.
+For translations from the selected Mingo–Speicher passages, use the
+[tutorial bridge](../docs/TUTORIAL_BRIDGE.md). The book is background; primary
+proof inputs and project-specific steps are distinguished in the proof map below.
+
 ## Setting
 
 Fix positive integers r and s. Let d tend to infinity through common multiples of r and s, with

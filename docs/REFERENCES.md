@@ -2,6 +2,28 @@
 
 The [technical derivation](../theory/PROOF.md) uses established random-matrix results and evaluates the additional gate contractions. This page identifies those dependencies and distinguishes them from nearby quantum-information results. The linked source records document the underlying literature review.
 
+## Sole background tutorial
+
+**B1. James A. Mingo and Roland Speicher, _Free Probability and Random Matrices_.**
+Fields Institute Monographs **35**, Springer, 2017.
+[Author page, PDF link and errata](https://rolandspeicher.com/literature/mingo-speicher/),
+[author PDF](https://rolandspeicher.com/wp-content/uploads/2019/02/mingo-speicher.pdf),
+[DOI:10.1007/978-1-4939-6942-5](https://doi.org/10.1007/978-1-4939-6942-5).
+This is the one assigned background tutorial. The [selected reading map](START_HERE.md#selected-reading)
+uses short Gaussian, Wishart and fluctuation passages, with an optional deeper
+route from the same book. [Source verification](../reviews/mingo-speicher-reader-route/IMPLEMENTATION.md)
+records retrieval, SHA-256, author-PDF pagination, errata and nearby source cautions.
+No source PDF or page images are redistributed.
+
+The book teaches the background and polynomial conventions. It does not supply
+the repository's gate-dependent contraction or entropy theorem. Those bridges
+are explained [locally](TUTORIAL_BRIDGE.md), with the [canonical proof](../theory/PROOF.md)
+retaining all external hypotheses. R1–R2 below credit established fluctuation
+machinery; R4 is an actual analytic theorem input. R3 and R5 are comparison
+frameworks, and R6–R9 locate quantum-information antecedents. These primary papers
+are not additional assigned tutorials. The educational choice implies no author
+endorsement and replaces no primary attribution.
+
 ## Mathematical foundations
 
 **R1. James A. Mingo and Roland Speicher, _Second Order Freeness and Fluctuations of Random Matrices: I. Gaussian and Wishart matrices and cyclic Fock spaces_.** [arXiv:math/0405191v3](https://arxiv.org/abs/math/0405191v3). The saved review inspected Theorem 3.5 and its cumulant calculation, Sections 8.3 and 9. These supply weighted annular Wishart machinery and its second-order setting. The gate-specific realignment reduction is derived in this repository; it is not quoted as a theorem of this source. [Read record](../evidence/checkpoint08/foundation/GENERAL_GATE_LITERATURE.md).

@@ -2,6 +2,13 @@
 
 This note consolidates the existing derivation behind [the theorem](THEOREM.md). It records the conventions and logical dependencies in one route. It adds no new theorem or numerical evidence, and is not a newly certified formal proof. The all-degree argument and its internal assessments remain available in the [foundation notes](../evidence/checkpoint08/foundation/GENERAL_GATE_REVIEW.md) and [proof assessment](../reviews/PROOF_ASSESSMENT.md). Established external inputs are identified in [References](../docs/REFERENCES.md).
 
+For **CHECK**, proceed directly through Sections 1–6. For **LEARN**, the
+[tutorial bridge](../docs/TUTORIAL_BRIDGE.md) explains the quantum dictionary and
+the book's trace and Chebyshev conventions first. The selected book supplies
+background, R1–R2 supply credited annular-Wishart machinery, and R4 supplies the
+nonpolynomial approximation input. The gate-specific cycle reduction is derived
+in Section 2, rather than assumed from Wishart marginals or quoted from the book.
+
 ## 1. Assumptions and Gaussian representation
 
 Fix active dimensions $r,s$, a finite list of deterministic gates $U_1,\ldots,U_L$ on $\mathbb C^r\otimes\mathbb C^s$, and finitely many positive entropy orders. Let $d\to\infty$ through common multiples of $r,s$. Each half has dimension $d$, with spectator dimensions $d/r,d/s$. Logs are natural. The initial state is complex Haar on the full $d\times d$ cut.
@@ -89,7 +96,7 @@ There are $k$ compatible cyclic gluings. Consequently
 =\sum_{k=1}^{\min(m,j)}kq_{m,k}q_{j,k}F_k(V_{\ell n}).
 ```
 
-Define $\Gamma_k(x)=2T_k((x-2)/2)$, where $T_k$ is the first-kind Chebyshev polynomial. The exact triangular identity
+Define $\Gamma_k(x)=2T_k((x-2)/2)$, where $T_k$ is the first-kind Chebyshev polynomial, $T_k(\cos\theta)=\cos(k\theta)$. This is $C_k(x-2)$ in the book's convention, the square case of its Example 42. All covariances here use unnormalized $\operatorname{Tr}$ and exact mean centering; normalized $\mathrm{tr}=d^{-1}\operatorname{Tr}$ describes empirical spectral averages instead. The exact triangular identity
 
 ```math
 x^m=\binom{2m}{m}+\sum_{k=1}^m q_{m,k}\Gamma_k(x)
@@ -109,6 +116,30 @@ f(2+2\cos\theta)=a_0(f)+\sum_{k\ge1}a_k(f)\cos(k\theta),\qquad
 ```
 
 Henry Hu's square-LUE variance convergence and approximation results [R4](../docs/REFERENCES.md), specifically Theorem 1.1, Lemma 1.2, Corollary 1.3 and Section 3, provide the external nonpolynomial input. Its fixed rectangularity parameter permits zero and is unrelated to entropy order. It gives variance convergence as well as a CLT; a distributional CLT alone would not suffice below.
+
+In the convention used here, the matrix is complex LUE with fixed nonnegative
+integer rectangularity, zero for the square case. The sufficient hypothesis on
+a bounded real $f:[0,\infty)\to\mathbb R$ is that, for some $\varepsilon>0$,
+
+```math
+\int_0^{4+\varepsilon}\!\int_0^{4+\varepsilon}
+\left(\frac{f(x)-f(y)}{x-y}\right)^2 w(x,y)\,dx\,dy<\infty,
+```
+
+```math
+w(x,y)=\frac1{8\pi^2}\left[
+\frac{\sqrt{|(4-x)y|}}{\sqrt{|(4-y)x|}}
++\frac{\sqrt{|(4-y)x|}}{\sqrt{|(4-x)y|}}
+\right].
+```
+
+This is the weighted condition already checked in the inherited
+[nonpolynomial transfer](../evidence/checkpoint08/foundation/NONSMOOTH_EXTENSION.md).
+Together with Hu's variance convergence and approximation results, it controls
+centered polynomial approximation in $L^2$, not only in distribution. That
+second-moment control is what permits covariance transfer and the entropy
+normalization below. No independence between the different gate marginals is
+part of this input.
 
 For a bounded smooth upper cutoff of $x^\alpha$, equal to that power near $[0,4]$, the weighted hard-edge regularity test reduces near $0<y<x<\delta$, with $y=ux$, to
 

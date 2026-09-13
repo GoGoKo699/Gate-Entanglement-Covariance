@@ -1,12 +1,13 @@
 # Repository map
 
-Start with [the scientific guide](START_HERE.md). This page explains where to read, calculate, and make changes. The repository holds one active covariance project; it also preserves the evidence on which that project was built.
+Choose **LEARN** in [Start here](START_HERE.md), **CHECK** in [the theorem](../theory/THEOREM.md) and [proof](../theory/PROOF.md), or **REPRODUCE** in [the reproduction guide](../REPRODUCE.md). This page assigns each maintained document a role. The repository holds one active covariance project; it also preserves the evidence on which that project was built.
 
 ## Maintained project
 
 | Material | Canonical location | Purpose |
 |---|---|---|
-| Physical question and interpretation | [START_HERE.md](START_HERE.md) | First reading without checkpoint history |
+| Physical question and selected reading map | [START_HERE.md](START_HERE.md) | LEARN entry, with the exact Mingo and Speicher passages and a route requiring no checkpoint history |
+| Book-to-project bridge | [TUTORIAL_BRIDGE.md](TUTORIAL_BRIDGE.md) | Quantum-to-matrix dictionary, mode conventions, gate contraction, normalization, and interpretation |
 | Concrete gate example | [WORKED_EXAMPLE.md](WORKED_EXAMPLE.md) | Connect the formula to identity, ZZ, and active SWAP gates |
 | Precise statement | [THEOREM.md](../theory/THEOREM.md) | Definitions, limits, coefficients, and consequences |
 | Technical reasoning | [PROOF.md](../theory/PROOF.md) | One derivation route with its mathematical dependencies |
@@ -16,8 +17,11 @@ Start with [the scientific guide](START_HERE.md). This page explains where to re
 | Default computation | [scripts/reproduce.py](../scripts/reproduce.py) | Focused checks and the analytical reader figure |
 | Reader reference outputs | [figures/](../figures/), [results/](../results/) | Small deterministic outputs with generating commands |
 | Reproduction instructions | [REPRODUCE.md](../REPRODUCE.md) | Environment, output locations, and optional longer calculations |
+| Reader-route source and implementation checks | [IMPLEMENTATION.md](../reviews/mingo-speicher-reader-route/IMPLEMENTATION.md) | Verified source metadata, editorial changes, checks, and remaining limitations |
 
 New outputs go under the ignored `build/` directory. Maintained code can be revised to correct an identified problem; reference changes must be explained. Reference values are not evidence that a general theorem is true.
+
+Mingo and Speicher is the sole assigned external tutorial. The exact reading assignment belongs in `START_HERE.md`; the local bridge translates it into this problem. The canonical theorem and proof remain in `theory/`, and [References](REFERENCES.md) retains the primary attribution. A proof dependency cited there is not an additional assigned tutorial. No third-party book PDF or page images are distributed here.
 
 ## Preserved evidence
 
@@ -37,4 +41,4 @@ The entire former Entangling-successions tree is retained under `legacy/subset-d
 
 ## Future work
 
-[AGENTS.md](../AGENTS.md) records project instructions, [HANDOVER.md](../HANDOVER.md) gives the starting route for another workspace, and [NEXT.md](../NEXT.md) records the phase order. The manuscript outline is future planning material. Any new ensemble extension needs its own stated assumptions and evidence before it can change the current claims.
+[AGENTS.md](../AGENTS.md) records project instructions, [HANDOVER.md](../HANDOVER.md) gives the starting route for another workspace, and [NEXT.md](../NEXT.md) records the phase order. Completion of the educational route does not automatically start manuscript work. The manuscript outline is future planning material. Any new ensemble extension needs its own stated assumptions and evidence before it can change the current claims.
