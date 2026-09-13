@@ -1,52 +1,102 @@
-# Reproduction
+# Reproduce the repository
 
-The current repository is a migration of already checked research. The default gate verifies relocation and existing deterministic consequences. It does not rerun every previous experiment.
+The default run verifies the imported records, checks maintained formulas against independent analytical references, reruns six existing deterministic calculations, and regenerates the analytical reader figure. It creates no new random-state cohort.
 
-## Default check
+## One entry point
 
-Use Python 3.12 with the pinned NumPy and SciPy versions:
+From the repository root, use Python 3.12 and the pinned dependencies:
 
 ```sh
 python -m pip install -r requirements.txt
-python verify_project.py
+python scripts/reproduce.py
 ```
 
-The script checks the hashes in `provenance/IMPORTS.json`, copies checkpoint 08 to a temporary directory, runs its six deterministic calculations, compares saved JSON references, and confirms that the imported files stayed unchanged. Reports are written to `validation/`. The files under `evidence/` are never edited by this command.
+The root requirements pin NumPy 2.3.5, SciPy 1.17.0, and Matplotlib 3.10.8. No GPU is needed. The scripts set one numerical-library thread for the focused run.
 
-The checks cover integer-order inversion, exact finite-purity identities, two-cut identities, and the exact-design example. This is a reproduction gate, not a replacement for the all-degree nonpolynomial proof.
+| Generated output under `build/reproduction/` | Meaning |
+|---|---|
+| `validation/PROJECT_VERIFICATION.json` | Integrity of all 193 imported files and status of the six inherited deterministic programs |
+| `validation/CHECKPOINT08_REPRODUCTION.json` | Per-program reference comparisons and their tolerances |
+| `validation/deterministic_reproduction.log` | Complete output of those programs |
+| `validation/maintained_calculations.json` | Maintained-code comparison with exact rational witnesses, known gate spectra, and the saved reader table |
+| `results/reader_examples.json` | Operator probabilities, covariance matrices, correlations, and increments for identity, ZZ, and active SWAP |
+| `figures/entropy_memory.png`, `figures/entropy_memory.svg` | Analytical correlation curves shown on the README |
 
-## Earlier Haar evidence
+New outputs are kept outside the preserved records. The inherited calculations run in a temporary copy; their saved inputs and results are checked again afterwards. The committed reader references are [results/reader_examples.json](results/reader_examples.json) and [figures/entropy_memory.png](figures/entropy_memory.png). A numerical tolerance comparison checks the table; image pixels are not a cross-platform scientific equality test.
 
-`evidence/checkpoint07/REPRODUCE.md` documents the exact finite-purity and contraction checks and the 192-state non-diagonal pilot. Run those commands in a copy of that directory to preserve the saved reference arrays. Its inherited 05–06 code and numerical records are also included. No previous random cohort was regenerated for this repository migration.
-
-Compare NPZ arrays rather than compressed bytes. The original tolerances and limitations remain with each study. Floating-point sampling error bars do not bound finite-size asymptotic bias.
-
-## Failed Floquet extension
-
-`limits/checkpoint09/` preserves its code, frozen protocol and predictions, summary JSON, figures, and original validation records. Two large regenerable files are omitted from Git: `results/cohort_N8.npz` and `results/cohort_N10.npz`. Their original hashes and sizes are recorded in `provenance/OMITTED_GENERATED_FILES.json`; the complete original checkpoint archive was retained before this migration.
-
-Before the optional Floquet commands, install its plotting dependency with `python -m pip install -r limits/checkpoint09/requirements-reproduction.txt`. The default deterministic gate needs only the root requirements.
-
-The original `limits/checkpoint09/reproduce.py` is preserved unchanged and expects those two original reference files. For a fresh regeneration without that archive, first copy `limits/checkpoint09/` to a writable directory. Keep a separate copy of its saved summaries, then run there:
+To reproduce into a separate directory, including from another working directory, use an absolute script path:
 
 ```sh
+python /path/to/Entangling-successions/scripts/reproduce.py --output-dir /tmp/gate-covariance-reproduction
+```
+
+Replace `/path/to/Entangling-successions` with the actual checkout path. Source lookup is relative to the script, not the shell's working directory.
+
+## Numerical approximation and the scientific limit
+
+The maintained formulas in [gate_covariance/core.py](gate_covariance/core.py) evaluate the theorem with explicit coefficient cutoff `K`. The reader example uses `K=65536` and records changes on doubling to `131072`. At the showcased orders `1/2`, `1`, `2`, `3`, and `4`, the displayed correlations change by less than `1e-9` in that diagnostic. Integer orders 2, 3, and 4 terminate exactly at modes 2, 3, and 4. A different order can converge more slowly and needs its own justified cutoff.
+
+The cutoff comparison is a numerical diagnostic, not a certified bound on omitted terms. It also says nothing about finite-dimensional bias. These are calculations of the balanced-Haar, fixed-active-support limit; they are not finite-state simulations or fitted estimates. [The worked example](docs/WORKED_EXAMPLE.md) explains the quantities and units.
+
+For example, from the repository root:
+
+```python
+import numpy as np
+from gate_covariance import operator_schmidt_probabilities, correlation
+
+u = np.diag(np.exp(-1j * np.pi / 4 * np.array([1, -1, -1, 1])))
+eta = operator_schmidt_probabilities(u, r=2, s=2)
+print(eta)  # two nonzero probabilities, both 1/2, up to SVD roundoff
+print(correlation(2, 2, eta, cutoff=4))  # 1/2
+```
+
+For two observations at gates `U_l` and `U_m`, pass the operator probabilities of `U_l @ U_m.conj().T`. The core also accepts abstract normalized probability vectors for algebraic calculations; this does not establish that every vector is realized by a gate at specified dimensions.
+
+## What the default checks establish
+
+The six inherited checks cover exact moment inversion, finite-dimensional purity identities, two subsystem assignments, and a gate-design example. [Results and evidence](docs/RESULTS.md) maps each program to its saved output and qualification. Five historical JSON outputs match byte for byte; the sixth uses its documented floating-point tolerance.
+
+The maintained calculations are checked against those independently generated rational witnesses, exact spectra of specific gates, a closed order-one coefficient expression, and the integer-order moment inverse. They also compare the regenerated reader table with its committed reference. Neither the reference agreement nor the inherited finite-degree checks replace the all-degree entropy derivation.
+
+For a narrower run:
+
+```sh
+python scripts/check_calculations.py
+python verify_project.py --output-dir build/validation
+python scripts/check_repository.py
+```
+
+The last command checks local file destinations in the maintained Markdown reading route. It does not fetch external references or audit historical links. GitHub Actions runs the navigation check and complete default reproduction, then verifies the legacy tree identity.
+
+## Existing Haar samples
+
+The saved [non-diagonal pilot summary](evidence/checkpoint07/checkpoints/07/results/pilot_summary.json) and its NPZ arrays support the finite-size table in [Results](docs/RESULTS.md). Earlier cohorts remain separate. No cohort is regenerated by the default command.
+
+[The inherited reproduction guide](evidence/checkpoint07/REPRODUCE.md) gives the original commands for finite-purity, contraction, and sampling studies. Run them in a writable copy of that checkpoint to retain its reference arrays. Some commands are longer calculations and are not needed to reproduce the new analytical figure. Compare NPZ array values rather than compressed archive bytes; retain each original protocol and tolerance.
+
+## Optional failed Floquet extension
+
+[limits/checkpoint09/](limits/checkpoint09/) contains the frozen protocol, code, predictions, summaries, figures, and validation records. Two large regenerable files are omitted from Git: `results/cohort_N8.npz` and `results/cohort_N10.npz`. Their original hashes and sizes are listed in [OMITTED_GENERATED_FILES.json](provenance/OMITTED_GENERATED_FILES.json). The complete original checkpoint archive was retained before the repository migration.
+
+The original `reproduce.py` there expects the omitted reference files. To regenerate without that archive, copy `limits/checkpoint09/` to a separate writable directory and preserve another copy of its summary JSON files. In the writable copy run:
+
+```sh
+python -m pip install -r requirements-reproduction.txt
 python theory/haar_predictions.py
 python floquet_test.py
 python reviews/independent_audit.py
 python plot_results.py
 ```
 
-The first two commands regenerate the prescribed predictions and cohorts. The following commands audit the generated cohort and redraw the figure. Compare summary values with the saved references, excluding wall time; the original JSON comparison tolerance is relative 1e-9 and absolute 1e-11. The generation uses only the two frozen sizes and gates. This longer optional computation was not rerun during migration.
+These commands regenerate the two frozen-size cohorts, audit them, and redraw their figure. Compare summary values with the preserved summaries, excluding wall time; the original comparison uses relative tolerance `1e-9` and absolute tolerance `1e-11`. This optional calculation was not rerun during refurnishing. Its original manifest lists the two omitted archives; the current import manifest describes the actual Git files.
 
-The shipped checkpoint-09 MANIFEST describes its original complete package and therefore also lists the two omitted files. The current `provenance/IMPORTS.json` describes the actual imported Git files. Neither original protocol nor original manifest was silently rewritten.
+## Preserved repository history
 
-## Legacy tree
-
-The former repository tree is retained by exact Git tree identity, not by regeneration. Its original root tree is `ffb13b5f01c8c8ad18c80b521feefd3383a34e34`. In a Git checkout, verify preservation with:
+In a normal Git clone, the following commands should both return `ffb13b5f01c8c8ad18c80b521feefd3383a34e34`:
 
 ```sh
 git rev-parse HEAD:legacy/subset-development
 git rev-parse origin/legacy/subset-development-2026-09-13^{tree}
 ```
 
-Both should return that tree SHA. The current active validation does not execute historical subset-state scripts.
+The second command requires the historical remote branch to have been fetched, as in a normal full clone. These checks establish exact preservation of the former tree. The active validation does not execute historical subset-state scripts. The [repository map](docs/REPOSITORY_MAP.md) distinguishes maintained content from those records.

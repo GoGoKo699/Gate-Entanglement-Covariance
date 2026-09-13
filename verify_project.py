@@ -3,6 +3,7 @@
 The imported checkpoints are never modified. No Haar sampling is rerun.
 """
 from pathlib import Path
+import argparse
 import hashlib
 import json
 import os
@@ -20,6 +21,10 @@ def sha256(path):
 
 
 def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--output-dir', type=Path, default=ROOT / 'build/validation',
+                        help='Directory for new validation reports (default: build/validation).')
+    args = parser.parse_args()
     imports = json.loads((ROOT / 'provenance/IMPORTS.json').read_text())
     files = imports['imported_files']
     failures = [name for name, digest in files.items()
@@ -27,8 +32,11 @@ def main():
     if failures:
         raise SystemExit('Imported file mismatch: ' + ', '.join(failures))
     print(f'Imported files verified: {len(files)}', flush=True)
-    output = ROOT / 'validation'
-    output.mkdir(exist_ok=True)
+    output = args.output_dir.resolve()
+    protected = [ROOT / name for name in ('evidence', 'limits', 'legacy', 'validation')]
+    if any(output == path or path in output.parents for path in protected):
+        raise SystemExit('Choose an output directory outside preserved research records.')
+    output.mkdir(parents=True, exist_ok=True)
     env = os.environ.copy()
     env.update(OPENBLAS_NUM_THREADS='1', OMP_NUM_THREADS='1', MKL_NUM_THREADS='1')
     with tempfile.TemporaryDirectory(prefix='entropy_quantum_verify_') as tmp:
@@ -57,7 +65,7 @@ def main():
                   scope='Input integrity and six checkpoint-08 deterministic checks only; '
                         'earlier sampling and proof audits are inherited evidence.')
     (output / 'PROJECT_VERIFICATION.json').write_text(json.dumps(report, indent=2)+'\n')
-    print('Project migration verification passed.', flush=True)
+    print('Imported evidence and deterministic reproduction passed.', flush=True)
 
 
 if __name__ == '__main__':

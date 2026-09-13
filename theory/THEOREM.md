@@ -1,6 +1,6 @@
 # The scientific core
 
-This is the current theorem statement and proof map, not a replacement for the full proof consolidation required before submission. Natural logarithms are used.
+This is the precise statement used throughout the repository. [The derivation](PROOF.md) fixes the conventions and explains its proof dependencies; [the worked example](../docs/WORKED_EXAMPLE.md) evaluates it for a boundary qubit pair. Natural logarithms are used.
 
 ## Setting
 
@@ -100,8 +100,8 @@ The corresponding worst-case amplification of bounded input errors is 1, 49, and
 4. The low-regularity square-LUE approximation of Henry Hu transfers centered polynomial limits to x^α for every fixed α>0 and to x log x. Marginal L² approximation and Cauchy–Schwarz suffice for cross-covariances; the different gates need not be independent.
 5. Normalize the shared Gaussian trace. The exact-mean-centered L² entropy delta method cancels the conserved k=1 radial mode, leaving the displayed k≥2 law. Exceptional events are bounded using the combined normalized entropy, not separate logarithms.
 
-The complete inherited all-degree argument is in `../evidence/checkpoint08/foundation/GENERAL_GATE_REVIEW.md`. The nonpolynomial transfer and delta method are in `NONSMOOTH_EXTENSION.md` and `NONSMOOTH_EXTENSION_AUDIT.md` in that directory. `../reviews/PROOF_ASSESSMENT.md` independently rechecks these steps and gives the explicit order-one expansion that the manuscript should include.
+The [consolidated derivation](PROOF.md) gives the indexed Wick convention, cycle contraction, nonpolynomial transfer, shared normalization, and explicit order-one remainder in one route. The detailed inherited [all-degree argument](../evidence/checkpoint08/foundation/GENERAL_GATE_REVIEW.md), [nonpolynomial transfer](../evidence/checkpoint08/foundation/NONSMOOTH_EXTENSION.md), [transfer audit](../evidence/checkpoint08/foundation/NONSMOOTH_EXTENSION_AUDIT.md), and [independent internal proof assessment](../reviews/PROOF_ASSESSMENT.md) remain available as source records.
 
-These arguments build on annular Wishart fluctuations, Chebyshev diagonalization, block-Gaussian methods, and established LUE regularity results. The proposed contribution is the gate-spectrum reduction and the full actual-entropy covariance law with its quantum-information consequences. See `../reviews/PUBLICATION_POSITIONING.md` for the closest literature and the limits of the novelty review.
+These arguments build on annular Wishart fluctuations, Chebyshev diagonalization, block-Gaussian methods, and established LUE regularity results. The proposed contribution is the gate-spectrum reduction and the full actual-entropy covariance law with its quantum-information consequences. See [References](../docs/REFERENCES.md) for the external inputs and [publication positioning](../reviews/PUBLICATION_POSITIONING.md) for the closest literature and the limits of the novelty review.
 
 No uniform finite-size error, growing support, growing order, shrinking-time limit, path-space convergence, or generic prepared-state extension is asserted.

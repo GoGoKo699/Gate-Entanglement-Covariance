@@ -1,6 +1,6 @@
-# Reviews at the spinoff decision
+# Internal review records
 
-These are independent internal assessments performed for checkpoint 16, not external referee reports.
+These are internal assessments, not external referee reports. [REFURNISHING_REVIEW.md](REFURNISHING_REVIEW.md) records the current repository work and validation. The proof and positioning assessments below were performed for checkpoint 16 and remain historical records.
 
 - `PROOF_ASSESSMENT.md` re-examines the all-degree gate contraction, marginal nonsmooth transfer, and entropy normalization.
 - `PUBLICATION_POSITIONING.md` compares the proposed contribution with selected primary sources and Quantum's stated criteria.

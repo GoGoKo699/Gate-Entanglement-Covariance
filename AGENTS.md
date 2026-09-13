@@ -1,8 +1,9 @@
 # Current project instructions
 
-Read README.md, CLAIM_LEDGER.md, NEXT.md, and theory/THEOREM.md before scientific changes.
+Read README.md, docs/START_HERE.md, CLAIM_LEDGER.md, NEXT.md, and theory/THEOREM.md before scientific changes. Follow docs/REPOSITORY_MAP.md for file responsibilities and REPRODUCE.md for maintained commands.
 
 - The current phase is repository refurnishing. Make the scientific story, theory, code, evidence, and reproduction path self-contained. Manuscript drafting is the last phase, after the repository is complete and checked.
+- Preserve the maintained reading route in docs/ and theory/, put new generated outputs under build/, and use scripts/reproduce.py for the focused verification. Record changes to reference figures or result tables with their source and reason.
 - Organize one focused Quantum-targeted paper around the fixed-support Haar entropy-covariance law. Preserve the user's preference for a clear insight, compact theory, and modest decisive numerics.
 - Keep open PRL exploration and other research candidates in separate projects. Do not modify Subset-states or the frozen Entanglement Trajectories or Boundary-Entangling-Susceptibility repositories.
 - Treat evidence/, limits/checkpoint09/, and legacy/subset-development/ as immutable historical records. Create maintained code and documentation outside them. Never change frozen protocols, data, exclusion records, or original claims silently.

@@ -2,6 +2,8 @@
 
 13 September 2026. This file supersedes historical publication aspirations in the imported checkpoints, without changing those records.
 
+[Results and evidence](docs/RESULTS.md) maps these claims to proofs, code, saved outputs, and numerical limitations. [The derivation](theory/PROOF.md) provides the current technical reading route.
+
 | Claim | Current status | Necessary qualification |
 |---|---|---|
 | The operator Schmidt probabilities of a relative boundary gate determine the limiting cross-covariance of all fixed positive Rényi orders | Central derived theorem, independently re-examined internally | Complex-Haar input, balanced growing halves, deterministic fixed active support, fixed finite gate set and fixed orders |
