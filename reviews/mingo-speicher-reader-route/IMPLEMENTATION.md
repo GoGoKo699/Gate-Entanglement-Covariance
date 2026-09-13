@@ -130,8 +130,98 @@ all six inherited deterministic programs. Five inherited JSON outputs reproduced
 byte for byte; the sixth passed its existing numerical tolerance. There was no
 inherited failure and no new sampling.
 
-Implementation, final reader-route checks, protected-file comparison and remote
-integration are in progress. Their exact outcomes will be recorded here before
-completion. These checks are documentation review and regression validation,
-not human reader testing, independent scientific replication or external peer
-review.
+After implementation, a fresh virtual environment was created and the existing
+requirements were installed without changing the pins:
+
+```sh
+python -m venv ../validation_venv
+../validation_venv/bin/python -m pip install -r requirements.txt
+source ../validation_venv/bin/activate
+python scripts/reproduce.py
+python scripts/check_repository.py
+```
+
+Both checks passed. Outputs were generated under `build/reproduction/`.
+Navigation now checks 15 maintained pages, 284 local destinations and 27 section
+fragments, including image targets and same-page anchors. Isolated temporary
+probes confirmed that missing anchors and images fail, while repeated headings,
+explicit HTML anchors, and fenced examples are handled. The checker is scoped to
+the maintained route, not all historical external links.
+
+Reproduction again verified all 193 imported hashes and all six inherited
+programs. Five JSON outputs were byte-identical; `check_two_cut_modes.py` passed
+its inherited tolerance. The maintained covariance and gate-spectrum maximum
+errors were both `1.11e-16`; the closed order-one coefficient error was
+`3.47e-18` and the hierarchy error `1.23e-13`. Ten invalid inputs were rejected.
+The reader reference values changed by exactly zero. Cutoff doubling changed the
+showcased correlations by less than `1e-9`, a diagnostic rather than a rigorous
+remainder bound. No new random states were generated.
+
+The exact runnable snippet in `REPRODUCE.md`, “Check the equal-purity comparison,”
+was also executed in that fresh environment. It printed
+`Rescaled covariance difference: 0.001930194847` and passed comparison with
+`9(3-2 sqrt(2))/800` at tolerance `1e-14`. A separate direct gate-matrix
+realignment check agreed with the displayed probabilities within `1.11e-16`
+and the order-three difference within `3.29e-16`. These are small deterministic
+checks of the existing witness, not new scientific evidence or a sampling study.
+
+## Reader walkthrough and editorial checks
+
+An agent walkthrough used the assigned book passages and maintained documents,
+without requiring old chats or checkpoint chronology. It repaired the §1.3
+Gaussian-vector label, the endpoint wording around Eq. (4.18), the explanation of
+possibly degenerate joint Gaussian covariance, and the explicit centered/scaled
+left-hand side at entropy order one. The trace symbol and spectator label are
+also distinguished locally. The book-to-project mode normalization and the full
+inherited Hu weighted hypothesis were checked against their source conventions.
+No project mathematical discrepancy or unresolved hidden prerequisite was found
+in this bounded documentation review.
+
+Markdown headings, tables, local anchors, math fences and inline delimiters were
+inspected. Eight principal pages were converted using
+`pandoc -f gfm+tex_math_dollars -t json`, mapping GitHub `math` code blocks to
+Pandoc `Math(DisplayMath)` nodes, then
+`pandoc -f json -t html5 --mathml`. All 63 display equations and their inline math
+converted without warnings, empty mathematical bodies or error nodes. A first
+temporary preview converter mishandled display delimiters; that converter was
+corrected and its outputs replaced. The repository's math source was unaffected.
+The existing analytical PNG was visually inspected for labels, curves, units and
+legend. It was retained unchanged. Temporary previews stay under `build/`.
+
+Actual GitHub browser layout was not exercised: the available Playwright runtime
+had no installed browser binary. The checks establish source compatibility and
+HTML/MathML conversion, not a pixel-level GitHub rendering test. No actual human
+reader test, external peer review or independent scientific replication is claimed.
+
+## Final diff and integration
+
+There are 16 changed paths: the existing README, START_HERE, WORKED_EXAMPLE,
+RESULTS, REFERENCES, REPOSITORY_MAP, THEOREM, PROOF, CLAIM_LEDGER, REPRODUCE,
+HANDOVER, NEXT and AGENTS documents; the navigation checker; and the new bridge
+and this record. The only code edit extends navigation checking. The scientific
+library, reproduction entry point, pinned dependencies, CI configuration,
+reference figure/table and manuscript-planning file are unchanged.
+
+All 207 materialized baseline files in the protected record directories retained
+their exact Git blob hashes after reproduction. The remote tree comparison also
+preserved the legacy subtree identity stated above, including its unmaterialized
+files. Existing paths and headings in the maintained guides were retained.
+The full diff was reviewed against `main`, which remained at the verified
+`cddb25ad8b31f18d1684f23b7324b575a3f920ff` baseline. No unrelated research,
+manuscript drafting, historical deletion or repository migration is included.
+
+Source/structure verification is commit
+`3d3fe3220656ae1a2872b36d8c1acb0ffc79949a`; educational implementation is commit
+`b126961218975a001bffd52eadf92e6b37f0fa7e`. On that implementation head,
+[GitHub Actions run 34740081003](https://github.com/GoGoKo699/Entangling-successions/actions/runs/34740081003)
+passed the clean checkout, pinned install, navigation, full reproduction and
+legacy-tree check. This final validation record is committed separately.
+[PR 1](https://github.com/GoGoKo699/Entangling-successions/pull/1) records the final
+head, final-head CI and merge outcome, avoiding a self-referential merge hash in
+this pre-merge record. Integration requires those checks and another current-main
+comparison; pending runs must not be described as passed.
+
+There is no unresolved documentation or scientific-scope blocker. The browser
+layout limitation is stated above. Stop after checked integration and the
+completion report. Manuscript preparation remains a separate final phase.
+
