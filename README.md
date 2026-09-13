@@ -2,7 +2,7 @@
 
 **How much entanglement correlation survives a gate acting on a small boundary region?**
 
-This repository develops one paper, provisionally titled **Operator Schmidt spectra and entanglement covariance under local gates**, with Quantum as the current publication target. Its central result is a derived covariance theorem for balanced complex-Haar states and deterministic gates of fixed boundary support. The proof has received internal review; a self-contained manuscript is the next task.
+This repository develops one paper, provisionally titled **Operator Schmidt spectra and entanglement covariance under local gates**, with Quantum as the current publication target. Its central result is a derived covariance theorem for balanced complex-Haar states and deterministic gates of fixed boundary support. The proof has received internal review. The current phase is repository refurnishing: make the scientific story, theory, evidence, and reproduction path clear without requiring a manuscript. Manuscript drafting is the final phase.
 
 For a relative gate V, let η_j be its normalized operator Schmidt probabilities. The limiting covariance of any fixed positive pair of Rényi orders is
 
@@ -29,7 +29,8 @@ The absolute fluctuations decrease as 1/d. The result concerns their covariance,
 | Current claims and exclusions | [Claim ledger](CLAIM_LEDGER.md) |
 | Exact setting and proof | [Theorem](theory/THEOREM.md), [general-gate derivation](evidence/checkpoint08/foundation/GENERAL_GATE_REVIEW.md), [proof review](reviews/PROOF_ASSESSMENT.md) |
 | Closest prior work | [Publication positioning](reviews/PUBLICATION_POSITIONING.md) |
-| Manuscript work | [Paper outline](PAPER_OUTLINE.md), [next tasks](NEXT.md) |
+| Current repository work | [Refurnishing roadmap](NEXT.md) |
+| Later manuscript phase | [Reserved paper outline](PAPER_OUTLINE.md) |
 | Computational checks | [Reproduction instructions](REPRODUCE.md) |
 | New research workspace | [Handover](HANDOVER.md), [agent instructions](AGENTS.md) |
 | Repository transition | [Provenance](provenance/REPOSITORY_TRANSITION.md) |

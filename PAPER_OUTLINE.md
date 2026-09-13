@@ -1,5 +1,7 @@
 # One Quantum article: proposed outline
 
+**Reserved for the final phase.** The current task is repository refurnishing under [NEXT.md](NEXT.md). This outline is retained for later use and does not authorize manuscript drafting during that phase.
+
 Working title: **Operator Schmidt spectra and entanglement covariance under local gates**
 
 Purpose: present the completed fixed-boundary Haar theorem as a self-contained quantum-information result. The scoped core has passed the present internal proof audit. Submission preparation should consolidate the established argument and evidence; it need not await a broader physical application.
