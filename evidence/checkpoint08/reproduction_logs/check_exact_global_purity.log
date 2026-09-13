@@ -1,0 +1,14 @@
+I2 rho= 1 max trace error= 0
+SWAP2 rho= 1 max trace error= 0
+CNOT2 rho= -0.111111111111 max trace error= 0
+ZZ2 rho= 0.494817569147 max trace error= 8.88e-16
+phaseSWAP2 rho= -0.111111111111 max trace error= 0
+Cartan2 rho= 0.356967443087 max trace error= 3.55e-15
+random2 rho= 0.0341624913006 max trace error= 2.13e-14
+I3 rho= 1 max trace error= 0
+SWAP3 rho= 1 max trace error= 0
+two_unitary3 rho= -0.25 max trace error= 0
+random3 rho= 0.0144704663399 max trace error= 1.14e-13
+I4 rho= 1 max trace error= 0
+SWAP4 rho= 1 max trace error= 0
+random4 rho= 0.00973571501796 max trace error= 1.42e-14

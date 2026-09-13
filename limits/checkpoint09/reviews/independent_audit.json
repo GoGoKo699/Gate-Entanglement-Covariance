@@ -1,0 +1,657 @@
+{
+  "status": "passed",
+  "no_production_imports": true,
+  "new_eigendecompositions": 0,
+  "numerical_source_amendment": "Only NumPy scalar JSON serialization conversion",
+  "sizes": [
+    {
+      "N": 8,
+      "state_count": 256,
+      "eigenvectors_checked": 256,
+      "entropy_anchor_count": 48,
+      "own_gate_anchor_count": 16,
+      "diagnostics": {
+        "eigen_residual_max": 1.4669534741808846e-14,
+        "orthogonality_max_entry": 1.432187701766452e-14,
+        "unitarity_frobenius_relative": 1.064255568014899e-15,
+        "minimum_eigenphase_gap": 0.00399985163695904,
+        "mean_circular_gap_ratio": 0.632345065117389,
+        "scaled_computational_ipr": 2.0961499802843067
+      },
+      "max_gate_seed_error": 0.0,
+      "max_entropy_anchor_error": 6.217248937900877e-15,
+      "max_purity_anchor_error": 2.7755575615628914e-16,
+      "max_smallest_probability_anchor_error": 3.7039056717536045e-17,
+      "max_own_gate_spectrum_change": 9.992007221626409e-16,
+      "max_own_gate_entropy_change": 2.220446049250313e-15,
+      "max_summary_error": [
+        1.9539925233402755e-13,
+        "/entropy/phaseSWAP/1/exact_haar_variance_before_ratio"
+      ],
+      "max_benchmark_error": [
+        8.881784197001252e-16,
+        "/von_neumann_mean"
+      ],
+      "max_diagnostics_difference": [
+        2.2664575690998196e-17,
+        "/eigen_residual_max"
+      ],
+      "full_saved_summary_recomputed": {
+        "entropy": {
+          "identity": [
+            {
+              "mean_before": 2.395243222829504,
+              "mean_after": 2.395243222829504,
+              "mean_shift": 0.0,
+              "variance_before": 0.0026585524316562943,
+              "variance_after": 0.0026585524316562943,
+              "covariance": 0.0026585524316562943,
+              "correlation": 1.0,
+              "msd": 0.0,
+              "mean_shift_in_input_sd": 0.0,
+              "order": 0.5,
+              "scaled_covariance": 0.6805894225040113,
+              "variance_before_ratio": 5.444715380032091,
+              "variance_after_ratio": 5.444715380032091,
+              "correlation_residual": 0.0,
+              "msd_ratio": null,
+              "criteria": {
+                "input_scale": false,
+                "output_scale": false,
+                "correlation": true,
+                "increment": true,
+                "mean_shift": true
+              },
+              "within_declared_band": null
+            },
+            {
+              "mean_before": 2.1910829569705577,
+              "mean_after": 2.1910829569705577,
+              "mean_shift": 0.0,
+              "variance_before": 0.007896676174703906,
+              "variance_after": 0.007896676174703906,
+              "covariance": 0.007896676174703906,
+              "correlation": 1.0,
+              "msd": 0.0,
+              "mean_shift_in_input_sd": 0.0,
+              "order": 1.0,
+              "scaled_covariance": 2.0215491007242,
+              "variance_before_ratio": 8.0861964028968,
+              "variance_after_ratio": 8.0861964028968,
+              "correlation_residual": 0.0,
+              "msd_ratio": null,
+              "criteria": {
+                "input_scale": false,
+                "output_scale": false,
+                "correlation": true,
+                "increment": true,
+                "mean_shift": true
+              },
+              "within_declared_band": null,
+              "exact_haar_variance_before_ratio": 8.170845962463558,
+              "exact_haar_mean_difference": -0.08378301261772902
+            },
+            {
+              "mean_before": 1.959836744480957,
+              "mean_after": 1.959836744480957,
+              "mean_shift": 0.0,
+              "variance_before": 0.01943876544570752,
+              "variance_after": 0.01943876544570752,
+              "covariance": 0.01943876544570752,
+              "correlation": 1.0,
+              "msd": 0.0,
+              "mean_shift_in_input_sd": 0.0,
+              "order": 2.0,
+              "scaled_covariance": 4.976323954101125,
+              "variance_before_ratio": 9.95264790820225,
+              "variance_after_ratio": 9.95264790820225,
+              "correlation_residual": 0.0,
+              "msd_ratio": null,
+              "criteria": {
+                "input_scale": false,
+                "output_scale": false,
+                "correlation": true,
+                "increment": true,
+                "mean_shift": true
+              },
+              "within_declared_band": null
+            }
+          ],
+          "SWAP": [
+            {
+              "mean_before": 2.395243222829504,
+              "mean_after": 2.400964279780035,
+              "mean_shift": 0.005721056950530823,
+              "variance_before": 0.0026585524316562943,
+              "variance_after": 0.0015703981221316108,
+              "covariance": 0.001519960145700043,
+              "correlation": 0.7438831168240227,
+              "msd": 0.001221760755019036,
+              "mean_shift_in_input_sd": 0.11095673175998585,
+              "order": 0.5,
+              "scaled_covariance": 0.389109797299211,
+              "variance_before_ratio": 5.444715380032091,
+              "variance_after_ratio": 3.216175354125539,
+              "correlation_residual": 0.5715609183178079,
+              "msd_ratio": 1.5115580131321027,
+              "criteria": {
+                "input_scale": false,
+                "output_scale": false,
+                "correlation": false,
+                "increment": false,
+                "mean_shift": true
+              },
+              "within_declared_band": false
+            },
+            {
+              "mean_before": 2.1910829569705577,
+              "mean_after": 2.2016544925425996,
+              "mean_shift": 0.010571535572041935,
+              "variance_before": 0.007896676174703906,
+              "variance_after": 0.004304363690399466,
+              "covariance": 0.004736884153912798,
+              "correlation": 0.8124864363494073,
+              "msd": 0.0028390289216287286,
+              "mean_shift_in_input_sd": 0.11896409661718357,
+              "order": 1.0,
+              "scaled_covariance": 1.2126423434016762,
+              "variance_before_ratio": 8.0861964028968,
+              "variance_after_ratio": 4.407668418969053,
+              "correlation_residual": 0.5847539978415905,
+              "msd_ratio": 1.8822269383751942,
+              "criteria": {
+                "input_scale": false,
+                "output_scale": false,
+                "correlation": false,
+                "increment": false,
+                "mean_shift": true
+              },
+              "within_declared_band": false,
+              "exact_haar_variance_before_ratio": 8.170845962463558,
+              "exact_haar_mean_difference": -0.08378301261772902
+            },
+            {
+              "mean_before": 1.959836744480957,
+              "mean_after": 1.9789782698088567,
+              "mean_shift": 0.0191415253278997,
+              "variance_before": 0.01943876544570752,
+              "variance_after": 0.010374302086812663,
+              "covariance": 0.011829912478564889,
+              "correlation": 0.8330436281778135,
+              "msd": 0.006519640567269031,
+              "mean_shift_in_input_sd": 0.13729104245591972,
+              "order": 2.0,
+              "scaled_covariance": 3.0284575945126115,
+              "variance_before_ratio": 9.95264790820225,
+              "variance_after_ratio": 5.3116426684480835,
+              "correlation_residual": 0.5830436281778135,
+              "msd_ratio": 2.2253706469611627,
+              "criteria": {
+                "input_scale": false,
+                "output_scale": false,
+                "correlation": false,
+                "increment": false,
+                "mean_shift": true
+              },
+              "within_declared_band": false
+            }
+          ],
+          "phaseSWAP": [
+            {
+              "mean_before": 2.395243222829504,
+              "mean_after": 2.403907702931566,
+              "mean_shift": 0.008664480102062111,
+              "variance_before": 0.0026585524316562943,
+              "variance_after": 0.0018244557068455428,
+              "covariance": 0.0017748822692270215,
+              "correlation": 0.8058983634610651,
+              "msd": 0.0010083168154868228,
+              "mean_shift_in_input_sd": 0.16804279398670197,
+              "order": 0.5,
+              "scaled_covariance": 0.4543698609221175,
+              "variance_before_ratio": 5.444715380032091,
+              "variance_after_ratio": 3.7364852876196717,
+              "correlation_residual": 0.6335761649548503,
+              "msd_ratio": 1.247485938604407,
+              "criteria": {
+                "input_scale": false,
+                "output_scale": false,
+                "correlation": false,
+                "increment": true,
+                "mean_shift": true
+              },
+              "within_declared_band": false
+            },
+            {
+              "mean_before": 2.1910829569705577,
+              "mean_after": 2.2065547470064972,
+              "mean_shift": 0.01547179003593957,
+              "variance_before": 0.007896676174703906,
+              "variance_after": 0.004795770767042835,
+              "covariance": 0.005236764522436451,
+              "correlation": 0.8509649514726783,
+              "msd": 0.0024582941837900454,
+              "mean_shift_in_input_sd": 0.17410786844855464,
+              "order": 1.0,
+              "scaled_covariance": 1.3406117177437316,
+              "variance_before_ratio": 8.0861964028968,
+              "variance_after_ratio": 4.910869265451863,
+              "correlation_residual": 0.6232325129648615,
+              "msd_ratio": 1.6298064101883725,
+              "criteria": {
+                "input_scale": false,
+                "output_scale": false,
+                "correlation": false,
+                "increment": false,
+                "mean_shift": true
+              },
+              "within_declared_band": false,
+              "exact_haar_variance_before_ratio": 8.170845962463558,
+              "exact_haar_mean_difference": -0.08378301261772902
+            },
+            {
+              "mean_before": 1.959836744480957,
+              "mean_after": 1.9853574688030662,
+              "mean_shift": 0.025520724322109167,
+              "variance_before": 0.01943876544570752,
+              "variance_after": 0.010673256182491028,
+              "covariance": 0.012201248099375244,
+              "correlation": 0.8470741947284715,
+              "msd": 0.006360832799373148,
+              "mean_shift_in_input_sd": 0.18304533136163412,
+              "order": 2.0,
+              "scaled_covariance": 3.1235195134400624,
+              "variance_before_ratio": 9.95264790820225,
+              "variance_after_ratio": 5.4647071654354065,
+              "correlation_residual": 0.5970741947284715,
+              "msd_ratio": 2.1711642621860343,
+              "criteria": {
+                "input_scale": false,
+                "output_scale": false,
+                "correlation": false,
+                "increment": false,
+                "mean_shift": true
+              },
+              "within_declared_band": false
+            }
+          ]
+        },
+        "purity": {
+          "identity": {
+            "mean_before": 0.1423332930627924,
+            "mean_after": 0.1423332930627924,
+            "mean_shift": 0.0,
+            "variance_before": 0.0004693290629841855,
+            "variance_after": 0.0004693290629841855,
+            "covariance": 0.0004693290629841855,
+            "correlation": 1.0,
+            "msd": 0.0,
+            "mean_shift_in_input_sd": 0.0,
+            "exact_haar_variance_before_ratio": 15.927690522951325,
+            "exact_haar_variance_after_ratio": 15.927690522951325,
+            "exact_haar_correlation_residual": 0.0
+          },
+          "SWAP": {
+            "mean_before": 0.1423332930627924,
+            "mean_after": 0.13895716669149097,
+            "mean_shift": -0.003376126371301441,
+            "variance_before": 0.0004693290629841855,
+            "variance_after": 0.00022640320098437684,
+            "covariance": 0.00027475905367269277,
+            "correlation": 0.8428921442671671,
+            "msd": 0.00015761238589817388,
+            "mean_shift_in_input_sd": -0.15584036977010887,
+            "exact_haar_variance_before_ratio": 15.927690522951325,
+            "exact_haar_variance_after_ratio": 7.68347925388591,
+            "exact_haar_correlation_residual": 0.5898817636443296
+          },
+          "phaseSWAP": {
+            "mean_before": 0.1423332930627924,
+            "mean_after": 0.1380914890102891,
+            "mean_shift": -0.004241804052503323,
+            "variance_before": 0.0004693290629841855,
+            "variance_after": 0.00022663962822666036,
+            "covariance": 0.0002758768132796296,
+            "correlation": 0.8458796012454043,
+            "msd": 0.0001622079662714197,
+            "mean_shift_in_input_sd": -0.19579963524281302,
+            "exact_haar_variance_before_ratio": 15.927690522951325,
+            "exact_haar_variance_after_ratio": 7.691502920526844,
+            "exact_haar_correlation_residual": 0.6007738726794681
+          }
+        },
+        "probe_pair_correlation_difference": [
+          -0.06201524663704239,
+          -0.03847851512327094,
+          -0.01403056655065793
+        ]
+      },
+      "cohort_sha256": "60e6a32a15ed720511ce800d2ba8e502bc5c1a281b5a8f5d28e66333356267ff"
+    },
+    {
+      "N": 10,
+      "state_count": 1024,
+      "eigenvectors_checked": 1024,
+      "entropy_anchor_count": 48,
+      "own_gate_anchor_count": 16,
+      "diagnostics": {
+        "eigen_residual_max": 2.5292943271003703e-14,
+        "orthogonality_max_entry": 2.4868995751603507e-14,
+        "unitarity_frobenius_relative": 1.239615969034832e-15,
+        "minimum_eigenphase_gap": 0.0006387480619594044,
+        "mean_circular_gap_ratio": 0.6043001463737613,
+        "scaled_computational_ipr": 2.039227805873298
+      },
+      "max_gate_seed_error": 0.0,
+      "max_entropy_anchor_error": 4.884981308350689e-15,
+      "max_purity_anchor_error": 8.326672684688674e-17,
+      "max_smallest_probability_anchor_error": 1.917682592583736e-17,
+      "max_own_gate_spectrum_change": 6.522560269672795e-16,
+      "max_own_gate_entropy_change": 1.7763568394002505e-15,
+      "max_summary_error": [
+        2.581934666068264e-12,
+        "/entropy/phaseSWAP/1/exact_haar_variance_before_ratio"
+      ],
+      "max_benchmark_error": [
+        8.881784197001252e-16,
+        "/von_neumann_mean"
+      ],
+      "max_diagnostics_difference": [
+        1.3128068543319262e-17,
+        "/eigen_residual_max"
+      ],
+      "full_saved_summary_recomputed": {
+        "entropy": {
+          "identity": [
+            {
+              "mean_before": 3.1156398870663202,
+              "mean_after": 3.1156398870663202,
+              "mean_shift": 0.0,
+              "variance_before": 0.0005192206701445728,
+              "variance_after": 0.0005192206701445728,
+              "covariance": 0.0005192206701445728,
+              "correlation": 1.0,
+              "msd": 0.0,
+              "mean_shift_in_input_sd": 0.0,
+              "order": 0.5,
+              "scaled_covariance": 0.5316819662280425,
+              "variance_before_ratio": 4.25345572982434,
+              "variance_after_ratio": 4.25345572982434,
+              "correlation_residual": 0.0,
+              "msd_ratio": null,
+              "criteria": {
+                "input_scale": false,
+                "output_scale": false,
+                "correlation": true,
+                "increment": true,
+                "mean_shift": true
+              },
+              "within_declared_band": null
+            },
+            {
+              "mean_before": 2.928577554990011,
+              "mean_after": 2.928577554990011,
+              "mean_shift": 0.0,
+              "variance_before": 0.0013846018236033902,
+              "variance_after": 0.0013846018236033902,
+              "covariance": 0.0013846018236033902,
+              "correlation": 1.0,
+              "msd": 0.0,
+              "mean_shift_in_input_sd": 0.0,
+              "order": 1.0,
+              "scaled_covariance": 1.4178322673698716,
+              "variance_before_ratio": 5.671329069479486,
+              "variance_after_ratio": 5.671329069479486,
+              "correlation_residual": 0.0,
+              "msd_ratio": null,
+              "criteria": {
+                "input_scale": false,
+                "output_scale": false,
+                "correlation": true,
+                "increment": true,
+                "mean_shift": true
+              },
+              "within_declared_band": null,
+              "exact_haar_variance_before_ratio": 5.686116441889946,
+              "exact_haar_mean_difference": -0.03772792185160245
+            },
+            {
+              "mean_before": 2.7158783570415026,
+              "mean_after": 2.7158783570415026,
+              "mean_shift": 0.0,
+              "variance_before": 0.003484370481984608,
+              "variance_after": 0.003484370481984608,
+              "covariance": 0.003484370481984608,
+              "correlation": 1.0,
+              "msd": 0.0,
+              "mean_shift_in_input_sd": 0.0,
+              "order": 2.0,
+              "scaled_covariance": 3.5679953735522387,
+              "variance_before_ratio": 7.1359907471044774,
+              "variance_after_ratio": 7.1359907471044774,
+              "correlation_residual": 0.0,
+              "msd_ratio": null,
+              "criteria": {
+                "input_scale": false,
+                "output_scale": false,
+                "correlation": true,
+                "increment": true,
+                "mean_shift": true
+              },
+              "within_declared_band": null
+            }
+          ],
+          "SWAP": [
+            {
+              "mean_before": 3.1156398870663202,
+              "mean_after": 3.1237616401052692,
+              "mean_shift": 0.00812175303894902,
+              "variance_before": 0.0005192206701445728,
+              "variance_after": 0.0002869535606546138,
+              "covariance": 0.0002550483199221717,
+              "correlation": 0.6607553243340494,
+              "msd": 0.00036204046338051673,
+              "mean_shift_in_input_sd": 0.3564296243765895,
+              "order": 0.5,
+              "scaled_covariance": 0.26116947960030384,
+              "variance_before_ratio": 4.25345572982434,
+              "variance_after_ratio": 2.350723568882596,
+              "correlation_residual": 0.4884331258278345,
+              "msd_ratio": 1.79166063814958,
+              "criteria": {
+                "input_scale": false,
+                "output_scale": false,
+                "correlation": false,
+                "increment": false,
+                "mean_shift": false
+              },
+              "within_declared_band": false
+            },
+            {
+              "mean_before": 2.928577554990011,
+              "mean_after": 2.9414282684466135,
+              "mean_shift": 0.012850713456602492,
+              "variance_before": 0.0013846018236033902,
+              "variance_after": 0.0007619396624017369,
+              "covariance": 0.0007567188876282307,
+              "correlation": 0.7367359016491739,
+              "msd": 0.0007982445470923648,
+              "mean_shift_in_input_sd": 0.34535423833712803,
+              "order": 1.0,
+              "scaled_covariance": 0.7748801409313082,
+              "variance_before_ratio": 5.671329069479486,
+              "variance_after_ratio": 3.120904857197514,
+              "correlation_residual": 0.5090034631413571,
+              "msd_ratio": 2.1168891637587066,
+              "criteria": {
+                "input_scale": false,
+                "output_scale": false,
+                "correlation": false,
+                "increment": false,
+                "mean_shift": false
+              },
+              "within_declared_band": false,
+              "exact_haar_variance_before_ratio": 5.686116441889946,
+              "exact_haar_mean_difference": -0.03772792185160245
+            },
+            {
+              "mean_before": 2.7158783570415026,
+              "mean_after": 2.735144427753415,
+              "mean_shift": 0.01926607071191233,
+              "variance_before": 0.003484370481984608,
+              "variance_after": 0.001895138788113745,
+              "covariance": 0.0019720062252578585,
+              "correlation": 0.7674067385407044,
+              "msd": 0.0018066783002590328,
+              "mean_shift_in_input_sd": 0.32638559801584294,
+              "order": 2.0,
+              "scaled_covariance": 2.019334374664047,
+              "variance_before_ratio": 7.1359907471044774,
+              "variance_after_ratio": 3.88124423805695,
+              "correlation_residual": 0.5174067385407044,
+              "msd_ratio": 2.466718105953666,
+              "criteria": {
+                "input_scale": false,
+                "output_scale": false,
+                "correlation": false,
+                "increment": false,
+                "mean_shift": false
+              },
+              "within_declared_band": false
+            }
+          ],
+          "phaseSWAP": [
+            {
+              "mean_before": 3.1156398870663202,
+              "mean_after": 3.1238735580573027,
+              "mean_shift": 0.008233670990982489,
+              "variance_before": 0.0005192206701445728,
+              "variance_after": 0.00031722925388513994,
+              "covariance": 0.0002829741359238933,
+              "correlation": 0.6972429647471436,
+              "msd": 0.0003382949901696738,
+              "mean_shift_in_input_sd": 0.3613412331651089,
+              "order": 0.5,
+              "scaled_covariance": 0.28976551518606675,
+              "variance_before_ratio": 4.25345572982434,
+              "variance_after_ratio": 2.5987420478270664,
+              "correlation_residual": 0.5249207662409288,
+              "msd_ratio": 1.67414938184178,
+              "criteria": {
+                "input_scale": false,
+                "output_scale": false,
+                "correlation": false,
+                "increment": false,
+                "mean_shift": false
+              },
+              "within_declared_band": false
+            },
+            {
+              "mean_before": 2.928577554990011,
+              "mean_after": 2.9414148647911333,
+              "mean_shift": 0.012837309801122299,
+              "variance_before": 0.0013846018236033902,
+              "variance_after": 0.0008307972083296462,
+              "covariance": 0.0008265698366800695,
+              "correlation": 0.7706720150342705,
+              "msd": 0.0007270558815028903,
+              "mean_shift_in_input_sd": 0.34499402415564095,
+              "order": 1.0,
+              "scaled_covariance": 0.8464075127603912,
+              "variance_before_ratio": 5.671329069479486,
+              "variance_after_ratio": 3.4029453653182307,
+              "correlation_residual": 0.5429395765264537,
+              "msd_ratio": 1.9281017610539517,
+              "criteria": {
+                "input_scale": false,
+                "output_scale": false,
+                "correlation": false,
+                "increment": false,
+                "mean_shift": false
+              },
+              "within_declared_band": false,
+              "exact_haar_variance_before_ratio": 5.686116441889946,
+              "exact_haar_mean_difference": -0.03772792185160245
+            },
+            {
+              "mean_before": 2.7158783570415026,
+              "mean_after": 2.7346375694231604,
+              "mean_shift": 0.018759212381657786,
+              "variance_before": 0.003484370481984608,
+              "variance_after": 0.0020086541004679485,
+              "covariance": 0.0021107154759173897,
+              "correlation": 0.7978384340584058,
+              "msd": 0.0016235016797978938,
+              "mean_shift_in_input_sd": 0.31779893487611127,
+              "order": 2.0,
+              "scaled_covariance": 2.161372647339407,
+              "variance_before_ratio": 7.1359907471044774,
+              "variance_after_ratio": 4.113723597758359,
+              "correlation_residual": 0.5478384340584058,
+              "msd_ratio": 2.2166209601507245,
+              "criteria": {
+                "input_scale": false,
+                "output_scale": false,
+                "correlation": false,
+                "increment": false,
+                "mean_shift": false
+              },
+              "within_declared_band": false
+            }
+          ]
+        },
+        "purity": {
+          "identity": {
+            "mean_before": 0.06626408218686226,
+            "mean_after": 0.06626408218686226,
+            "mean_shift": 0.0,
+            "variance_before": 1.6120565012231973e-05,
+            "variance_after": 1.6120565012231973e-05,
+            "covariance": 1.6120565012231973e-05,
+            "correlation": 1.0,
+            "msd": 0.0,
+            "mean_shift_in_input_sd": 0.0,
+            "exact_haar_variance_before_ratio": 8.52637700149321,
+            "exact_haar_variance_after_ratio": 8.52637700149321,
+            "exact_haar_correlation_residual": 0.0
+          },
+          "SWAP": {
+            "mean_before": 0.06626408218686226,
+            "mean_after": 0.06494701439915868,
+            "mean_shift": -0.001317067787703588,
+            "variance_before": 1.6120565012231973e-05,
+            "variance_after": 8.349793065287665e-06,
+            "covariance": 8.951324157114995e-06,
+            "correlation": 0.7715415137069754,
+            "msd": 8.302377320696022e-06,
+            "mean_shift_in_input_sd": -0.32803334942584983,
+            "exact_haar_variance_before_ratio": 8.52637700149321,
+            "exact_haar_variance_after_ratio": 4.416314409890472,
+            "exact_haar_correlation_residual": 0.5208040759484422
+          },
+          "phaseSWAP": {
+            "mean_before": 0.06626408218686226,
+            "mean_after": 0.06498360264873934,
+            "mean_shift": -0.0012804795381229223,
+            "variance_before": 1.6120565012231973e-05,
+            "variance_after": 8.827050013861764e-06,
+            "covariance": 9.554298607717992e-06,
+            "correlation": 0.8009416666439182,
+            "msd": 7.478645658209252e-06,
+            "mean_shift_in_input_sd": -0.3189205564689273,
+            "exact_haar_variance_before_ratio": 8.52637700149321,
+            "exact_haar_variance_after_ratio": 4.668741832070609,
+            "exact_haar_correlation_residual": 0.5521630852572581
+          }
+        },
+        "probe_pair_correlation_difference": [
+          -0.03648764041309427,
+          -0.03393611338509661,
+          -0.030431695517701418
+        ]
+      },
+      "cohort_sha256": "821196f445d49babb1f4431cec0e78aa09875e804683abc8ed5b88db78cad60b"
+    }
+  ],
+  "audit_source_sha256": "3505b022bd5b120084af919d1910bdac21b78cd79989718c600ffa1ed03dc209"
+}

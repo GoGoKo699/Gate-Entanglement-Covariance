@@ -1,0 +1,1826 @@
+{
+  "method": "Exact complex-Haar four-copy moment, 24 permutations; active traces in floating point and scalar sums at 60 decimal digits.",
+  "limitation": "The purity covariance is exact up to floating-point active traces. The Renyi-2 delta-method column is an asymptotic transformation, not the exact finite-d logarithmic entropy covariance.",
+  "results": {
+    "identity": {
+      "operator_weights": [
+        1.0,
+        2.8135104890695073e-34,
+        0.0,
+        0.0
+      ],
+      "predicted_limiting_purity_correlation": 1.0,
+      "terms": [
+        {
+          "permutation": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "nr": 2,
+          "nc": 4,
+          "active_real": 64.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            0,
+            1,
+            3,
+            2
+          ],
+          "nr": 3,
+          "nc": 3,
+          "active_real": 64.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            0,
+            2,
+            1,
+            3
+          ],
+          "nr": 1,
+          "nc": 3,
+          "active_real": 16.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            0,
+            2,
+            3,
+            1
+          ],
+          "nr": 2,
+          "nc": 2,
+          "active_real": 16.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            0,
+            3,
+            1,
+            2
+          ],
+          "nr": 2,
+          "nc": 2,
+          "active_real": 16.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            0,
+            3,
+            2,
+            1
+          ],
+          "nr": 1,
+          "nc": 3,
+          "active_real": 16.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            1,
+            0,
+            2,
+            3
+          ],
+          "nr": 3,
+          "nc": 3,
+          "active_real": 64.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            1,
+            0,
+            3,
+            2
+          ],
+          "nr": 4,
+          "nc": 2,
+          "active_real": 64.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            1,
+            2,
+            0,
+            3
+          ],
+          "nr": 2,
+          "nc": 2,
+          "active_real": 16.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            1,
+            2,
+            3,
+            0
+          ],
+          "nr": 3,
+          "nc": 1,
+          "active_real": 16.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            1,
+            3,
+            0,
+            2
+          ],
+          "nr": 3,
+          "nc": 1,
+          "active_real": 16.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            1,
+            3,
+            2,
+            0
+          ],
+          "nr": 2,
+          "nc": 2,
+          "active_real": 16.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            2,
+            0,
+            1,
+            3
+          ],
+          "nr": 2,
+          "nc": 2,
+          "active_real": 16.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            2,
+            0,
+            3,
+            1
+          ],
+          "nr": 3,
+          "nc": 1,
+          "active_real": 16.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            2,
+            1,
+            0,
+            3
+          ],
+          "nr": 1,
+          "nc": 3,
+          "active_real": 16.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            2,
+            1,
+            3,
+            0
+          ],
+          "nr": 2,
+          "nc": 2,
+          "active_real": 16.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            2,
+            3,
+            0,
+            1
+          ],
+          "nr": 2,
+          "nc": 2,
+          "active_real": 16.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            2,
+            3,
+            1,
+            0
+          ],
+          "nr": 1,
+          "nc": 1,
+          "active_real": 4.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            3,
+            0,
+            1,
+            2
+          ],
+          "nr": 3,
+          "nc": 1,
+          "active_real": 16.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            3,
+            0,
+            2,
+            1
+          ],
+          "nr": 2,
+          "nc": 2,
+          "active_real": 16.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            3,
+            1,
+            0,
+            2
+          ],
+          "nr": 2,
+          "nc": 2,
+          "active_real": 16.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            3,
+            1,
+            2,
+            0
+          ],
+          "nr": 1,
+          "nc": 3,
+          "active_real": 16.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            3,
+            2,
+            0,
+            1
+          ],
+          "nr": 1,
+          "nc": 1,
+          "active_real": 4.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            3,
+            2,
+            1,
+            0
+          ],
+          "nr": 2,
+          "nc": 2,
+          "active_real": 16.0,
+          "active_imag": 0.0
+        }
+      ],
+      "rows": [
+        {
+          "d": 2,
+          "purity_product_moment": 0.6571428571428571,
+          "purity_covariance": 0.017142857142857144,
+          "purity_correlation": 1.0,
+          "renyi2_delta_method_scaled_covariance": 0.06857142857142857
+        },
+        {
+          "d": 4,
+          "purity_product_moment": 0.2260061919504644,
+          "purity_covariance": 0.004552904753232562,
+          "purity_correlation": 1.0,
+          "renyi2_delta_method_scaled_covariance": 0.291385904206884
+        },
+        {
+          "d": 8,
+          "purity_product_moment": 0.06101659534495355,
+          "purity_covariance": 0.00042487936862219296,
+          "purity_correlation": 1.0,
+          "renyi2_delta_method_scaled_covariance": 0.4350764734691256
+        },
+        {
+          "d": 16,
+          "purity_product_moment": 0.015533107470488703,
+          "purity_covariance": 2.9466234436680974e-05,
+          "purity_correlation": 1.0,
+          "renyi2_delta_method_scaled_covariance": 0.4827747850105811
+        },
+        {
+          "d": 32,
+          "purity_product_moment": 0.003900522436782816,
+          "purity_covariance": 1.8906699773431093e-06,
+          "purity_correlation": 1.0,
+          "renyi2_delta_method_scaled_covariance": 0.49562779054063205
+        },
+        {
+          "d": 64,
+          "purity_product_moment": 0.0009762047850966508,
+          "purity_covariance": 1.1894768869725062e-07,
+          "purity_correlation": 1.0,
+          "renyi2_delta_method_scaled_covariance": 0.4989027664936331
+        },
+        {
+          "d": 128,
+          "purity_product_moment": 0.00024411827189504935,
+          "purity_covariance": 7.446489174951021e-09,
+          "purity_correlation": 1.0,
+          "renyi2_delta_method_scaled_covariance": 0.4997254293192603
+        },
+        {
+          "d": 256,
+          "purity_product_moment": 6.103375924482602e-05,
+          "purity_covariance": 4.6559734355695177e-10,
+          "purity_correlation": 1.0,
+          "renyi2_delta_method_scaled_covariance": 0.49993134092039604
+        },
+        {
+          "d": 1024,
+          "purity_product_moment": 3.814691808651585e-06,
+          "purity_covariance": 1.8189737911123273e-12,
+          "purity_correlation": 1.0,
+          "renyi2_delta_method_scaled_covariance": 0.4999957084869492
+        }
+      ]
+    },
+    "ZZ": {
+      "operator_weights": [
+        0.8692342793647942,
+        0.130765720635206,
+        0.0,
+        0.0
+      ],
+      "predicted_limiting_purity_correlation": 0.7726679061160779,
+      "terms": [
+        {
+          "permutation": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "nr": 2,
+          "nc": 4,
+          "active_real": 64.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            0,
+            1,
+            3,
+            2
+          ],
+          "nr": 3,
+          "nc": 3,
+          "active_real": 64.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            0,
+            2,
+            1,
+            3
+          ],
+          "nr": 1,
+          "nc": 3,
+          "active_real": 16.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            0,
+            2,
+            3,
+            1
+          ],
+          "nr": 2,
+          "nc": 2,
+          "active_real": 16.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            0,
+            3,
+            1,
+            2
+          ],
+          "nr": 2,
+          "nc": 2,
+          "active_real": 16.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            0,
+            3,
+            2,
+            1
+          ],
+          "nr": 1,
+          "nc": 3,
+          "active_real": 16.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            1,
+            0,
+            2,
+            3
+          ],
+          "nr": 3,
+          "nc": 3,
+          "active_real": 64.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            1,
+            0,
+            3,
+            2
+          ],
+          "nr": 4,
+          "nc": 2,
+          "active_real": 64.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            1,
+            2,
+            0,
+            3
+          ],
+          "nr": 2,
+          "nc": 2,
+          "active_real": 16.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            1,
+            2,
+            3,
+            0
+          ],
+          "nr": 3,
+          "nc": 1,
+          "active_real": 16.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            1,
+            3,
+            0,
+            2
+          ],
+          "nr": 3,
+          "nc": 1,
+          "active_real": 16.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            1,
+            3,
+            2,
+            0
+          ],
+          "nr": 2,
+          "nc": 2,
+          "active_real": 16.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            2,
+            0,
+            1,
+            3
+          ],
+          "nr": 2,
+          "nc": 2,
+          "active_real": 16.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            2,
+            0,
+            3,
+            1
+          ],
+          "nr": 3,
+          "nc": 1,
+          "active_real": 16.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            2,
+            1,
+            0,
+            3
+          ],
+          "nr": 1,
+          "nc": 3,
+          "active_real": 16.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            2,
+            1,
+            3,
+            0
+          ],
+          "nr": 2,
+          "nc": 2,
+          "active_real": 16.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            2,
+            3,
+            0,
+            1
+          ],
+          "nr": 2,
+          "nc": 2,
+          "active_real": 12.362686497857238,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            2,
+            3,
+            1,
+            0
+          ],
+          "nr": 1,
+          "nc": 1,
+          "active_real": 4.000000000000001,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            3,
+            0,
+            1,
+            2
+          ],
+          "nr": 3,
+          "nc": 1,
+          "active_real": 16.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            3,
+            0,
+            2,
+            1
+          ],
+          "nr": 2,
+          "nc": 2,
+          "active_real": 16.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            3,
+            1,
+            0,
+            2
+          ],
+          "nr": 2,
+          "nc": 2,
+          "active_real": 16.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            3,
+            1,
+            2,
+            0
+          ],
+          "nr": 1,
+          "nc": 3,
+          "active_real": 16.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            3,
+            2,
+            0,
+            1
+          ],
+          "nr": 1,
+          "nc": 1,
+          "active_real": 4.000000000000001,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            3,
+            2,
+            1,
+            0
+          ],
+          "nr": 2,
+          "nc": 2,
+          "active_real": 12.362686497857238,
+          "active_imag": 0.0
+        }
+      ],
+      "rows": [
+        {
+          "d": 2,
+          "purity_product_moment": 0.6484825868996601,
+          "purity_covariance": 0.008482586899660093,
+          "purity_correlation": 0.4948175691468388,
+          "renyi2_delta_method_scaled_covariance": 0.03393034759864037
+        },
+        {
+          "d": 4,
+          "purity_product_moment": 0.22475496611553397,
+          "purity_covariance": 0.003301678918302132,
+          "purity_correlation": 0.7251807576158802,
+          "renyi2_delta_method_scaled_covariance": 0.21130745077133645
+        },
+        {
+          "d": 8,
+          "purity_product_moment": 0.060915358494182434,
+          "purity_covariance": 0.00032364251785107616,
+          "purity_correlation": 0.7617280144728853,
+          "renyi2_delta_method_scaled_covariance": 0.331409938279502
+        },
+        {
+          "d": 16,
+          "purity_product_moment": 0.015526329836379957,
+          "purity_covariance": 2.2688600327934408e-05,
+          "purity_correlation": 0.7699864187495419,
+          "renyi2_delta_method_scaled_covariance": 0.37173002777287734
+        },
+        {
+          "d": 32,
+          "purity_product_moment": 0.0039000913655568427,
+          "purity_covariance": 1.4595987513698165e-06,
+          "purity_correlation": 0.7720008086344811,
+          "renyi2_delta_method_scaled_covariance": 0.38262505507908917
+        },
+        {
+          "d": 64,
+          "purity_product_moment": 0.0009761777246563083,
+          "purity_covariance": 9.188724835473464e-08,
+          "purity_correlation": 0.7725013353442196,
+          "renyi2_delta_method_scaled_covariance": 0.3854030533232569
+        },
+        {
+          "d": 128,
+          "purity_product_moment": 0.00024411657875907588,
+          "purity_covariance": 5.753353201497518e-09,
+          "purity_correlation": 0.7726262761317128,
+          "renyi2_delta_method_scaled_covariance": 0.38610099754326155
+        },
+        {
+          "d": 256,
+          "purity_product_moment": 6.103365339476167e-05,
+          "purity_covariance": 3.5974727920652437e-10,
+          "purity_correlation": 0.7726574994140192,
+          "renyi2_delta_method_scaled_covariance": 0.38627569975425075
+        },
+        {
+          "d": 1024,
+          "purity_product_moment": 3.8146913951392813e-06,
+          "purity_covariance": 1.4054614873920988e-12,
+          "purity_correlation": 0.7726672557127059,
+          "renyi2_delta_method_scaled_covariance": 0.38633031194474116
+        }
+      ]
+    },
+    "phaseSWAP": {
+      "operator_weights": [
+        0.25,
+        0.25,
+        0.25,
+        0.25
+      ],
+      "predicted_limiting_purity_correlation": 0.25,
+      "terms": [
+        {
+          "permutation": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "nr": 2,
+          "nc": 4,
+          "active_real": 64.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            0,
+            1,
+            3,
+            2
+          ],
+          "nr": 3,
+          "nc": 3,
+          "active_real": 64.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            0,
+            2,
+            1,
+            3
+          ],
+          "nr": 1,
+          "nc": 3,
+          "active_real": 16.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            0,
+            2,
+            3,
+            1
+          ],
+          "nr": 2,
+          "nc": 2,
+          "active_real": 16.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            0,
+            3,
+            1,
+            2
+          ],
+          "nr": 2,
+          "nc": 2,
+          "active_real": 16.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            0,
+            3,
+            2,
+            1
+          ],
+          "nr": 1,
+          "nc": 3,
+          "active_real": 16.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            1,
+            0,
+            2,
+            3
+          ],
+          "nr": 3,
+          "nc": 3,
+          "active_real": 64.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            1,
+            0,
+            3,
+            2
+          ],
+          "nr": 4,
+          "nc": 2,
+          "active_real": 64.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            1,
+            2,
+            0,
+            3
+          ],
+          "nr": 2,
+          "nc": 2,
+          "active_real": 16.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            1,
+            2,
+            3,
+            0
+          ],
+          "nr": 3,
+          "nc": 1,
+          "active_real": 16.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            1,
+            3,
+            0,
+            2
+          ],
+          "nr": 3,
+          "nc": 1,
+          "active_real": 16.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            1,
+            3,
+            2,
+            0
+          ],
+          "nr": 2,
+          "nc": 2,
+          "active_real": 16.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            2,
+            0,
+            1,
+            3
+          ],
+          "nr": 2,
+          "nc": 2,
+          "active_real": 16.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            2,
+            0,
+            3,
+            1
+          ],
+          "nr": 3,
+          "nc": 1,
+          "active_real": 16.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            2,
+            1,
+            0,
+            3
+          ],
+          "nr": 1,
+          "nc": 3,
+          "active_real": 16.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            2,
+            1,
+            3,
+            0
+          ],
+          "nr": 2,
+          "nc": 2,
+          "active_real": 16.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            2,
+            3,
+            0,
+            1
+          ],
+          "nr": 2,
+          "nc": 2,
+          "active_real": 4.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            2,
+            3,
+            1,
+            0
+          ],
+          "nr": 1,
+          "nc": 1,
+          "active_real": 8.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            3,
+            0,
+            1,
+            2
+          ],
+          "nr": 3,
+          "nc": 1,
+          "active_real": 16.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            3,
+            0,
+            2,
+            1
+          ],
+          "nr": 2,
+          "nc": 2,
+          "active_real": 16.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            3,
+            1,
+            0,
+            2
+          ],
+          "nr": 2,
+          "nc": 2,
+          "active_real": 16.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            3,
+            1,
+            2,
+            0
+          ],
+          "nr": 1,
+          "nc": 3,
+          "active_real": 16.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            3,
+            2,
+            0,
+            1
+          ],
+          "nr": 1,
+          "nc": 1,
+          "active_real": 8.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            3,
+            2,
+            1,
+            0
+          ],
+          "nr": 2,
+          "nc": 2,
+          "active_real": 4.0,
+          "active_imag": 0.0
+        }
+      ],
+      "rows": [
+        {
+          "d": 2,
+          "purity_product_moment": 0.638095238095238,
+          "purity_covariance": -0.0019047619047619048,
+          "purity_correlation": -0.1111111111111111,
+          "renyi2_delta_method_scaled_covariance": -0.007619047619047619
+        },
+        {
+          "d": 4,
+          "purity_product_moment": 0.2222222222222222,
+          "purity_covariance": 0.0007689350249903883,
+          "purity_correlation": 0.1688888888888889,
+          "renyi2_delta_method_scaled_covariance": 0.049211841599384853
+        },
+        {
+          "d": 8,
+          "purity_product_moment": 0.06068955919702188,
+          "purity_covariance": 9.784322069052264e-05,
+          "purity_correlation": 0.23028470647518268,
+          "renyi2_delta_method_scaled_covariance": 0.10019145798709518
+        },
+        {
+          "d": 16,
+          "purity_product_moment": 0.015510863578911719,
+          "purity_covariance": 7.222342859697368e-06,
+          "purity_correlation": 0.24510572856593618,
+          "renyi2_delta_method_scaled_covariance": 0.11833086541328168
+        },
+        {
+          "d": 32,
+          "purity_product_moment": 0.0038991021250003068,
+          "purity_covariance": 4.703581948337675e-07,
+          "purity_correlation": 0.2487785813866601,
+          "renyi2_delta_method_scaled_covariance": 0.12330157862650315
+        },
+        {
+          "d": 64,
+          "purity_product_moment": 0.0009761155380248562,
+          "purity_covariance": 2.9700616902677916e-08,
+          "purity_correlation": 0.24969477951162933,
+          "renyi2_delta_method_scaled_covariance": 0.12457341627736959
+        },
+        {
+          "d": 128,
+          "purity_product_moment": 0.00024411268646002527,
+          "purity_covariance": 1.861054150894198e-09,
+          "purity_correlation": 0.24992370326066293,
+          "renyi2_delta_method_scaled_covariance": 0.12489322990899421
+        },
+        {
+          "d": 256,
+          "purity_product_moment": 6.103341003793771e-05,
+          "purity_covariance": 1.163904552433668e-10,
+          "purity_correlation": 0.249980926339048,
+          "renyi2_delta_method_scaled_covariance": 0.12497329970920303
+        },
+        {
+          "d": 1024,
+          "purity_product_moment": 3.8146904444190735e-06,
+          "purity_covariance": 4.547412793911076e-13,
+          "purity_correlation": 0.24999880790642237,
+          "renyi2_delta_method_scaled_covariance": 0.12499833108006438
+        }
+      ]
+    },
+    "SWAP": {
+      "operator_weights": [
+        0.25,
+        0.25,
+        0.25,
+        0.25
+      ],
+      "predicted_limiting_purity_correlation": 0.25,
+      "terms": [
+        {
+          "permutation": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "nr": 2,
+          "nc": 4,
+          "active_real": 64.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            0,
+            1,
+            3,
+            2
+          ],
+          "nr": 3,
+          "nc": 3,
+          "active_real": 64.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            0,
+            2,
+            1,
+            3
+          ],
+          "nr": 1,
+          "nc": 3,
+          "active_real": 16.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            0,
+            2,
+            3,
+            1
+          ],
+          "nr": 2,
+          "nc": 2,
+          "active_real": 16.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            0,
+            3,
+            1,
+            2
+          ],
+          "nr": 2,
+          "nc": 2,
+          "active_real": 16.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            0,
+            3,
+            2,
+            1
+          ],
+          "nr": 1,
+          "nc": 3,
+          "active_real": 16.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            1,
+            0,
+            2,
+            3
+          ],
+          "nr": 3,
+          "nc": 3,
+          "active_real": 64.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            1,
+            0,
+            3,
+            2
+          ],
+          "nr": 4,
+          "nc": 2,
+          "active_real": 64.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            1,
+            2,
+            0,
+            3
+          ],
+          "nr": 2,
+          "nc": 2,
+          "active_real": 16.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            1,
+            2,
+            3,
+            0
+          ],
+          "nr": 3,
+          "nc": 1,
+          "active_real": 16.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            1,
+            3,
+            0,
+            2
+          ],
+          "nr": 3,
+          "nc": 1,
+          "active_real": 16.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            1,
+            3,
+            2,
+            0
+          ],
+          "nr": 2,
+          "nc": 2,
+          "active_real": 16.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            2,
+            0,
+            1,
+            3
+          ],
+          "nr": 2,
+          "nc": 2,
+          "active_real": 16.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            2,
+            0,
+            3,
+            1
+          ],
+          "nr": 3,
+          "nc": 1,
+          "active_real": 16.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            2,
+            1,
+            0,
+            3
+          ],
+          "nr": 1,
+          "nc": 3,
+          "active_real": 16.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            2,
+            1,
+            3,
+            0
+          ],
+          "nr": 2,
+          "nc": 2,
+          "active_real": 16.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            2,
+            3,
+            0,
+            1
+          ],
+          "nr": 2,
+          "nc": 2,
+          "active_real": 4.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            2,
+            3,
+            1,
+            0
+          ],
+          "nr": 1,
+          "nc": 1,
+          "active_real": 16.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            3,
+            0,
+            1,
+            2
+          ],
+          "nr": 3,
+          "nc": 1,
+          "active_real": 16.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            3,
+            0,
+            2,
+            1
+          ],
+          "nr": 2,
+          "nc": 2,
+          "active_real": 16.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            3,
+            1,
+            0,
+            2
+          ],
+          "nr": 2,
+          "nc": 2,
+          "active_real": 16.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            3,
+            1,
+            2,
+            0
+          ],
+          "nr": 1,
+          "nc": 3,
+          "active_real": 16.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            3,
+            2,
+            0,
+            1
+          ],
+          "nr": 1,
+          "nc": 1,
+          "active_real": 16.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            3,
+            2,
+            1,
+            0
+          ],
+          "nr": 2,
+          "nc": 2,
+          "active_real": 4.0,
+          "active_imag": 0.0
+        }
+      ],
+      "rows": [
+        {
+          "d": 2,
+          "purity_product_moment": 0.6571428571428571,
+          "purity_covariance": 0.017142857142857144,
+          "purity_correlation": 1.0,
+          "renyi2_delta_method_scaled_covariance": 0.06857142857142857
+        },
+        {
+          "d": 4,
+          "purity_product_moment": 0.22291021671826625,
+          "purity_covariance": 0.0014569295210344199,
+          "purity_correlation": 0.32,
+          "renyi2_delta_method_scaled_covariance": 0.09324348934620287
+        },
+        {
+          "d": 8,
+          "purity_product_moment": 0.060703475628848765,
+          "purity_covariance": 0.00011175965251740222,
+          "purity_correlation": 0.26303854875283444,
+          "renyi2_delta_method_scaled_covariance": 0.11444188417781988
+        },
+        {
+          "d": 16,
+          "purity_product_moment": 0.015511096499242368,
+          "purity_covariance": 7.455263190346411e-06,
+          "purity_correlation": 0.25301038062283737,
+          "renyi2_delta_method_scaled_covariance": 0.1221470321106356
+        },
+        {
+          "d": 32,
+          "purity_product_moment": 0.003899105828551239,
+          "purity_covariance": 4.7406174576599527e-07,
+          "purity_correlation": 0.2507374377585332,
+          "renyi2_delta_method_scaled_covariance": 0.12427244228208106
+        },
+        {
+          "d": 64,
+          "purity_product_moment": 0.0009761155961473387,
+          "purity_covariance": 2.9758739385123095e-08,
+          "purity_correlation": 0.25018341853506687,
+          "renyi2_delta_method_scaled_covariance": 0.12481719963797934
+        },
+        {
+          "d": 128,
+          "purity_product_moment": 0.00024411268736918698,
+          "purity_covariance": 1.8619633126137482e-09,
+          "purity_correlation": 0.2500457959271787,
+          "renyi2_delta_method_scaled_covariance": 0.12495424271918551
+        },
+        {
+          "d": 256,
+          "purity_product_moment": 6.103341005214726e-05,
+          "purity_covariance": 1.164046647971221e-10,
+          "purity_correlation": 0.2500114453141924,
+          "renyi2_delta_method_scaled_covariance": 0.12498855710137047
+        },
+        {
+          "d": 1024,
+          "purity_product_moment": 3.814690444422543e-06,
+          "purity_covariance": 4.5474474881820726e-13,
+          "purity_correlation": 0.25000071526051215,
+          "renyi2_delta_method_scaled_covariance": 0.12499928474892383
+        }
+      ]
+    },
+    "Cartan": {
+      "operator_weights": [
+        0.8142078815175638,
+        0.12301979188317579,
+        0.046126909919963044,
+        0.016645416679297545
+      ],
+      "predicted_limiting_purity_correlation": 0.6804731052354909,
+      "terms": [
+        {
+          "permutation": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "nr": 2,
+          "nc": 4,
+          "active_real": 64.00000000000001,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            0,
+            1,
+            3,
+            2
+          ],
+          "nr": 3,
+          "nc": 3,
+          "active_real": 64.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            0,
+            2,
+            1,
+            3
+          ],
+          "nr": 1,
+          "nc": 3,
+          "active_real": 16.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            0,
+            2,
+            3,
+            1
+          ],
+          "nr": 2,
+          "nc": 2,
+          "active_real": 16.000000000000004,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            0,
+            3,
+            1,
+            2
+          ],
+          "nr": 2,
+          "nc": 2,
+          "active_real": 16.000000000000004,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            0,
+            3,
+            2,
+            1
+          ],
+          "nr": 1,
+          "nc": 3,
+          "active_real": 16.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            1,
+            0,
+            2,
+            3
+          ],
+          "nr": 3,
+          "nc": 3,
+          "active_real": 64.00000000000001,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            1,
+            0,
+            3,
+            2
+          ],
+          "nr": 4,
+          "nc": 2,
+          "active_real": 64.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            1,
+            2,
+            0,
+            3
+          ],
+          "nr": 2,
+          "nc": 2,
+          "active_real": 16.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            1,
+            2,
+            3,
+            0
+          ],
+          "nr": 3,
+          "nc": 1,
+          "active_real": 16.000000000000004,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            1,
+            3,
+            0,
+            2
+          ],
+          "nr": 3,
+          "nc": 1,
+          "active_real": 16.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            1,
+            3,
+            2,
+            0
+          ],
+          "nr": 2,
+          "nc": 2,
+          "active_real": 16.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            2,
+            0,
+            1,
+            3
+          ],
+          "nr": 2,
+          "nc": 2,
+          "active_real": 16.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            2,
+            0,
+            3,
+            1
+          ],
+          "nr": 3,
+          "nc": 1,
+          "active_real": 16.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            2,
+            1,
+            0,
+            3
+          ],
+          "nr": 1,
+          "nc": 3,
+          "active_real": 16.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            2,
+            1,
+            3,
+            0
+          ],
+          "nr": 2,
+          "nc": 2,
+          "active_real": 16.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            2,
+            3,
+            0,
+            1
+          ],
+          "nr": 2,
+          "nc": 2,
+          "active_real": 10.88756968376785,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            2,
+            3,
+            1,
+            0
+          ],
+          "nr": 1,
+          "nc": 1,
+          "active_real": 4.482595906456906,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            3,
+            0,
+            1,
+            2
+          ],
+          "nr": 3,
+          "nc": 1,
+          "active_real": 16.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            3,
+            0,
+            2,
+            1
+          ],
+          "nr": 2,
+          "nc": 2,
+          "active_real": 16.000000000000004,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            3,
+            1,
+            0,
+            2
+          ],
+          "nr": 2,
+          "nc": 2,
+          "active_real": 16.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            3,
+            1,
+            2,
+            0
+          ],
+          "nr": 1,
+          "nc": 3,
+          "active_real": 16.000000000000004,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            3,
+            2,
+            0,
+            1
+          ],
+          "nr": 1,
+          "nc": 1,
+          "active_real": 4.482595906456906,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            3,
+            2,
+            1,
+            0
+          ],
+          "nr": 2,
+          "nc": 2,
+          "active_real": 10.88756968376785,
+          "active_imag": 0.0
+        }
+      ],
+      "rows": [
+        {
+          "d": 2,
+          "purity_product_moment": 0.6461194418814875,
+          "purity_covariance": 0.0061194418814875615,
+          "purity_correlation": 0.35696744308677447,
+          "renyi2_delta_method_scaled_covariance": 0.024477767525950246
+        },
+        {
+          "d": 4,
+          "purity_product_moment": 0.2242890329069082,
+          "purity_covariance": 0.002835745709676362,
+          "purity_correlation": 0.6228431876733163,
+          "renyi2_delta_method_scaled_covariance": 0.18148772541928718
+        },
+        {
+          "d": 8,
+          "purity_product_moment": 0.060875141270651544,
+          "purity_covariance": 0.0002834252943201807,
+          "purity_correlation": 0.6670723863087956,
+          "renyi2_delta_method_scaled_covariance": 0.29022750138386505
+        },
+        {
+          "d": 16,
+          "purity_product_moment": 0.015523595209611052,
+          "purity_covariance": 1.995397355902904e-05,
+          "purity_correlation": 0.6771809815708716,
+          "renyi2_delta_method_scaled_covariance": 0.3269259027911318
+        },
+        {
+          "d": 32,
+          "purity_product_moment": 0.0038999167675235953,
+          "purity_covariance": 1.2850007181221284e-06,
+          "purity_correlation": 0.6796536325857852,
+          "renyi2_delta_method_scaled_covariance": 0.33685522825140723
+        },
+        {
+          "d": 64,
+          "purity_product_moment": 0.0009761667537687725,
+          "purity_covariance": 8.091636081899165e-08,
+          "purity_correlation": 0.6802684583888176,
+          "renyi2_delta_method_scaled_covariance": 0.33938781584853994
+        },
+        {
+          "d": 128,
+          "purity_product_moment": 0.00024411589216061412,
+          "purity_covariance": 5.066754739743809e-09,
+          "purity_correlation": 0.6804219573416804,
+          "renyi2_delta_method_scaled_covariance": 0.34002415475082265
+        },
+        {
+          "d": 256,
+          "purity_product_moment": 6.103361046799945e-05,
+          "purity_covariance": 3.1682051698509886e-10,
+          "purity_correlation": 0.6804603191348437,
+          "renyi2_delta_method_scaled_covariance": 0.34018343978820303
+        },
+        {
+          "d": 1024,
+          "purity_product_moment": 3.8146912274390846e-06,
+          "purity_covariance": 1.237761290708828e-12,
+          "purity_correlation": 0.6804723062842594,
+          "renyi2_delta_method_scaled_covariance": 0.34023323288634655
+        }
+      ]
+    }
+  }
+}

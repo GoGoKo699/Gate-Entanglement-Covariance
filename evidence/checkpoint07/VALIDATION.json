@@ -1,0 +1,38 @@
+{
+  "checkpoint": 7,
+  "date": "2026-09-12",
+  "status": "passed",
+  "fresh_directory_reproduction": {
+    "pilot_d32": {
+      "orders": 0.0,
+      "base": 0.0,
+      "deltas": 0.0,
+      "purities": 0.0
+    },
+    "pilot_d64": {
+      "orders": 0.0,
+      "base": 0.0,
+      "deltas": 0.0,
+      "purities": 0.0
+    },
+    "pilot_frozen.json": true,
+    "pilot_summary.json": true,
+    "exact_purity.json": true,
+    "wick_numerical_arrays_identical": true,
+    "frozen_protocol_source_hashes_valid": true,
+    "independent_exact_rational_swap_audit": "passed, 18 saved rows verified; all moment/covariance/correlation errors zero"
+  },
+  "python": "3.12.14",
+  "numpy": "2.3.5",
+  "scipy": "1.17.0",
+  "matplotlib": "3.10.8",
+  "new_independent_haar_states": 192,
+  "new_pulse_evaluations": 384,
+  "inherited_campaigns_rerun": false,
+  "limitations": [
+    "Same runtime fresh-directory reproduction, not cross-platform verification.",
+    "Internal mathematical review, not external peer review.",
+    "No new tests of physically prepared-state universality."
+  ],
+  "independent_exact_rational_audit": "Standard-library integer active permutations and Fraction arithmetic, independent of dense four-copy contraction implementation."
+}

@@ -1,0 +1,114 @@
+{
+  "orders": [
+    {
+      "alpha": 0.5,
+      "scaled_static_variance": 0.12499999998362919,
+      "scaled_swap_covariance": 0.021540274813276864,
+      "swap_correlation": 0.17232219852878333,
+      "scaled_swap_mean_square_increment": 0.20691945034070466,
+      "scope": "asymptotic complex Haar, fixed boundary, natural logarithms",
+      "series_cutoff": 131072
+    },
+    {
+      "alpha": 1,
+      "scaled_static_variance": 0.24999999999999992,
+      "scaled_swap_covariance": 0.0569331096269542,
+      "swap_correlation": 0.22773243850781688,
+      "scaled_swap_mean_square_increment": 0.38613378074609145,
+      "scope": "asymptotic complex Haar, fixed boundary, natural logarithms",
+      "series_cutoff": 131072
+    },
+    {
+      "alpha": 2,
+      "scaled_static_variance": 0.5,
+      "scaled_swap_covariance": 0.125,
+      "swap_correlation": 0.25,
+      "scaled_swap_mean_square_increment": 0.75,
+      "scope": "asymptotic complex Haar, fixed boundary, natural logarithms",
+      "series_cutoff": 131072
+    }
+  ],
+  "sizes": [
+    {
+      "d": 16,
+      "N": 8,
+      "mean": 0.1245136186770428,
+      "variance": 2.9466234436680974e-05,
+      "variance_rational": "21675/735587713",
+      "scaled_variance": 1.9310991400423243,
+      "gate_rows": {
+        "identity": {
+          "correlation": 1.0,
+          "correlation_rational": "1",
+          "covariance": 2.9466234436680974e-05,
+          "scaled_covariance": 1.9310991400423243,
+          "mean_square_increment": 0.0,
+          "scaled_mean_square_increment": 0.0
+        },
+        "swap": {
+          "correlation": 0.25301038062283737,
+          "correlation_rational": "1828/7225",
+          "covariance": 7.455263190346411e-06,
+          "scaled_covariance": 0.4885881284425424,
+          "mean_square_increment": 4.4021942492669125e-05,
+          "scaled_mean_square_increment": 2.885022023199564
+        },
+        "phase_swap": {
+          "correlation": 0.24510572856593618,
+          "correlation_rational": "15938/65025",
+          "covariance": 7.222342859697368e-06,
+          "scaled_covariance": 0.4733234616531267,
+          "mean_square_increment": 4.448778315396721e-05,
+          "scaled_mean_square_increment": 2.915551356778395
+        }
+      },
+      "exact_Haar_von_Neumann_variance": 0.0009664453608574479,
+      "exact_Haar_von_Neumann_scaled_variance": 0.24741001237950666,
+      "exact_Haar_von_Neumann_mean": 2.274865969588287
+    },
+    {
+      "d": 32,
+      "N": 10,
+      "mean": 0.0624390243902439,
+      "variance": 1.8906699773431093e-06,
+      "variance_rational": "116281/61502536875",
+      "scaled_variance": 1.9825111621625282,
+      "gate_rows": {
+        "identity": {
+          "correlation": 1.0,
+          "correlation_rational": "1",
+          "covariance": 1.8906699773431093e-06,
+          "scaled_covariance": 1.9825111621625282,
+          "mean_square_increment": 0.0,
+          "scaled_mean_square_increment": 0.0
+        },
+        "swap": {
+          "correlation": 0.2507374377585332,
+          "correlation_rational": "29156/116281",
+          "covariance": 4.7406174576599527e-07,
+          "scaled_covariance": 0.49708976912832425,
+          "mean_square_increment": 2.833216463154228e-06,
+          "scaled_mean_square_increment": 2.970842786068408
+        },
+        "phase_swap": {
+          "correlation": 0.2487785813866601,
+          "correlation_rational": "260354/1046529",
+          "covariance": 4.703581948337675e-07,
+          "scaled_covariance": 0.4932063145060126,
+          "mean_square_increment": 2.8406235650186836e-06,
+          "scaled_mean_square_increment": 2.978609695313031
+        }
+      },
+      "exact_Haar_von_Neumann_variance": 0.000243505710400568,
+      "exact_Haar_von_Neumann_scaled_variance": 0.24934984745018163,
+      "exact_Haar_von_Neumann_mean": 2.966305476841614
+    }
+  ],
+  "notes": [
+    "SWAP and SWAP exp(-i pi ZZ/4) share all limiting entropy benchmarks.",
+    "They have different exact finite-d purity correlations.",
+    "Identity has correlation one and zero increment for every input ensemble.",
+    "Floquet complete-basis statistics are dependent population summaries, not iid estimates.",
+    "The entropy series truncation is numerical; purity fractions are exact."
+  ]
+}

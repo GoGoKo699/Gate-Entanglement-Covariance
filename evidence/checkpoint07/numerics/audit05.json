@@ -1,0 +1,355 @@
+{
+  "method": "Independent unordered-pair covariance, reduced-density commutator, and direct matrix exponential; no production import.",
+  "production_arrays": {
+    "observations": 2560,
+    "files": [
+      {
+        "file": "haar_d128_balanced.npz",
+        "samples": 256,
+        "max_covariance_error_in_rms_product": 1.4288657522182051e-15
+      },
+      {
+        "file": "haar_d128_shifted.npz",
+        "samples": 256,
+        "max_covariance_error_in_rms_product": 1.0382580841655447e-15
+      },
+      {
+        "file": "haar_d16_balanced.npz",
+        "samples": 256,
+        "max_covariance_error_in_rms_product": 1.9656648302235967e-15
+      },
+      {
+        "file": "haar_d16_shifted.npz",
+        "samples": 256,
+        "max_covariance_error_in_rms_product": 2.0855972688870603e-15
+      },
+      {
+        "file": "haar_d32_balanced.npz",
+        "samples": 256,
+        "max_covariance_error_in_rms_product": 1.6419532508219311e-15
+      },
+      {
+        "file": "haar_d32_shifted.npz",
+        "samples": 256,
+        "max_covariance_error_in_rms_product": 1.7124647893273298e-15
+      },
+      {
+        "file": "haar_d64_balanced.npz",
+        "samples": 256,
+        "max_covariance_error_in_rms_product": 1.3197678175372367e-15
+      },
+      {
+        "file": "haar_d64_shifted.npz",
+        "samples": 256,
+        "max_covariance_error_in_rms_product": 1.629991754813894e-15
+      },
+      {
+        "file": "haar_d8_balanced.npz",
+        "samples": 256,
+        "max_covariance_error_in_rms_product": 1.8285444510130835e-15
+      },
+      {
+        "file": "haar_d8_shifted.npz",
+        "samples": 256,
+        "max_covariance_error_in_rms_product": 2.0872609397276463e-15
+      }
+    ],
+    "min_probability": 1.8496330854192788e-09,
+    "max_normalization_error": 1.6653345369377348e-15,
+    "minimum_smallest_sv_over_machine_epsilon_times_largest_sv": 1109125304342.426,
+    "max_covariance_error_in_rms_product": 2.0872609397276463e-15
+  },
+  "commutator_checks": [
+    {
+      "file": "haar_d128_balanced.npz",
+      "index": 0,
+      "max_absolute_rate_error": 2.67841304690819e-15,
+      "max_error_in_conditional_rms": 2.9974575161611597e-13,
+      "max_spectrum_absolute_error": 2.0816681711721685e-16,
+      "derivative_trace_error": 0.0
+    },
+    {
+      "file": "haar_d128_balanced.npz",
+      "index": 18,
+      "max_absolute_rate_error": 7.219919107015471e-15,
+      "max_error_in_conditional_rms": 1.5277588391161442e-13,
+      "max_spectrum_absolute_error": 3.0184188481996443e-16,
+      "derivative_trace_error": 0.0
+    },
+    {
+      "file": "haar_d128_shifted.npz",
+      "index": 0,
+      "max_absolute_rate_error": 7.979727989493313e-17,
+      "max_error_in_conditional_rms": 1.0742184837820126e-14,
+      "max_spectrum_absolute_error": 1.3183898417423734e-16,
+      "derivative_trace_error": 0.0
+    },
+    {
+      "file": "haar_d128_shifted.npz",
+      "index": 92,
+      "max_absolute_rate_error": 1.2620113287731272e-16,
+      "max_error_in_conditional_rms": 1.4330502871095292e-14,
+      "max_spectrum_absolute_error": 1.6653345369377348e-16,
+      "derivative_trace_error": 0.0
+    },
+    {
+      "file": "haar_d16_balanced.npz",
+      "index": 0,
+      "max_absolute_rate_error": 2.498001805406602e-16,
+      "max_error_in_conditional_rms": 2.7196171632148404e-15,
+      "max_spectrum_absolute_error": 0.0,
+      "derivative_trace_error": 0.0
+    },
+    {
+      "file": "haar_d16_balanced.npz",
+      "index": 145,
+      "max_absolute_rate_error": 6.650235917504688e-14,
+      "max_error_in_conditional_rms": 2.1398718500943758e-13,
+      "max_spectrum_absolute_error": 0.0,
+      "derivative_trace_error": 0.0
+    },
+    {
+      "file": "haar_d16_shifted.npz",
+      "index": 0,
+      "max_absolute_rate_error": 5.898059818321144e-17,
+      "max_error_in_conditional_rms": 7.714558095134214e-16,
+      "max_spectrum_absolute_error": 0.0,
+      "derivative_trace_error": 0.0
+    },
+    {
+      "file": "haar_d16_shifted.npz",
+      "index": 192,
+      "max_absolute_rate_error": 2.0816681711721685e-16,
+      "max_error_in_conditional_rms": 2.634241559980732e-15,
+      "max_spectrum_absolute_error": 0.0,
+      "derivative_trace_error": 0.0
+    },
+    {
+      "file": "haar_d32_balanced.npz",
+      "index": 0,
+      "max_absolute_rate_error": 2.0469737016526324e-16,
+      "max_error_in_conditional_rms": 1.0801477856354637e-14,
+      "max_spectrum_absolute_error": 2.7755575615628914e-16,
+      "derivative_trace_error": 0.0
+    },
+    {
+      "file": "haar_d32_balanced.npz",
+      "index": 202,
+      "max_absolute_rate_error": 2.2599977445025843e-14,
+      "max_error_in_conditional_rms": 2.056952079383674e-13,
+      "max_spectrum_absolute_error": 2.914335439641036e-16,
+      "derivative_trace_error": 0.0
+    },
+    {
+      "file": "haar_d32_shifted.npz",
+      "index": 0,
+      "max_absolute_rate_error": 1.93421667571414e-16,
+      "max_error_in_conditional_rms": 9.591164568152504e-15,
+      "max_spectrum_absolute_error": 0.0,
+      "derivative_trace_error": 0.0
+    },
+    {
+      "file": "haar_d32_shifted.npz",
+      "index": 139,
+      "max_absolute_rate_error": 2.983724378680108e-16,
+      "max_error_in_conditional_rms": 1.3977947290747788e-14,
+      "max_spectrum_absolute_error": 1.8041124150158794e-16,
+      "derivative_trace_error": 0.0
+    },
+    {
+      "file": "haar_d64_balanced.npz",
+      "index": 0,
+      "max_absolute_rate_error": 5.646524914304507e-16,
+      "max_error_in_conditional_rms": 4.823299761187771e-14,
+      "max_spectrum_absolute_error": 2.706168622523819e-16,
+      "derivative_trace_error": 0.0
+    },
+    {
+      "file": "haar_d64_balanced.npz",
+      "index": 88,
+      "max_absolute_rate_error": 2.42861286636753e-14,
+      "max_error_in_conditional_rms": 4.854277362346295e-13,
+      "max_spectrum_absolute_error": 2.1510571102112408e-16,
+      "derivative_trace_error": 0.0
+    },
+    {
+      "file": "haar_d64_shifted.npz",
+      "index": 0,
+      "max_absolute_rate_error": 4.0592529337857286e-16,
+      "max_error_in_conditional_rms": 2.2627530472694624e-14,
+      "max_spectrum_absolute_error": 2.706168622523819e-16,
+      "derivative_trace_error": 0.0
+    },
+    {
+      "file": "haar_d64_shifted.npz",
+      "index": 24,
+      "max_absolute_rate_error": 1.3704315460216776e-16,
+      "max_error_in_conditional_rms": 1.2965909201538148e-14,
+      "max_spectrum_absolute_error": 2.2898349882893854e-16,
+      "derivative_trace_error": 0.0
+    },
+    {
+      "file": "haar_d8_balanced.npz",
+      "index": 0,
+      "max_absolute_rate_error": 4.440892098500626e-16,
+      "max_error_in_conditional_rms": 4.343317097303127e-15,
+      "max_spectrum_absolute_error": 0.0,
+      "derivative_trace_error": 0.0
+    },
+    {
+      "file": "haar_d8_balanced.npz",
+      "index": 247,
+      "max_absolute_rate_error": 1.0408340855860843e-14,
+      "max_error_in_conditional_rms": 3.60737443763142e-14,
+      "max_spectrum_absolute_error": 0.0,
+      "derivative_trace_error": 0.0
+    },
+    {
+      "file": "haar_d8_shifted.npz",
+      "index": 0,
+      "max_absolute_rate_error": 1.1102230246251565e-16,
+      "max_error_in_conditional_rms": 2.0689766019191374e-15,
+      "max_spectrum_absolute_error": 0.0,
+      "derivative_trace_error": 0.0
+    },
+    {
+      "file": "haar_d8_shifted.npz",
+      "index": 70,
+      "max_absolute_rate_error": 2.0816681711721685e-16,
+      "max_error_in_conditional_rms": 1.2325812647653953e-15,
+      "max_spectrum_absolute_error": 0.0,
+      "derivative_trace_error": 0.0
+    }
+  ],
+  "deterministic_pauli_orientation_design": {
+    "points": 36,
+    "max_absolute_covariance_error": 5.551115123125783e-17
+  },
+  "saved_orientation_recheck": [
+    {
+      "file": "orientation_a4_b16.npz",
+      "draws": 4000,
+      "max_absolute_z": 1.0675211067841257,
+      "max_absolute_mean_in_standard_errors": 1.2673262876463065,
+      "max_stored_covariance_difference": 6.938893903907228e-18
+    },
+    {
+      "file": "orientation_a8_b8.npz",
+      "draws": 4000,
+      "max_absolute_z": 1.7325991570805912,
+      "max_absolute_mean_in_standard_errors": 0.46083162576541875,
+      "max_stored_covariance_difference": 3.469446951953614e-18
+    }
+  ],
+  "direct_matrix_finite_pulses": [
+    {
+      "a": 8,
+      "b": 8,
+      "duration": 0.02,
+      "max_saved_entropy_change_error": 1.5543122344752192e-15
+    },
+    {
+      "a": 8,
+      "b": 8,
+      "duration": -0.02,
+      "max_saved_entropy_change_error": 2.4424906541753444e-15
+    },
+    {
+      "a": 8,
+      "b": 8,
+      "duration": 0.1,
+      "max_saved_entropy_change_error": 2.220446049250313e-15
+    },
+    {
+      "a": 8,
+      "b": 8,
+      "duration": -0.1,
+      "max_saved_entropy_change_error": 1.1102230246251565e-15
+    },
+    {
+      "a": 8,
+      "b": 8,
+      "duration": 0.035355339059327376,
+      "max_saved_entropy_change_error": 1.7763568394002505e-15
+    },
+    {
+      "a": 8,
+      "b": 8,
+      "duration": -0.035355339059327376,
+      "max_saved_entropy_change_error": 1.7763568394002505e-15
+    },
+    {
+      "a": 8,
+      "b": 8,
+      "duration": 0.17677669529663687,
+      "max_saved_entropy_change_error": 1.3322676295501878e-15
+    },
+    {
+      "a": 8,
+      "b": 8,
+      "duration": -0.17677669529663687,
+      "max_saved_entropy_change_error": 8.881784197001252e-16
+    },
+    {
+      "a": 4,
+      "b": 16,
+      "duration": 0.02,
+      "max_saved_entropy_change_error": 2.220446049250313e-16
+    },
+    {
+      "a": 4,
+      "b": 16,
+      "duration": -0.02,
+      "max_saved_entropy_change_error": 4.440892098500626e-16
+    },
+    {
+      "a": 4,
+      "b": 16,
+      "duration": 0.1,
+      "max_saved_entropy_change_error": 6.661338147750939e-16
+    },
+    {
+      "a": 4,
+      "b": 16,
+      "duration": -0.1,
+      "max_saved_entropy_change_error": 4.440892098500626e-16
+    },
+    {
+      "a": 4,
+      "b": 16,
+      "duration": 0.035355339059327376,
+      "max_saved_entropy_change_error": 8.881784197001252e-16
+    },
+    {
+      "a": 4,
+      "b": 16,
+      "duration": -0.035355339059327376,
+      "max_saved_entropy_change_error": 2.220446049250313e-16
+    },
+    {
+      "a": 4,
+      "b": 16,
+      "duration": 0.17677669529663687,
+      "max_saved_entropy_change_error": 6.661338147750939e-16
+    },
+    {
+      "a": 4,
+      "b": 16,
+      "duration": -0.17677669529663687,
+      "max_saved_entropy_change_error": 2.220446049250313e-16
+    }
+  ],
+  "interpretation": [
+    "The conditional mean rate is exactly zero; empirical second moments are appropriate without subtracting estimated sample means.",
+    "Fixed-spectrum orientation products have finite moments, so their reported conditional Monte Carlo standard errors are legitimate.",
+    "Across random balanced spectra, fourth rate moments can fail for alpha<=1/4; ordinary unconditional sample-variance error bars would be unjustified.",
+    "Finite-pulse entropy changes require no eigenvalue cutoffs. Dividing them by duration tests differentiability on the tested states and durations, not a uniform expansion over Haar states.",
+    "Changing the cut also changes the physical ZZ bond. An aspect-ratio comparison is valid; a locality or statewise protection claim would not follow.",
+    "The smallest sampled singular value is far above backward-error resolution; observed low-order statistics are not caused by clipped or numerically zero Schmidt probabilities."
+  ],
+  "provenance": {
+    "run_experiment.py": "9e8804adce66d03e14beb41c64b7d0afbfef2d85459a88e597a9913ec8c392e7",
+    "PROTOCOL.md": "547a624a388408cf227e77404392228920fb9e3d90984316aca8587caf90b27d",
+    "audit05.py": "0dea8e444b64ddfc6dc3ffd807ec513bcd74f8b6c68b925631b5226dc3404af6"
+  }
+}

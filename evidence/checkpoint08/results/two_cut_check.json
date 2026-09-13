@@ -1,0 +1,5039 @@
+{
+  "method": "Direct four-copy Haar contraction of purity sum and direct second-moment product-input entangling power. No fitted or sampled Haar moments.",
+  "protocol_sha256": "d9b3e2929ec8ae0a66e21d193ce2c2a51526eaa977a8684e3dc4ba9f96bd95d3",
+  "source_sha256": "f0402ba944f0fda15c3a67ca73c49190ded42b68b92d13885261c9314c2594bf",
+  "results": [
+    {
+      "q": 2,
+      "gate": "identity",
+      "entangling_power_direct": 0.0,
+      "operator_purity": 1.0,
+      "crossed_operator_purity": 0.25,
+      "ep_invariant_error": 0.0,
+      "terms": [
+        {
+          "permutation": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "nr": 2,
+          "nc": 4,
+          "active_real": 256.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            0,
+            1,
+            3,
+            2
+          ],
+          "nr": 3,
+          "nc": 3,
+          "active_real": 256.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            0,
+            2,
+            1,
+            3
+          ],
+          "nr": 1,
+          "nc": 3,
+          "active_real": 64.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            0,
+            2,
+            3,
+            1
+          ],
+          "nr": 2,
+          "nc": 2,
+          "active_real": 64.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            0,
+            3,
+            1,
+            2
+          ],
+          "nr": 2,
+          "nc": 2,
+          "active_real": 64.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            0,
+            3,
+            2,
+            1
+          ],
+          "nr": 1,
+          "nc": 3,
+          "active_real": 64.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            1,
+            0,
+            2,
+            3
+          ],
+          "nr": 3,
+          "nc": 3,
+          "active_real": 256.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            1,
+            0,
+            3,
+            2
+          ],
+          "nr": 4,
+          "nc": 2,
+          "active_real": 256.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            1,
+            2,
+            0,
+            3
+          ],
+          "nr": 2,
+          "nc": 2,
+          "active_real": 64.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            1,
+            2,
+            3,
+            0
+          ],
+          "nr": 3,
+          "nc": 1,
+          "active_real": 64.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            1,
+            3,
+            0,
+            2
+          ],
+          "nr": 3,
+          "nc": 1,
+          "active_real": 64.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            1,
+            3,
+            2,
+            0
+          ],
+          "nr": 2,
+          "nc": 2,
+          "active_real": 64.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            2,
+            0,
+            1,
+            3
+          ],
+          "nr": 2,
+          "nc": 2,
+          "active_real": 64.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            2,
+            0,
+            3,
+            1
+          ],
+          "nr": 3,
+          "nc": 1,
+          "active_real": 64.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            2,
+            1,
+            0,
+            3
+          ],
+          "nr": 1,
+          "nc": 3,
+          "active_real": 64.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            2,
+            1,
+            3,
+            0
+          ],
+          "nr": 2,
+          "nc": 2,
+          "active_real": 64.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            2,
+            3,
+            0,
+            1
+          ],
+          "nr": 2,
+          "nc": 2,
+          "active_real": 40.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            2,
+            3,
+            1,
+            0
+          ],
+          "nr": 1,
+          "nc": 1,
+          "active_real": 40.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            3,
+            0,
+            1,
+            2
+          ],
+          "nr": 3,
+          "nc": 1,
+          "active_real": 64.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            3,
+            0,
+            2,
+            1
+          ],
+          "nr": 2,
+          "nc": 2,
+          "active_real": 64.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            3,
+            1,
+            0,
+            2
+          ],
+          "nr": 2,
+          "nc": 2,
+          "active_real": 64.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            3,
+            1,
+            2,
+            0
+          ],
+          "nr": 1,
+          "nc": 3,
+          "active_real": 64.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            3,
+            2,
+            0,
+            1
+          ],
+          "nr": 1,
+          "nc": 1,
+          "active_real": 40.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            3,
+            2,
+            1,
+            0
+          ],
+          "nr": 2,
+          "nc": 2,
+          "active_real": 40.0,
+          "active_imag": 0.0
+        }
+      ],
+      "rows": [
+        {
+          "d": 2,
+          "spectator_dimension": 1,
+          "correlation_direct": 1.0,
+          "correlation_prediction": 1.0,
+          "error": 0.0
+        },
+        {
+          "d": 4,
+          "spectator_dimension": 2,
+          "correlation_direct": 1.0,
+          "correlation_prediction": 1.0,
+          "error": 0.0
+        },
+        {
+          "d": 8,
+          "spectator_dimension": 4,
+          "correlation_direct": 1.0,
+          "correlation_prediction": 1.0,
+          "error": 0.0
+        },
+        {
+          "d": 16,
+          "spectator_dimension": 8,
+          "correlation_direct": 1.0,
+          "correlation_prediction": 1.0,
+          "error": 0.0
+        },
+        {
+          "d": 32,
+          "spectator_dimension": 16,
+          "correlation_direct": 1.0,
+          "correlation_prediction": 1.0,
+          "error": 0.0
+        }
+      ]
+    },
+    {
+      "q": 2,
+      "gate": "SWAP",
+      "entangling_power_direct": 0.0,
+      "operator_purity": 0.25,
+      "crossed_operator_purity": 1.0,
+      "ep_invariant_error": 0.0,
+      "terms": [
+        {
+          "permutation": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "nr": 2,
+          "nc": 4,
+          "active_real": 256.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            0,
+            1,
+            3,
+            2
+          ],
+          "nr": 3,
+          "nc": 3,
+          "active_real": 256.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            0,
+            2,
+            1,
+            3
+          ],
+          "nr": 1,
+          "nc": 3,
+          "active_real": 64.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            0,
+            2,
+            3,
+            1
+          ],
+          "nr": 2,
+          "nc": 2,
+          "active_real": 64.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            0,
+            3,
+            1,
+            2
+          ],
+          "nr": 2,
+          "nc": 2,
+          "active_real": 64.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            0,
+            3,
+            2,
+            1
+          ],
+          "nr": 1,
+          "nc": 3,
+          "active_real": 64.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            1,
+            0,
+            2,
+            3
+          ],
+          "nr": 3,
+          "nc": 3,
+          "active_real": 256.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            1,
+            0,
+            3,
+            2
+          ],
+          "nr": 4,
+          "nc": 2,
+          "active_real": 256.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            1,
+            2,
+            0,
+            3
+          ],
+          "nr": 2,
+          "nc": 2,
+          "active_real": 64.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            1,
+            2,
+            3,
+            0
+          ],
+          "nr": 3,
+          "nc": 1,
+          "active_real": 64.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            1,
+            3,
+            0,
+            2
+          ],
+          "nr": 3,
+          "nc": 1,
+          "active_real": 64.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            1,
+            3,
+            2,
+            0
+          ],
+          "nr": 2,
+          "nc": 2,
+          "active_real": 64.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            2,
+            0,
+            1,
+            3
+          ],
+          "nr": 2,
+          "nc": 2,
+          "active_real": 64.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            2,
+            0,
+            3,
+            1
+          ],
+          "nr": 3,
+          "nc": 1,
+          "active_real": 64.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            2,
+            1,
+            0,
+            3
+          ],
+          "nr": 1,
+          "nc": 3,
+          "active_real": 64.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            2,
+            1,
+            3,
+            0
+          ],
+          "nr": 2,
+          "nc": 2,
+          "active_real": 64.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            2,
+            3,
+            0,
+            1
+          ],
+          "nr": 2,
+          "nc": 2,
+          "active_real": 40.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            2,
+            3,
+            1,
+            0
+          ],
+          "nr": 1,
+          "nc": 1,
+          "active_real": 40.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            3,
+            0,
+            1,
+            2
+          ],
+          "nr": 3,
+          "nc": 1,
+          "active_real": 64.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            3,
+            0,
+            2,
+            1
+          ],
+          "nr": 2,
+          "nc": 2,
+          "active_real": 64.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            3,
+            1,
+            0,
+            2
+          ],
+          "nr": 2,
+          "nc": 2,
+          "active_real": 64.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            3,
+            1,
+            2,
+            0
+          ],
+          "nr": 1,
+          "nc": 3,
+          "active_real": 64.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            3,
+            2,
+            0,
+            1
+          ],
+          "nr": 1,
+          "nc": 1,
+          "active_real": 40.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            3,
+            2,
+            1,
+            0
+          ],
+          "nr": 2,
+          "nc": 2,
+          "active_real": 40.0,
+          "active_imag": 0.0
+        }
+      ],
+      "rows": [
+        {
+          "d": 2,
+          "spectator_dimension": 1,
+          "correlation_direct": 1.0,
+          "correlation_prediction": 1.0,
+          "error": 0.0
+        },
+        {
+          "d": 4,
+          "spectator_dimension": 2,
+          "correlation_direct": 1.0,
+          "correlation_prediction": 1.0,
+          "error": 0.0
+        },
+        {
+          "d": 8,
+          "spectator_dimension": 4,
+          "correlation_direct": 1.0,
+          "correlation_prediction": 1.0,
+          "error": 0.0
+        },
+        {
+          "d": 16,
+          "spectator_dimension": 8,
+          "correlation_direct": 1.0,
+          "correlation_prediction": 1.0,
+          "error": 0.0
+        },
+        {
+          "d": 32,
+          "spectator_dimension": 16,
+          "correlation_direct": 1.0,
+          "correlation_prediction": 1.0,
+          "error": 0.0
+        }
+      ]
+    },
+    {
+      "q": 2,
+      "gate": "phaseSWAP",
+      "entangling_power_direct": 0.007519183821551811,
+      "operator_purity": 0.25,
+      "crossed_operator_purity": 0.9830818364015086,
+      "ep_invariant_error": 7.45931094670027e-17,
+      "terms": [
+        {
+          "permutation": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "nr": 2,
+          "nc": 4,
+          "active_real": 256.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            0,
+            1,
+            3,
+            2
+          ],
+          "nr": 3,
+          "nc": 3,
+          "active_real": 256.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            0,
+            2,
+            1,
+            3
+          ],
+          "nr": 1,
+          "nc": 3,
+          "active_real": 64.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            0,
+            2,
+            3,
+            1
+          ],
+          "nr": 2,
+          "nc": 2,
+          "active_real": 64.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            0,
+            3,
+            1,
+            2
+          ],
+          "nr": 2,
+          "nc": 2,
+          "active_real": 64.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            0,
+            3,
+            2,
+            1
+          ],
+          "nr": 1,
+          "nc": 3,
+          "active_real": 64.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            1,
+            0,
+            2,
+            3
+          ],
+          "nr": 3,
+          "nc": 3,
+          "active_real": 256.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            1,
+            0,
+            3,
+            2
+          ],
+          "nr": 4,
+          "nc": 2,
+          "active_real": 256.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            1,
+            2,
+            0,
+            3
+          ],
+          "nr": 2,
+          "nc": 2,
+          "active_real": 64.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            1,
+            2,
+            3,
+            0
+          ],
+          "nr": 3,
+          "nc": 1,
+          "active_real": 64.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            1,
+            3,
+            0,
+            2
+          ],
+          "nr": 3,
+          "nc": 1,
+          "active_real": 64.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            1,
+            3,
+            2,
+            0
+          ],
+          "nr": 2,
+          "nc": 2,
+          "active_real": 64.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            2,
+            0,
+            1,
+            3
+          ],
+          "nr": 2,
+          "nc": 2,
+          "active_real": 64.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            2,
+            0,
+            3,
+            1
+          ],
+          "nr": 3,
+          "nc": 1,
+          "active_real": 64.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            2,
+            1,
+            0,
+            3
+          ],
+          "nr": 1,
+          "nc": 3,
+          "active_real": 64.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            2,
+            1,
+            3,
+            0
+          ],
+          "nr": 2,
+          "nc": 2,
+          "active_real": 64.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            2,
+            3,
+            0,
+            1
+          ],
+          "nr": 2,
+          "nc": 2,
+          "active_real": 39.45861876484828,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            2,
+            3,
+            1,
+            0
+          ],
+          "nr": 1,
+          "nc": 1,
+          "active_real": 39.45861876484828,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            3,
+            0,
+            1,
+            2
+          ],
+          "nr": 3,
+          "nc": 1,
+          "active_real": 64.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            3,
+            0,
+            2,
+            1
+          ],
+          "nr": 2,
+          "nc": 2,
+          "active_real": 64.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            3,
+            1,
+            0,
+            2
+          ],
+          "nr": 2,
+          "nc": 2,
+          "active_real": 64.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            3,
+            1,
+            2,
+            0
+          ],
+          "nr": 1,
+          "nc": 3,
+          "active_real": 64.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            3,
+            2,
+            0,
+            1
+          ],
+          "nr": 1,
+          "nc": 1,
+          "active_real": 39.45861876484828,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            3,
+            2,
+            1,
+            0
+          ],
+          "nr": 2,
+          "nc": 2,
+          "active_real": 39.45861876484828,
+          "active_imag": 0.0
+        }
+      ],
+      "rows": [
+        {
+          "d": 2,
+          "spectator_dimension": 1,
+          "correlation_direct": 0.9624040808922417,
+          "correlation_prediction": 0.9624040808922409,
+          "error": 7.771561172376096e-16
+        },
+        {
+          "d": 4,
+          "spectator_dimension": 2,
+          "correlation_direct": 0.9806324053081245,
+          "correlation_prediction": 0.9806324053081241,
+          "error": 3.3306690738754696e-16
+        },
+        {
+          "d": 8,
+          "spectator_dimension": 4,
+          "correlation_direct": 0.9850831272480887,
+          "correlation_prediction": 0.9850831272480884,
+          "error": 2.220446049250313e-16
+        },
+        {
+          "d": 16,
+          "spectator_dimension": 8,
+          "correlation_direct": 0.9861252661284634,
+          "correlation_prediction": 0.9861252661284632,
+          "error": 2.220446049250313e-16
+        },
+        {
+          "d": 32,
+          "spectator_dimension": 16,
+          "correlation_direct": 0.9863807628169431,
+          "correlation_prediction": 0.9863807628169429,
+          "error": 2.220446049250313e-16
+        }
+      ]
+    },
+    {
+      "q": 2,
+      "gate": "generic_QR",
+      "entangling_power_direct": 0.13029897848896188,
+      "operator_purity": 0.6757923205259544,
+      "crossed_operator_purity": 0.2810349778738812,
+      "ep_invariant_error": 5.551115123125783e-17,
+      "terms": [
+        {
+          "permutation": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "nr": 2,
+          "nc": 4,
+          "active_real": 256.0000000000001,
+          "active_imag": -6.661338147750939e-16
+        },
+        {
+          "permutation": [
+            0,
+            1,
+            3,
+            2
+          ],
+          "nr": 3,
+          "nc": 3,
+          "active_real": 256.0000000000001,
+          "active_imag": -2.220446049250313e-16
+        },
+        {
+          "permutation": [
+            0,
+            2,
+            1,
+            3
+          ],
+          "nr": 1,
+          "nc": 3,
+          "active_real": 64.00000000000003,
+          "active_imag": -1.6653345369377348e-16
+        },
+        {
+          "permutation": [
+            0,
+            2,
+            3,
+            1
+          ],
+          "nr": 2,
+          "nc": 2,
+          "active_real": 64.00000000000003,
+          "active_imag": -5.551115123125783e-17
+        },
+        {
+          "permutation": [
+            0,
+            3,
+            1,
+            2
+          ],
+          "nr": 2,
+          "nc": 2,
+          "active_real": 64.00000000000003,
+          "active_imag": -5.551115123125783e-17
+        },
+        {
+          "permutation": [
+            0,
+            3,
+            2,
+            1
+          ],
+          "nr": 1,
+          "nc": 3,
+          "active_real": 64.00000000000003,
+          "active_imag": -1.6653345369377348e-16
+        },
+        {
+          "permutation": [
+            1,
+            0,
+            2,
+            3
+          ],
+          "nr": 3,
+          "nc": 3,
+          "active_real": 256.0000000000001,
+          "active_imag": -6.661338147750939e-16
+        },
+        {
+          "permutation": [
+            1,
+            0,
+            3,
+            2
+          ],
+          "nr": 4,
+          "nc": 2,
+          "active_real": 256.0000000000001,
+          "active_imag": -2.220446049250313e-16
+        },
+        {
+          "permutation": [
+            1,
+            2,
+            0,
+            3
+          ],
+          "nr": 2,
+          "nc": 2,
+          "active_real": 64.00000000000003,
+          "active_imag": -1.6653345369377348e-16
+        },
+        {
+          "permutation": [
+            1,
+            2,
+            3,
+            0
+          ],
+          "nr": 3,
+          "nc": 1,
+          "active_real": 64.00000000000003,
+          "active_imag": -5.551115123125783e-17
+        },
+        {
+          "permutation": [
+            1,
+            3,
+            0,
+            2
+          ],
+          "nr": 3,
+          "nc": 1,
+          "active_real": 64.00000000000003,
+          "active_imag": -5.551115123125783e-17
+        },
+        {
+          "permutation": [
+            1,
+            3,
+            2,
+            0
+          ],
+          "nr": 2,
+          "nc": 2,
+          "active_real": 64.00000000000003,
+          "active_imag": -1.6653345369377348e-16
+        },
+        {
+          "permutation": [
+            2,
+            0,
+            1,
+            3
+          ],
+          "nr": 2,
+          "nc": 2,
+          "active_real": 64.00000000000003,
+          "active_imag": -1.6653345369377348e-16
+        },
+        {
+          "permutation": [
+            2,
+            0,
+            3,
+            1
+          ],
+          "nr": 3,
+          "nc": 1,
+          "active_real": 64.00000000000003,
+          "active_imag": -5.551115123125783e-17
+        },
+        {
+          "permutation": [
+            2,
+            1,
+            0,
+            3
+          ],
+          "nr": 1,
+          "nc": 3,
+          "active_real": 64.00000000000003,
+          "active_imag": -1.6653345369377348e-16
+        },
+        {
+          "permutation": [
+            2,
+            1,
+            3,
+            0
+          ],
+          "nr": 2,
+          "nc": 2,
+          "active_real": 64.00000000000003,
+          "active_imag": -5.551115123125783e-17
+        },
+        {
+          "permutation": [
+            2,
+            3,
+            0,
+            1
+          ],
+          "nr": 2,
+          "nc": 2,
+          "active_real": 30.618473548794746,
+          "active_imag": -2.220446049250313e-16
+        },
+        {
+          "permutation": [
+            2,
+            3,
+            1,
+            0
+          ],
+          "nr": 1,
+          "nc": 1,
+          "active_real": 30.618473548794746,
+          "active_imag": -2.220446049250313e-16
+        },
+        {
+          "permutation": [
+            3,
+            0,
+            1,
+            2
+          ],
+          "nr": 3,
+          "nc": 1,
+          "active_real": 64.00000000000003,
+          "active_imag": -5.551115123125783e-17
+        },
+        {
+          "permutation": [
+            3,
+            0,
+            2,
+            1
+          ],
+          "nr": 2,
+          "nc": 2,
+          "active_real": 64.00000000000003,
+          "active_imag": -1.6653345369377348e-16
+        },
+        {
+          "permutation": [
+            3,
+            1,
+            0,
+            2
+          ],
+          "nr": 2,
+          "nc": 2,
+          "active_real": 64.00000000000003,
+          "active_imag": -5.551115123125783e-17
+        },
+        {
+          "permutation": [
+            3,
+            1,
+            2,
+            0
+          ],
+          "nr": 1,
+          "nc": 3,
+          "active_real": 64.00000000000003,
+          "active_imag": -1.6653345369377348e-16
+        },
+        {
+          "permutation": [
+            3,
+            2,
+            0,
+            1
+          ],
+          "nr": 1,
+          "nc": 1,
+          "active_real": 30.618473548794746,
+          "active_imag": -1.1102230246251565e-16
+        },
+        {
+          "permutation": [
+            3,
+            2,
+            1,
+            0
+          ],
+          "nr": 2,
+          "nc": 2,
+          "active_real": 30.618473548794746,
+          "active_imag": -1.1102230246251565e-16
+        }
+      ],
+      "rows": [
+        {
+          "d": 2,
+          "spectator_dimension": 1,
+          "correlation_direct": 0.348505107555206,
+          "correlation_prediction": 0.3485051075551906,
+          "error": 1.5376588891058418e-14
+        },
+        {
+          "d": 4,
+          "spectator_dimension": 2,
+          "correlation_direct": 0.6643814190436128,
+          "correlation_prediction": 0.664381419043583,
+          "error": 2.9753977059954195e-14
+        },
+        {
+          "d": 8,
+          "spectator_dimension": 4,
+          "correlation_direct": 0.7415074125130104,
+          "correlation_prediction": 0.7415074125129213,
+          "error": 8.915090887740007e-14
+        },
+        {
+          "d": 16,
+          "spectator_dimension": 8,
+          "correlation_direct": 0.7595665044012891,
+          "correlation_prediction": 0.7595665044009601,
+          "error": 3.290701044988964e-13
+        },
+        {
+          "d": 32,
+          "spectator_dimension": 16,
+          "correlation_direct": 0.7639939739662719,
+          "correlation_prediction": 0.7639939739649829,
+          "error": 1.2889689315898067e-12
+        }
+      ]
+    },
+    {
+      "q": 2,
+      "gate": "phaseSWAP_pi8",
+      "entangling_power_direct": 0.11111111111111116,
+      "operator_purity": 0.25,
+      "crossed_operator_purity": 0.75,
+      "ep_invariant_error": 5.551115123125783e-17,
+      "terms": [
+        {
+          "permutation": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "nr": 2,
+          "nc": 4,
+          "active_real": 256.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            0,
+            1,
+            3,
+            2
+          ],
+          "nr": 3,
+          "nc": 3,
+          "active_real": 256.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            0,
+            2,
+            1,
+            3
+          ],
+          "nr": 1,
+          "nc": 3,
+          "active_real": 64.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            0,
+            2,
+            3,
+            1
+          ],
+          "nr": 2,
+          "nc": 2,
+          "active_real": 64.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            0,
+            3,
+            1,
+            2
+          ],
+          "nr": 2,
+          "nc": 2,
+          "active_real": 64.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            0,
+            3,
+            2,
+            1
+          ],
+          "nr": 1,
+          "nc": 3,
+          "active_real": 64.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            1,
+            0,
+            2,
+            3
+          ],
+          "nr": 3,
+          "nc": 3,
+          "active_real": 256.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            1,
+            0,
+            3,
+            2
+          ],
+          "nr": 4,
+          "nc": 2,
+          "active_real": 256.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            1,
+            2,
+            0,
+            3
+          ],
+          "nr": 2,
+          "nc": 2,
+          "active_real": 64.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            1,
+            2,
+            3,
+            0
+          ],
+          "nr": 3,
+          "nc": 1,
+          "active_real": 64.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            1,
+            3,
+            0,
+            2
+          ],
+          "nr": 3,
+          "nc": 1,
+          "active_real": 64.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            1,
+            3,
+            2,
+            0
+          ],
+          "nr": 2,
+          "nc": 2,
+          "active_real": 64.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            2,
+            0,
+            1,
+            3
+          ],
+          "nr": 2,
+          "nc": 2,
+          "active_real": 64.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            2,
+            0,
+            3,
+            1
+          ],
+          "nr": 3,
+          "nc": 1,
+          "active_real": 64.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            2,
+            1,
+            0,
+            3
+          ],
+          "nr": 1,
+          "nc": 3,
+          "active_real": 64.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            2,
+            1,
+            3,
+            0
+          ],
+          "nr": 2,
+          "nc": 2,
+          "active_real": 64.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            2,
+            3,
+            0,
+            1
+          ],
+          "nr": 2,
+          "nc": 2,
+          "active_real": 32.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            2,
+            3,
+            1,
+            0
+          ],
+          "nr": 1,
+          "nc": 1,
+          "active_real": 32.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            3,
+            0,
+            1,
+            2
+          ],
+          "nr": 3,
+          "nc": 1,
+          "active_real": 64.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            3,
+            0,
+            2,
+            1
+          ],
+          "nr": 2,
+          "nc": 2,
+          "active_real": 64.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            3,
+            1,
+            0,
+            2
+          ],
+          "nr": 2,
+          "nc": 2,
+          "active_real": 64.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            3,
+            1,
+            2,
+            0
+          ],
+          "nr": 1,
+          "nc": 3,
+          "active_real": 64.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            3,
+            2,
+            0,
+            1
+          ],
+          "nr": 1,
+          "nc": 1,
+          "active_real": 32.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            3,
+            2,
+            1,
+            0
+          ],
+          "nr": 2,
+          "nc": 2,
+          "active_real": 32.0,
+          "active_imag": 0.0
+        }
+      ],
+      "rows": [
+        {
+          "d": 2,
+          "spectator_dimension": 1,
+          "correlation_direct": 0.4444444444444444,
+          "correlation_prediction": 0.4444444444444442,
+          "error": 2.220446049250313e-16
+        },
+        {
+          "d": 4,
+          "spectator_dimension": 2,
+          "correlation_direct": 0.7138047138047138,
+          "correlation_prediction": 0.7138047138047137,
+          "error": 1.1102230246251565e-16
+        },
+        {
+          "d": 8,
+          "spectator_dimension": 4,
+          "correlation_direct": 0.779573109914223,
+          "correlation_prediction": 0.7795731099142229,
+          "error": 1.1102230246251565e-16
+        },
+        {
+          "d": 16,
+          "spectator_dimension": 8,
+          "correlation_direct": 0.7949728144138837,
+          "correlation_prediction": 0.7949728144138836,
+          "error": 1.1102230246251565e-16
+        },
+        {
+          "d": 32,
+          "spectator_dimension": 16,
+          "correlation_direct": 0.7987482934573428,
+          "correlation_prediction": 0.7987482934573427,
+          "error": 1.1102230246251565e-16
+        }
+      ]
+    },
+    {
+      "q": 2,
+      "gate": "phaseSWAP_pi4",
+      "entangling_power_direct": 0.22222222222222232,
+      "operator_purity": 0.25,
+      "crossed_operator_purity": 0.5,
+      "ep_invariant_error": 1.1102230246251565e-16,
+      "terms": [
+        {
+          "permutation": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "nr": 2,
+          "nc": 4,
+          "active_real": 256.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            0,
+            1,
+            3,
+            2
+          ],
+          "nr": 3,
+          "nc": 3,
+          "active_real": 256.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            0,
+            2,
+            1,
+            3
+          ],
+          "nr": 1,
+          "nc": 3,
+          "active_real": 64.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            0,
+            2,
+            3,
+            1
+          ],
+          "nr": 2,
+          "nc": 2,
+          "active_real": 64.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            0,
+            3,
+            1,
+            2
+          ],
+          "nr": 2,
+          "nc": 2,
+          "active_real": 64.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            0,
+            3,
+            2,
+            1
+          ],
+          "nr": 1,
+          "nc": 3,
+          "active_real": 64.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            1,
+            0,
+            2,
+            3
+          ],
+          "nr": 3,
+          "nc": 3,
+          "active_real": 256.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            1,
+            0,
+            3,
+            2
+          ],
+          "nr": 4,
+          "nc": 2,
+          "active_real": 256.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            1,
+            2,
+            0,
+            3
+          ],
+          "nr": 2,
+          "nc": 2,
+          "active_real": 64.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            1,
+            2,
+            3,
+            0
+          ],
+          "nr": 3,
+          "nc": 1,
+          "active_real": 64.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            1,
+            3,
+            0,
+            2
+          ],
+          "nr": 3,
+          "nc": 1,
+          "active_real": 64.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            1,
+            3,
+            2,
+            0
+          ],
+          "nr": 2,
+          "nc": 2,
+          "active_real": 64.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            2,
+            0,
+            1,
+            3
+          ],
+          "nr": 2,
+          "nc": 2,
+          "active_real": 64.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            2,
+            0,
+            3,
+            1
+          ],
+          "nr": 3,
+          "nc": 1,
+          "active_real": 64.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            2,
+            1,
+            0,
+            3
+          ],
+          "nr": 1,
+          "nc": 3,
+          "active_real": 64.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            2,
+            1,
+            3,
+            0
+          ],
+          "nr": 2,
+          "nc": 2,
+          "active_real": 64.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            2,
+            3,
+            0,
+            1
+          ],
+          "nr": 2,
+          "nc": 2,
+          "active_real": 24.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            2,
+            3,
+            1,
+            0
+          ],
+          "nr": 1,
+          "nc": 1,
+          "active_real": 24.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            3,
+            0,
+            1,
+            2
+          ],
+          "nr": 3,
+          "nc": 1,
+          "active_real": 64.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            3,
+            0,
+            2,
+            1
+          ],
+          "nr": 2,
+          "nc": 2,
+          "active_real": 64.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            3,
+            1,
+            0,
+            2
+          ],
+          "nr": 2,
+          "nc": 2,
+          "active_real": 64.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            3,
+            1,
+            2,
+            0
+          ],
+          "nr": 1,
+          "nc": 3,
+          "active_real": 64.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            3,
+            2,
+            0,
+            1
+          ],
+          "nr": 1,
+          "nc": 1,
+          "active_real": 24.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            3,
+            2,
+            1,
+            0
+          ],
+          "nr": 2,
+          "nc": 2,
+          "active_real": 24.0,
+          "active_imag": 0.0
+        }
+      ],
+      "rows": [
+        {
+          "d": 2,
+          "spectator_dimension": 1,
+          "correlation_direct": -0.1111111111111111,
+          "correlation_prediction": -0.1111111111111116,
+          "error": 4.996003610813204e-16
+        },
+        {
+          "d": 4,
+          "spectator_dimension": 2,
+          "correlation_direct": 0.4276094276094276,
+          "correlation_prediction": 0.42760942760942733,
+          "error": 2.7755575615628914e-16
+        },
+        {
+          "d": 8,
+          "spectator_dimension": 4,
+          "correlation_direct": 0.559146219828446,
+          "correlation_prediction": 0.5591462198284458,
+          "error": 2.220446049250313e-16
+        },
+        {
+          "d": 16,
+          "spectator_dimension": 8,
+          "correlation_direct": 0.5899456288277674,
+          "correlation_prediction": 0.5899456288277671,
+          "error": 2.220446049250313e-16
+        },
+        {
+          "d": 32,
+          "spectator_dimension": 16,
+          "correlation_direct": 0.5974965869146854,
+          "correlation_prediction": 0.5974965869146853,
+          "error": 1.1102230246251565e-16
+        }
+      ]
+    },
+    {
+      "q": 2,
+      "gate": "XX_0.29",
+      "entangling_power_direct": 0.0667400522881918,
+      "operator_purity": 0.8498348823515685,
+      "crossed_operator_purity": 0.25,
+      "ep_invariant_error": 0.0,
+      "terms": [
+        {
+          "permutation": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "nr": 2,
+          "nc": 4,
+          "active_real": 256.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            0,
+            1,
+            3,
+            2
+          ],
+          "nr": 3,
+          "nc": 3,
+          "active_real": 256.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            0,
+            2,
+            1,
+            3
+          ],
+          "nr": 1,
+          "nc": 3,
+          "active_real": 64.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            0,
+            2,
+            3,
+            1
+          ],
+          "nr": 2,
+          "nc": 2,
+          "active_real": 64.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            0,
+            3,
+            1,
+            2
+          ],
+          "nr": 2,
+          "nc": 2,
+          "active_real": 64.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            0,
+            3,
+            2,
+            1
+          ],
+          "nr": 1,
+          "nc": 3,
+          "active_real": 64.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            1,
+            0,
+            2,
+            3
+          ],
+          "nr": 3,
+          "nc": 3,
+          "active_real": 256.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            1,
+            0,
+            3,
+            2
+          ],
+          "nr": 4,
+          "nc": 2,
+          "active_real": 256.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            1,
+            2,
+            0,
+            3
+          ],
+          "nr": 2,
+          "nc": 2,
+          "active_real": 64.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            1,
+            2,
+            3,
+            0
+          ],
+          "nr": 3,
+          "nc": 1,
+          "active_real": 64.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            1,
+            3,
+            0,
+            2
+          ],
+          "nr": 3,
+          "nc": 1,
+          "active_real": 64.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            1,
+            3,
+            2,
+            0
+          ],
+          "nr": 2,
+          "nc": 2,
+          "active_real": 64.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            2,
+            0,
+            1,
+            3
+          ],
+          "nr": 2,
+          "nc": 2,
+          "active_real": 64.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            2,
+            0,
+            3,
+            1
+          ],
+          "nr": 3,
+          "nc": 1,
+          "active_real": 64.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            2,
+            1,
+            0,
+            3
+          ],
+          "nr": 1,
+          "nc": 3,
+          "active_real": 64.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            2,
+            1,
+            3,
+            0
+          ],
+          "nr": 2,
+          "nc": 2,
+          "active_real": 64.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            2,
+            3,
+            0,
+            1
+          ],
+          "nr": 2,
+          "nc": 2,
+          "active_real": 35.19471623525018,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            2,
+            3,
+            1,
+            0
+          ],
+          "nr": 1,
+          "nc": 1,
+          "active_real": 35.19471623525018,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            3,
+            0,
+            1,
+            2
+          ],
+          "nr": 3,
+          "nc": 1,
+          "active_real": 64.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            3,
+            0,
+            2,
+            1
+          ],
+          "nr": 2,
+          "nc": 2,
+          "active_real": 64.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            3,
+            1,
+            0,
+            2
+          ],
+          "nr": 2,
+          "nc": 2,
+          "active_real": 64.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            3,
+            1,
+            2,
+            0
+          ],
+          "nr": 1,
+          "nc": 3,
+          "active_real": 64.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            3,
+            2,
+            0,
+            1
+          ],
+          "nr": 1,
+          "nc": 1,
+          "active_real": 35.19471623525018,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            3,
+            2,
+            1,
+            0
+          ],
+          "nr": 2,
+          "nc": 2,
+          "active_real": 35.19471623525018,
+          "active_imag": 0.0
+        }
+      ],
+      "rows": [
+        {
+          "d": 2,
+          "spectator_dimension": 1,
+          "correlation_direct": 0.6662997385590402,
+          "correlation_prediction": 0.666299738559041,
+          "error": 7.771561172376096e-16
+        },
+        {
+          "d": 4,
+          "spectator_dimension": 2,
+          "correlation_direct": 0.8280938047122328,
+          "correlation_prediction": 0.8280938047122333,
+          "error": 4.440892098500626e-16
+        },
+        {
+          "d": 8,
+          "spectator_dimension": 4,
+          "correlation_direct": 0.8675982804695653,
+          "correlation_prediction": 0.8675982804695657,
+          "error": 3.3306690738754696e-16
+        },
+        {
+          "d": 16,
+          "spectator_dimension": 8,
+          "correlation_direct": 0.8768482742213358,
+          "correlation_prediction": 0.8768482742213362,
+          "error": 3.3306690738754696e-16
+        },
+        {
+          "d": 32,
+          "spectator_dimension": 16,
+          "correlation_direct": 0.8791160552402968,
+          "correlation_prediction": 0.879116055240297,
+          "error": 2.220446049250313e-16
+        }
+      ]
+    },
+    {
+      "q": 3,
+      "gate": "identity",
+      "entangling_power_direct": 0.0,
+      "operator_purity": 1.0,
+      "crossed_operator_purity": 0.1111111111111111,
+      "ep_invariant_error": 3.122502256758253e-17,
+      "terms": [
+        {
+          "permutation": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "nr": 2,
+          "nc": 4,
+          "active_real": 2916.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            0,
+            1,
+            3,
+            2
+          ],
+          "nr": 3,
+          "nc": 3,
+          "active_real": 2916.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            0,
+            2,
+            1,
+            3
+          ],
+          "nr": 1,
+          "nc": 3,
+          "active_real": 324.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            0,
+            2,
+            3,
+            1
+          ],
+          "nr": 2,
+          "nc": 2,
+          "active_real": 324.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            0,
+            3,
+            1,
+            2
+          ],
+          "nr": 2,
+          "nc": 2,
+          "active_real": 324.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            0,
+            3,
+            2,
+            1
+          ],
+          "nr": 1,
+          "nc": 3,
+          "active_real": 324.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            1,
+            0,
+            2,
+            3
+          ],
+          "nr": 3,
+          "nc": 3,
+          "active_real": 2916.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            1,
+            0,
+            3,
+            2
+          ],
+          "nr": 4,
+          "nc": 2,
+          "active_real": 2916.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            1,
+            2,
+            0,
+            3
+          ],
+          "nr": 2,
+          "nc": 2,
+          "active_real": 324.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            1,
+            2,
+            3,
+            0
+          ],
+          "nr": 3,
+          "nc": 1,
+          "active_real": 324.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            1,
+            3,
+            0,
+            2
+          ],
+          "nr": 3,
+          "nc": 1,
+          "active_real": 324.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            1,
+            3,
+            2,
+            0
+          ],
+          "nr": 2,
+          "nc": 2,
+          "active_real": 324.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            2,
+            0,
+            1,
+            3
+          ],
+          "nr": 2,
+          "nc": 2,
+          "active_real": 324.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            2,
+            0,
+            3,
+            1
+          ],
+          "nr": 3,
+          "nc": 1,
+          "active_real": 324.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            2,
+            1,
+            0,
+            3
+          ],
+          "nr": 1,
+          "nc": 3,
+          "active_real": 324.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            2,
+            1,
+            3,
+            0
+          ],
+          "nr": 2,
+          "nc": 2,
+          "active_real": 324.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            2,
+            3,
+            0,
+            1
+          ],
+          "nr": 2,
+          "nc": 2,
+          "active_real": 180.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            2,
+            3,
+            1,
+            0
+          ],
+          "nr": 1,
+          "nc": 1,
+          "active_real": 180.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            3,
+            0,
+            1,
+            2
+          ],
+          "nr": 3,
+          "nc": 1,
+          "active_real": 324.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            3,
+            0,
+            2,
+            1
+          ],
+          "nr": 2,
+          "nc": 2,
+          "active_real": 324.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            3,
+            1,
+            0,
+            2
+          ],
+          "nr": 2,
+          "nc": 2,
+          "active_real": 324.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            3,
+            1,
+            2,
+            0
+          ],
+          "nr": 1,
+          "nc": 3,
+          "active_real": 324.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            3,
+            2,
+            0,
+            1
+          ],
+          "nr": 1,
+          "nc": 1,
+          "active_real": 180.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            3,
+            2,
+            1,
+            0
+          ],
+          "nr": 2,
+          "nc": 2,
+          "active_real": 180.0,
+          "active_imag": 0.0
+        }
+      ],
+      "rows": [
+        {
+          "d": 3,
+          "spectator_dimension": 1,
+          "correlation_direct": 1.0,
+          "correlation_prediction": 1.0,
+          "error": 0.0
+        },
+        {
+          "d": 6,
+          "spectator_dimension": 2,
+          "correlation_direct": 1.0,
+          "correlation_prediction": 1.0,
+          "error": 0.0
+        },
+        {
+          "d": 12,
+          "spectator_dimension": 4,
+          "correlation_direct": 1.0,
+          "correlation_prediction": 1.0,
+          "error": 0.0
+        },
+        {
+          "d": 24,
+          "spectator_dimension": 8,
+          "correlation_direct": 1.0,
+          "correlation_prediction": 1.0,
+          "error": 0.0
+        },
+        {
+          "d": 48,
+          "spectator_dimension": 16,
+          "correlation_direct": 1.0,
+          "correlation_prediction": 1.0,
+          "error": 0.0
+        }
+      ]
+    },
+    {
+      "q": 3,
+      "gate": "SWAP",
+      "entangling_power_direct": 0.0,
+      "operator_purity": 0.1111111111111111,
+      "crossed_operator_purity": 1.0,
+      "ep_invariant_error": 0.0,
+      "terms": [
+        {
+          "permutation": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "nr": 2,
+          "nc": 4,
+          "active_real": 2916.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            0,
+            1,
+            3,
+            2
+          ],
+          "nr": 3,
+          "nc": 3,
+          "active_real": 2916.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            0,
+            2,
+            1,
+            3
+          ],
+          "nr": 1,
+          "nc": 3,
+          "active_real": 324.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            0,
+            2,
+            3,
+            1
+          ],
+          "nr": 2,
+          "nc": 2,
+          "active_real": 324.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            0,
+            3,
+            1,
+            2
+          ],
+          "nr": 2,
+          "nc": 2,
+          "active_real": 324.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            0,
+            3,
+            2,
+            1
+          ],
+          "nr": 1,
+          "nc": 3,
+          "active_real": 324.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            1,
+            0,
+            2,
+            3
+          ],
+          "nr": 3,
+          "nc": 3,
+          "active_real": 2916.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            1,
+            0,
+            3,
+            2
+          ],
+          "nr": 4,
+          "nc": 2,
+          "active_real": 2916.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            1,
+            2,
+            0,
+            3
+          ],
+          "nr": 2,
+          "nc": 2,
+          "active_real": 324.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            1,
+            2,
+            3,
+            0
+          ],
+          "nr": 3,
+          "nc": 1,
+          "active_real": 324.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            1,
+            3,
+            0,
+            2
+          ],
+          "nr": 3,
+          "nc": 1,
+          "active_real": 324.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            1,
+            3,
+            2,
+            0
+          ],
+          "nr": 2,
+          "nc": 2,
+          "active_real": 324.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            2,
+            0,
+            1,
+            3
+          ],
+          "nr": 2,
+          "nc": 2,
+          "active_real": 324.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            2,
+            0,
+            3,
+            1
+          ],
+          "nr": 3,
+          "nc": 1,
+          "active_real": 324.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            2,
+            1,
+            0,
+            3
+          ],
+          "nr": 1,
+          "nc": 3,
+          "active_real": 324.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            2,
+            1,
+            3,
+            0
+          ],
+          "nr": 2,
+          "nc": 2,
+          "active_real": 324.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            2,
+            3,
+            0,
+            1
+          ],
+          "nr": 2,
+          "nc": 2,
+          "active_real": 180.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            2,
+            3,
+            1,
+            0
+          ],
+          "nr": 1,
+          "nc": 1,
+          "active_real": 180.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            3,
+            0,
+            1,
+            2
+          ],
+          "nr": 3,
+          "nc": 1,
+          "active_real": 324.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            3,
+            0,
+            2,
+            1
+          ],
+          "nr": 2,
+          "nc": 2,
+          "active_real": 324.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            3,
+            1,
+            0,
+            2
+          ],
+          "nr": 2,
+          "nc": 2,
+          "active_real": 324.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            3,
+            1,
+            2,
+            0
+          ],
+          "nr": 1,
+          "nc": 3,
+          "active_real": 324.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            3,
+            2,
+            0,
+            1
+          ],
+          "nr": 1,
+          "nc": 1,
+          "active_real": 180.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            3,
+            2,
+            1,
+            0
+          ],
+          "nr": 2,
+          "nc": 2,
+          "active_real": 180.0,
+          "active_imag": 0.0
+        }
+      ],
+      "rows": [
+        {
+          "d": 3,
+          "spectator_dimension": 1,
+          "correlation_direct": 1.0,
+          "correlation_prediction": 1.0,
+          "error": 0.0
+        },
+        {
+          "d": 6,
+          "spectator_dimension": 2,
+          "correlation_direct": 1.0,
+          "correlation_prediction": 1.0,
+          "error": 0.0
+        },
+        {
+          "d": 12,
+          "spectator_dimension": 4,
+          "correlation_direct": 1.0,
+          "correlation_prediction": 1.0,
+          "error": 0.0
+        },
+        {
+          "d": 24,
+          "spectator_dimension": 8,
+          "correlation_direct": 1.0,
+          "correlation_prediction": 1.0,
+          "error": 0.0
+        },
+        {
+          "d": 48,
+          "spectator_dimension": 16,
+          "correlation_direct": 1.0,
+          "correlation_prediction": 1.0,
+          "error": 0.0
+        }
+      ]
+    },
+    {
+      "q": 3,
+      "gate": "phaseSWAP",
+      "entangling_power_direct": 0.06183735439425564,
+      "operator_purity": 0.1111111111111111,
+      "crossed_operator_purity": 0.8900669255213235,
+      "ep_invariant_error": 1.0408340855860843e-16,
+      "terms": [
+        {
+          "permutation": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "nr": 2,
+          "nc": 4,
+          "active_real": 2916.0,
+          "active_imag": 7.966961973300068e-16
+        },
+        {
+          "permutation": [
+            0,
+            1,
+            3,
+            2
+          ],
+          "nr": 3,
+          "nc": 3,
+          "active_real": 2916.0,
+          "active_imag": 7.966961973300068e-16
+        },
+        {
+          "permutation": [
+            0,
+            2,
+            1,
+            3
+          ],
+          "nr": 1,
+          "nc": 3,
+          "active_real": 324.0,
+          "active_imag": 8.852179970333409e-17
+        },
+        {
+          "permutation": [
+            0,
+            2,
+            3,
+            1
+          ],
+          "nr": 2,
+          "nc": 2,
+          "active_real": 324.0,
+          "active_imag": 8.852179970333409e-17
+        },
+        {
+          "permutation": [
+            0,
+            3,
+            1,
+            2
+          ],
+          "nr": 2,
+          "nc": 2,
+          "active_real": 324.0,
+          "active_imag": 8.852179970333409e-17
+        },
+        {
+          "permutation": [
+            0,
+            3,
+            2,
+            1
+          ],
+          "nr": 1,
+          "nc": 3,
+          "active_real": 324.0,
+          "active_imag": 8.852179970333409e-17
+        },
+        {
+          "permutation": [
+            1,
+            0,
+            2,
+            3
+          ],
+          "nr": 3,
+          "nc": 3,
+          "active_real": 2916.0,
+          "active_imag": 7.966961973300068e-16
+        },
+        {
+          "permutation": [
+            1,
+            0,
+            3,
+            2
+          ],
+          "nr": 4,
+          "nc": 2,
+          "active_real": 2916.0,
+          "active_imag": 7.966961973300068e-16
+        },
+        {
+          "permutation": [
+            1,
+            2,
+            0,
+            3
+          ],
+          "nr": 2,
+          "nc": 2,
+          "active_real": 324.0,
+          "active_imag": 8.852179970333409e-17
+        },
+        {
+          "permutation": [
+            1,
+            2,
+            3,
+            0
+          ],
+          "nr": 3,
+          "nc": 1,
+          "active_real": 324.0,
+          "active_imag": 8.852179970333409e-17
+        },
+        {
+          "permutation": [
+            1,
+            3,
+            0,
+            2
+          ],
+          "nr": 3,
+          "nc": 1,
+          "active_real": 324.0,
+          "active_imag": 8.852179970333409e-17
+        },
+        {
+          "permutation": [
+            1,
+            3,
+            2,
+            0
+          ],
+          "nr": 2,
+          "nc": 2,
+          "active_real": 324.0,
+          "active_imag": 8.852179970333409e-17
+        },
+        {
+          "permutation": [
+            2,
+            0,
+            1,
+            3
+          ],
+          "nr": 2,
+          "nc": 2,
+          "active_real": 324.0,
+          "active_imag": 8.852179970333409e-17
+        },
+        {
+          "permutation": [
+            2,
+            0,
+            3,
+            1
+          ],
+          "nr": 3,
+          "nc": 1,
+          "active_real": 324.0,
+          "active_imag": 8.852179970333409e-17
+        },
+        {
+          "permutation": [
+            2,
+            1,
+            0,
+            3
+          ],
+          "nr": 1,
+          "nc": 3,
+          "active_real": 324.0,
+          "active_imag": 8.852179970333409e-17
+        },
+        {
+          "permutation": [
+            2,
+            1,
+            3,
+            0
+          ],
+          "nr": 2,
+          "nc": 2,
+          "active_real": 324.0,
+          "active_imag": 8.852179970333409e-17
+        },
+        {
+          "permutation": [
+            2,
+            3,
+            0,
+            1
+          ],
+          "nr": 2,
+          "nc": 2,
+          "active_real": 162.1908419344544,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            2,
+            3,
+            1,
+            0
+          ],
+          "nr": 1,
+          "nc": 1,
+          "active_real": 162.1908419344544,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            3,
+            0,
+            1,
+            2
+          ],
+          "nr": 3,
+          "nc": 1,
+          "active_real": 324.0,
+          "active_imag": 8.852179970333409e-17
+        },
+        {
+          "permutation": [
+            3,
+            0,
+            2,
+            1
+          ],
+          "nr": 2,
+          "nc": 2,
+          "active_real": 324.0,
+          "active_imag": 8.852179970333409e-17
+        },
+        {
+          "permutation": [
+            3,
+            1,
+            0,
+            2
+          ],
+          "nr": 2,
+          "nc": 2,
+          "active_real": 324.0,
+          "active_imag": 8.852179970333409e-17
+        },
+        {
+          "permutation": [
+            3,
+            1,
+            2,
+            0
+          ],
+          "nr": 1,
+          "nc": 3,
+          "active_real": 324.0,
+          "active_imag": 8.852179970333409e-17
+        },
+        {
+          "permutation": [
+            3,
+            2,
+            0,
+            1
+          ],
+          "nr": 1,
+          "nc": 1,
+          "active_real": 162.1908419344544,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            3,
+            2,
+            1,
+            0
+          ],
+          "nr": 2,
+          "nc": 2,
+          "active_real": 162.1908419344544,
+          "active_imag": 0.0
+        }
+      ],
+      "rows": [
+        {
+          "d": 3,
+          "spectator_dimension": 1,
+          "correlation_direct": 0.8454066140143611,
+          "correlation_prediction": 0.8454066140143609,
+          "error": 2.220446049250313e-16
+        },
+        {
+          "d": 6,
+          "spectator_dimension": 2,
+          "correlation_direct": 0.8828178175371342,
+          "correlation_prediction": 0.882817817537134,
+          "error": 2.220446049250313e-16
+        },
+        {
+          "d": 12,
+          "spectator_dimension": 4,
+          "correlation_direct": 0.8962096664690851,
+          "correlation_prediction": 0.896209666469085,
+          "error": 1.1102230246251565e-16
+        },
+        {
+          "d": 24,
+          "spectator_dimension": 8,
+          "correlation_direct": 0.8998295019870726,
+          "correlation_prediction": 0.8998295019870723,
+          "error": 2.220446049250313e-16
+        },
+        {
+          "d": 48,
+          "spectator_dimension": 16,
+          "correlation_direct": 0.9007514220118784,
+          "correlation_prediction": 0.9007514220118782,
+          "error": 2.220446049250313e-16
+        }
+      ]
+    },
+    {
+      "q": 3,
+      "gate": "generic_QR",
+      "entangling_power_direct": 0.403261929251292,
+      "operator_purity": 0.19899514961116913,
+      "crossed_operator_purity": 0.19520586505320078,
+      "ep_invariant_error": 1.1102230246251565e-16,
+      "terms": [
+        {
+          "permutation": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "nr": 2,
+          "nc": 4,
+          "active_real": 2916.0,
+          "active_imag": 1.1457482617145052e-14
+        },
+        {
+          "permutation": [
+            0,
+            1,
+            3,
+            2
+          ],
+          "nr": 3,
+          "nc": 3,
+          "active_real": 2916.0,
+          "active_imag": 1.1785345354104669e-14
+        },
+        {
+          "permutation": [
+            0,
+            2,
+            1,
+            3
+          ],
+          "nr": 1,
+          "nc": 3,
+          "active_real": 324.0,
+          "active_imag": 1.273053624127228e-15
+        },
+        {
+          "permutation": [
+            0,
+            2,
+            3,
+            1
+          ],
+          "nr": 2,
+          "nc": 2,
+          "active_real": 324.0,
+          "active_imag": 1.3094828171227409e-15
+        },
+        {
+          "permutation": [
+            0,
+            3,
+            1,
+            2
+          ],
+          "nr": 2,
+          "nc": 2,
+          "active_real": 324.0,
+          "active_imag": 1.309482817122741e-15
+        },
+        {
+          "permutation": [
+            0,
+            3,
+            2,
+            1
+          ],
+          "nr": 1,
+          "nc": 3,
+          "active_real": 324.0,
+          "active_imag": 1.2730536241272281e-15
+        },
+        {
+          "permutation": [
+            1,
+            0,
+            2,
+            3
+          ],
+          "nr": 3,
+          "nc": 3,
+          "active_real": 2916.0,
+          "active_imag": 1.1457482617145052e-14
+        },
+        {
+          "permutation": [
+            1,
+            0,
+            3,
+            2
+          ],
+          "nr": 4,
+          "nc": 2,
+          "active_real": 2916.0,
+          "active_imag": 1.1785345354104669e-14
+        },
+        {
+          "permutation": [
+            1,
+            2,
+            0,
+            3
+          ],
+          "nr": 2,
+          "nc": 2,
+          "active_real": 324.0,
+          "active_imag": 1.273053624127228e-15
+        },
+        {
+          "permutation": [
+            1,
+            2,
+            3,
+            0
+          ],
+          "nr": 3,
+          "nc": 1,
+          "active_real": 324.0,
+          "active_imag": 1.3094828171227409e-15
+        },
+        {
+          "permutation": [
+            1,
+            3,
+            0,
+            2
+          ],
+          "nr": 3,
+          "nc": 1,
+          "active_real": 324.0,
+          "active_imag": 1.309482817122741e-15
+        },
+        {
+          "permutation": [
+            1,
+            3,
+            2,
+            0
+          ],
+          "nr": 2,
+          "nc": 2,
+          "active_real": 324.0,
+          "active_imag": 1.2730536241272281e-15
+        },
+        {
+          "permutation": [
+            2,
+            0,
+            1,
+            3
+          ],
+          "nr": 2,
+          "nc": 2,
+          "active_real": 324.0,
+          "active_imag": 1.2730536241272281e-15
+        },
+        {
+          "permutation": [
+            2,
+            0,
+            3,
+            1
+          ],
+          "nr": 3,
+          "nc": 1,
+          "active_real": 324.0,
+          "active_imag": 1.309482817122741e-15
+        },
+        {
+          "permutation": [
+            2,
+            1,
+            0,
+            3
+          ],
+          "nr": 1,
+          "nc": 3,
+          "active_real": 324.0,
+          "active_imag": 1.2730536241272281e-15
+        },
+        {
+          "permutation": [
+            2,
+            1,
+            3,
+            0
+          ],
+          "nr": 2,
+          "nc": 2,
+          "active_real": 324.0,
+          "active_imag": 1.309482817122741e-15
+        },
+        {
+          "permutation": [
+            2,
+            3,
+            0,
+            1
+          ],
+          "nr": 2,
+          "nc": 2,
+          "active_real": 63.860564375627916,
+          "active_imag": 6.661338147750939e-16
+        },
+        {
+          "permutation": [
+            2,
+            3,
+            1,
+            0
+          ],
+          "nr": 1,
+          "nc": 1,
+          "active_real": 63.860564375627916,
+          "active_imag": 6.661338147750939e-16
+        },
+        {
+          "permutation": [
+            3,
+            0,
+            1,
+            2
+          ],
+          "nr": 3,
+          "nc": 1,
+          "active_real": 324.0,
+          "active_imag": 1.3094828171227409e-15
+        },
+        {
+          "permutation": [
+            3,
+            0,
+            2,
+            1
+          ],
+          "nr": 2,
+          "nc": 2,
+          "active_real": 324.0,
+          "active_imag": 1.2730536241272281e-15
+        },
+        {
+          "permutation": [
+            3,
+            1,
+            0,
+            2
+          ],
+          "nr": 2,
+          "nc": 2,
+          "active_real": 324.0,
+          "active_imag": 1.3094828171227409e-15
+        },
+        {
+          "permutation": [
+            3,
+            1,
+            2,
+            0
+          ],
+          "nr": 1,
+          "nc": 3,
+          "active_real": 324.0,
+          "active_imag": 1.2730536241272281e-15
+        },
+        {
+          "permutation": [
+            3,
+            2,
+            0,
+            1
+          ],
+          "nr": 1,
+          "nc": 1,
+          "active_real": 63.860564375627916,
+          "active_imag": 6.106226635438361e-16
+        },
+        {
+          "permutation": [
+            3,
+            2,
+            1,
+            0
+          ],
+          "nr": 2,
+          "nc": 2,
+          "active_real": 63.860564375627916,
+          "active_imag": 6.106226635438361e-16
+        }
+      ],
+      "rows": [
+        {
+          "d": 3,
+          "spectator_dimension": 1,
+          "correlation_direct": -0.008154823128229896,
+          "correlation_prediction": -0.008154823128230015,
+          "error": 1.196959198423997e-16
+        },
+        {
+          "d": 6,
+          "spectator_dimension": 2,
+          "correlation_direct": 0.23581606236630973,
+          "correlation_prediction": 0.2358160623663096,
+          "error": 1.3877787807814457e-16
+        },
+        {
+          "d": 12,
+          "spectator_dimension": 4,
+          "correlation_direct": 0.3231487577806216,
+          "correlation_prediction": 0.32314875778062147,
+          "error": 1.1102230246251565e-16
+        },
+        {
+          "d": 24,
+          "spectator_dimension": 8,
+          "correlation_direct": 0.34675490763705175,
+          "correlation_prediction": 0.34675490763705163,
+          "error": 1.1102230246251565e-16
+        },
+        {
+          "d": 48,
+          "spectator_dimension": 16,
+          "correlation_direct": 0.35276705436390354,
+          "correlation_prediction": 0.35276705436390354,
+          "error": 0.0
+        }
+      ]
+    },
+    {
+      "q": 4,
+      "gate": "identity",
+      "entangling_power_direct": 0.0,
+      "operator_purity": 1.0,
+      "crossed_operator_purity": 0.0625,
+      "ep_invariant_error": 0.0,
+      "terms": [
+        {
+          "permutation": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "nr": 2,
+          "nc": 4,
+          "active_real": 16384.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            0,
+            1,
+            3,
+            2
+          ],
+          "nr": 3,
+          "nc": 3,
+          "active_real": 16384.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            0,
+            2,
+            1,
+            3
+          ],
+          "nr": 1,
+          "nc": 3,
+          "active_real": 1024.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            0,
+            2,
+            3,
+            1
+          ],
+          "nr": 2,
+          "nc": 2,
+          "active_real": 1024.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            0,
+            3,
+            1,
+            2
+          ],
+          "nr": 2,
+          "nc": 2,
+          "active_real": 1024.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            0,
+            3,
+            2,
+            1
+          ],
+          "nr": 1,
+          "nc": 3,
+          "active_real": 1024.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            1,
+            0,
+            2,
+            3
+          ],
+          "nr": 3,
+          "nc": 3,
+          "active_real": 16384.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            1,
+            0,
+            3,
+            2
+          ],
+          "nr": 4,
+          "nc": 2,
+          "active_real": 16384.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            1,
+            2,
+            0,
+            3
+          ],
+          "nr": 2,
+          "nc": 2,
+          "active_real": 1024.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            1,
+            2,
+            3,
+            0
+          ],
+          "nr": 3,
+          "nc": 1,
+          "active_real": 1024.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            1,
+            3,
+            0,
+            2
+          ],
+          "nr": 3,
+          "nc": 1,
+          "active_real": 1024.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            1,
+            3,
+            2,
+            0
+          ],
+          "nr": 2,
+          "nc": 2,
+          "active_real": 1024.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            2,
+            0,
+            1,
+            3
+          ],
+          "nr": 2,
+          "nc": 2,
+          "active_real": 1024.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            2,
+            0,
+            3,
+            1
+          ],
+          "nr": 3,
+          "nc": 1,
+          "active_real": 1024.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            2,
+            1,
+            0,
+            3
+          ],
+          "nr": 1,
+          "nc": 3,
+          "active_real": 1024.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            2,
+            1,
+            3,
+            0
+          ],
+          "nr": 2,
+          "nc": 2,
+          "active_real": 1024.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            2,
+            3,
+            0,
+            1
+          ],
+          "nr": 2,
+          "nc": 2,
+          "active_real": 544.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            2,
+            3,
+            1,
+            0
+          ],
+          "nr": 1,
+          "nc": 1,
+          "active_real": 544.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            3,
+            0,
+            1,
+            2
+          ],
+          "nr": 3,
+          "nc": 1,
+          "active_real": 1024.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            3,
+            0,
+            2,
+            1
+          ],
+          "nr": 2,
+          "nc": 2,
+          "active_real": 1024.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            3,
+            1,
+            0,
+            2
+          ],
+          "nr": 2,
+          "nc": 2,
+          "active_real": 1024.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            3,
+            1,
+            2,
+            0
+          ],
+          "nr": 1,
+          "nc": 3,
+          "active_real": 1024.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            3,
+            2,
+            0,
+            1
+          ],
+          "nr": 1,
+          "nc": 1,
+          "active_real": 544.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            3,
+            2,
+            1,
+            0
+          ],
+          "nr": 2,
+          "nc": 2,
+          "active_real": 544.0,
+          "active_imag": 0.0
+        }
+      ],
+      "rows": [
+        {
+          "d": 4,
+          "spectator_dimension": 1,
+          "correlation_direct": 1.0,
+          "correlation_prediction": 1.0,
+          "error": 0.0
+        },
+        {
+          "d": 8,
+          "spectator_dimension": 2,
+          "correlation_direct": 1.0,
+          "correlation_prediction": 1.0,
+          "error": 0.0
+        },
+        {
+          "d": 16,
+          "spectator_dimension": 4,
+          "correlation_direct": 1.0,
+          "correlation_prediction": 1.0,
+          "error": 0.0
+        },
+        {
+          "d": 32,
+          "spectator_dimension": 8,
+          "correlation_direct": 1.0,
+          "correlation_prediction": 1.0,
+          "error": 0.0
+        },
+        {
+          "d": 64,
+          "spectator_dimension": 16,
+          "correlation_direct": 1.0,
+          "correlation_prediction": 1.0,
+          "error": 0.0
+        }
+      ]
+    },
+    {
+      "q": 4,
+      "gate": "SWAP",
+      "entangling_power_direct": 0.0,
+      "operator_purity": 0.0625,
+      "crossed_operator_purity": 1.0,
+      "ep_invariant_error": 0.0,
+      "terms": [
+        {
+          "permutation": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "nr": 2,
+          "nc": 4,
+          "active_real": 16384.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            0,
+            1,
+            3,
+            2
+          ],
+          "nr": 3,
+          "nc": 3,
+          "active_real": 16384.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            0,
+            2,
+            1,
+            3
+          ],
+          "nr": 1,
+          "nc": 3,
+          "active_real": 1024.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            0,
+            2,
+            3,
+            1
+          ],
+          "nr": 2,
+          "nc": 2,
+          "active_real": 1024.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            0,
+            3,
+            1,
+            2
+          ],
+          "nr": 2,
+          "nc": 2,
+          "active_real": 1024.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            0,
+            3,
+            2,
+            1
+          ],
+          "nr": 1,
+          "nc": 3,
+          "active_real": 1024.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            1,
+            0,
+            2,
+            3
+          ],
+          "nr": 3,
+          "nc": 3,
+          "active_real": 16384.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            1,
+            0,
+            3,
+            2
+          ],
+          "nr": 4,
+          "nc": 2,
+          "active_real": 16384.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            1,
+            2,
+            0,
+            3
+          ],
+          "nr": 2,
+          "nc": 2,
+          "active_real": 1024.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            1,
+            2,
+            3,
+            0
+          ],
+          "nr": 3,
+          "nc": 1,
+          "active_real": 1024.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            1,
+            3,
+            0,
+            2
+          ],
+          "nr": 3,
+          "nc": 1,
+          "active_real": 1024.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            1,
+            3,
+            2,
+            0
+          ],
+          "nr": 2,
+          "nc": 2,
+          "active_real": 1024.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            2,
+            0,
+            1,
+            3
+          ],
+          "nr": 2,
+          "nc": 2,
+          "active_real": 1024.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            2,
+            0,
+            3,
+            1
+          ],
+          "nr": 3,
+          "nc": 1,
+          "active_real": 1024.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            2,
+            1,
+            0,
+            3
+          ],
+          "nr": 1,
+          "nc": 3,
+          "active_real": 1024.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            2,
+            1,
+            3,
+            0
+          ],
+          "nr": 2,
+          "nc": 2,
+          "active_real": 1024.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            2,
+            3,
+            0,
+            1
+          ],
+          "nr": 2,
+          "nc": 2,
+          "active_real": 544.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            2,
+            3,
+            1,
+            0
+          ],
+          "nr": 1,
+          "nc": 1,
+          "active_real": 544.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            3,
+            0,
+            1,
+            2
+          ],
+          "nr": 3,
+          "nc": 1,
+          "active_real": 1024.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            3,
+            0,
+            2,
+            1
+          ],
+          "nr": 2,
+          "nc": 2,
+          "active_real": 1024.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            3,
+            1,
+            0,
+            2
+          ],
+          "nr": 2,
+          "nc": 2,
+          "active_real": 1024.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            3,
+            1,
+            2,
+            0
+          ],
+          "nr": 1,
+          "nc": 3,
+          "active_real": 1024.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            3,
+            2,
+            0,
+            1
+          ],
+          "nr": 1,
+          "nc": 1,
+          "active_real": 544.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            3,
+            2,
+            1,
+            0
+          ],
+          "nr": 2,
+          "nc": 2,
+          "active_real": 544.0,
+          "active_imag": 0.0
+        }
+      ],
+      "rows": [
+        {
+          "d": 4,
+          "spectator_dimension": 1,
+          "correlation_direct": 1.0,
+          "correlation_prediction": 1.0,
+          "error": 0.0
+        },
+        {
+          "d": 8,
+          "spectator_dimension": 2,
+          "correlation_direct": 1.0,
+          "correlation_prediction": 1.0,
+          "error": 0.0
+        },
+        {
+          "d": 16,
+          "spectator_dimension": 4,
+          "correlation_direct": 1.0,
+          "correlation_prediction": 1.0,
+          "error": 0.0
+        },
+        {
+          "d": 32,
+          "spectator_dimension": 8,
+          "correlation_direct": 1.0,
+          "correlation_prediction": 1.0,
+          "error": 0.0
+        },
+        {
+          "d": 64,
+          "spectator_dimension": 16,
+          "correlation_direct": 1.0,
+          "correlation_prediction": 1.0,
+          "error": 0.0
+        }
+      ]
+    },
+    {
+      "q": 4,
+      "gate": "phaseSWAP",
+      "entangling_power_direct": 0.19117288447053093,
+      "operator_purity": 0.0625,
+      "crossed_operator_purity": 0.7012923680147953,
+      "ep_invariant_error": 5.551115123125783e-17,
+      "terms": [
+        {
+          "permutation": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "nr": 2,
+          "nc": 4,
+          "active_real": 16384.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            0,
+            1,
+            3,
+            2
+          ],
+          "nr": 3,
+          "nc": 3,
+          "active_real": 16384.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            0,
+            2,
+            1,
+            3
+          ],
+          "nr": 1,
+          "nc": 3,
+          "active_real": 1024.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            0,
+            2,
+            3,
+            1
+          ],
+          "nr": 2,
+          "nc": 2,
+          "active_real": 1024.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            0,
+            3,
+            1,
+            2
+          ],
+          "nr": 2,
+          "nc": 2,
+          "active_real": 1024.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            0,
+            3,
+            2,
+            1
+          ],
+          "nr": 1,
+          "nc": 3,
+          "active_real": 1024.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            1,
+            0,
+            2,
+            3
+          ],
+          "nr": 3,
+          "nc": 3,
+          "active_real": 16384.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            1,
+            0,
+            3,
+            2
+          ],
+          "nr": 4,
+          "nc": 2,
+          "active_real": 16384.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            1,
+            2,
+            0,
+            3
+          ],
+          "nr": 2,
+          "nc": 2,
+          "active_real": 1024.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            1,
+            2,
+            3,
+            0
+          ],
+          "nr": 3,
+          "nc": 1,
+          "active_real": 1024.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            1,
+            3,
+            0,
+            2
+          ],
+          "nr": 3,
+          "nc": 1,
+          "active_real": 1024.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            1,
+            3,
+            2,
+            0
+          ],
+          "nr": 2,
+          "nc": 2,
+          "active_real": 1024.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            2,
+            0,
+            1,
+            3
+          ],
+          "nr": 2,
+          "nc": 2,
+          "active_real": 1024.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            2,
+            0,
+            3,
+            1
+          ],
+          "nr": 3,
+          "nc": 1,
+          "active_real": 1024.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            2,
+            1,
+            0,
+            3
+          ],
+          "nr": 1,
+          "nc": 3,
+          "active_real": 1024.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            2,
+            1,
+            3,
+            0
+          ],
+          "nr": 2,
+          "nc": 2,
+          "active_real": 1024.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            2,
+            3,
+            0,
+            1
+          ],
+          "nr": 2,
+          "nc": 2,
+          "active_real": 391.0616924235752,
+          "active_imag": -1.7763568394002505e-15
+        },
+        {
+          "permutation": [
+            2,
+            3,
+            1,
+            0
+          ],
+          "nr": 1,
+          "nc": 1,
+          "active_real": 391.0616924235752,
+          "active_imag": -1.7763568394002505e-15
+        },
+        {
+          "permutation": [
+            3,
+            0,
+            1,
+            2
+          ],
+          "nr": 3,
+          "nc": 1,
+          "active_real": 1024.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            3,
+            0,
+            2,
+            1
+          ],
+          "nr": 2,
+          "nc": 2,
+          "active_real": 1024.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            3,
+            1,
+            0,
+            2
+          ],
+          "nr": 2,
+          "nc": 2,
+          "active_real": 1024.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            3,
+            1,
+            2,
+            0
+          ],
+          "nr": 1,
+          "nc": 3,
+          "active_real": 1024.0,
+          "active_imag": 0.0
+        },
+        {
+          "permutation": [
+            3,
+            2,
+            0,
+            1
+          ],
+          "nr": 1,
+          "nc": 1,
+          "active_real": 391.0616924235752,
+          "active_imag": -2.6645352591003757e-15
+        },
+        {
+          "permutation": [
+            3,
+            2,
+            1,
+            0
+          ],
+          "nr": 2,
+          "nc": 2,
+          "active_real": 391.0616924235752,
+          "active_imag": -2.6645352591003757e-15
+        }
+      ],
+      "rows": [
+        {
+          "d": 4,
+          "spectator_dimension": 1,
+          "correlation_direct": 0.6388956626667748,
+          "correlation_prediction": 0.6388956626667749,
+          "error": 1.1102230246251565e-16
+        },
+        {
+          "d": 8,
+          "spectator_dimension": 2,
+          "correlation_direct": 0.6901496735840685,
+          "correlation_prediction": 0.6901496735840686,
+          "error": 1.1102230246251565e-16
+        },
+        {
+          "d": 16,
+          "spectator_dimension": 4,
+          "correlation_direct": 0.7108915430073555,
+          "correlation_prediction": 0.7108915430073556,
+          "error": 1.1102230246251565e-16
+        },
+        {
+          "d": 32,
+          "spectator_dimension": 8,
+          "correlation_direct": 0.7168151986857125,
+          "correlation_prediction": 0.7168151986857126,
+          "error": 1.1102230246251565e-16
+        },
+        {
+          "d": 64,
+          "spectator_dimension": 16,
+          "correlation_direct": 0.7183478026242873,
+          "correlation_prediction": 0.7183478026242873,
+          "error": 0.0
+        }
+      ]
+    },
+    {
+      "q": 4,
+      "gate": "generic_QR",
+      "entangling_power_direct": 0.535355370714101,
+      "operator_purity": 0.1074229675365829,
+      "crossed_operator_purity": 0.11858426572263439,
+      "ep_invariant_error": 0.0,
+      "terms": [
+        {
+          "permutation": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "nr": 2,
+          "nc": 4,
+          "active_real": 16384.0,
+          "active_imag": -1.970645868709653e-15
+        },
+        {
+          "permutation": [
+            0,
+            1,
+            3,
+            2
+          ],
+          "nr": 3,
+          "nc": 3,
+          "active_real": 16384.0,
+          "active_imag": -5.412337245047638e-15
+        },
+        {
+          "permutation": [
+            0,
+            2,
+            1,
+            3
+          ],
+          "nr": 1,
+          "nc": 3,
+          "active_real": 1023.9999999999999,
+          "active_imag": -1.231653667943533e-16
+        },
+        {
+          "permutation": [
+            0,
+            2,
+            3,
+            1
+          ],
+          "nr": 2,
+          "nc": 2,
+          "active_real": 1024.0,
+          "active_imag": -3.382710778154774e-16
+        },
+        {
+          "permutation": [
+            0,
+            3,
+            1,
+            2
+          ],
+          "nr": 2,
+          "nc": 2,
+          "active_real": 1024.0,
+          "active_imag": -3.382710778154774e-16
+        },
+        {
+          "permutation": [
+            0,
+            3,
+            2,
+            1
+          ],
+          "nr": 1,
+          "nc": 3,
+          "active_real": 1024.0,
+          "active_imag": -1.231653667943533e-16
+        },
+        {
+          "permutation": [
+            1,
+            0,
+            2,
+            3
+          ],
+          "nr": 3,
+          "nc": 3,
+          "active_real": 16384.0,
+          "active_imag": -1.970645868709653e-15
+        },
+        {
+          "permutation": [
+            1,
+            0,
+            3,
+            2
+          ],
+          "nr": 4,
+          "nc": 2,
+          "active_real": 16384.0,
+          "active_imag": -5.412337245047638e-15
+        },
+        {
+          "permutation": [
+            1,
+            2,
+            0,
+            3
+          ],
+          "nr": 2,
+          "nc": 2,
+          "active_real": 1023.9999999999999,
+          "active_imag": -1.231653667943533e-16
+        },
+        {
+          "permutation": [
+            1,
+            2,
+            3,
+            0
+          ],
+          "nr": 3,
+          "nc": 1,
+          "active_real": 1024.0,
+          "active_imag": -3.382710778154774e-16
+        },
+        {
+          "permutation": [
+            1,
+            3,
+            0,
+            2
+          ],
+          "nr": 3,
+          "nc": 1,
+          "active_real": 1024.0,
+          "active_imag": -3.382710778154774e-16
+        },
+        {
+          "permutation": [
+            1,
+            3,
+            2,
+            0
+          ],
+          "nr": 2,
+          "nc": 2,
+          "active_real": 1024.0,
+          "active_imag": -1.231653667943533e-16
+        },
+        {
+          "permutation": [
+            2,
+            0,
+            1,
+            3
+          ],
+          "nr": 2,
+          "nc": 2,
+          "active_real": 1023.9999999999999,
+          "active_imag": -1.231653667943533e-16
+        },
+        {
+          "permutation": [
+            2,
+            0,
+            3,
+            1
+          ],
+          "nr": 3,
+          "nc": 1,
+          "active_real": 1024.0,
+          "active_imag": -3.382710778154774e-16
+        },
+        {
+          "permutation": [
+            2,
+            1,
+            0,
+            3
+          ],
+          "nr": 1,
+          "nc": 3,
+          "active_real": 1023.9999999999999,
+          "active_imag": -1.231653667943533e-16
+        },
+        {
+          "permutation": [
+            2,
+            1,
+            3,
+            0
+          ],
+          "nr": 2,
+          "nc": 2,
+          "active_real": 1024.0,
+          "active_imag": -3.382710778154774e-16
+        },
+        {
+          "permutation": [
+            2,
+            3,
+            0,
+            1
+          ],
+          "nr": 2,
+          "nc": 2,
+          "active_real": 115.71570342871924,
+          "active_imag": 1.6653345369377348e-16
+        },
+        {
+          "permutation": [
+            2,
+            3,
+            1,
+            0
+          ],
+          "nr": 1,
+          "nc": 1,
+          "active_real": 115.71570342871924,
+          "active_imag": 1.6653345369377348e-16
+        },
+        {
+          "permutation": [
+            3,
+            0,
+            1,
+            2
+          ],
+          "nr": 3,
+          "nc": 1,
+          "active_real": 1023.9999999999999,
+          "active_imag": -3.382710778154774e-16
+        },
+        {
+          "permutation": [
+            3,
+            0,
+            2,
+            1
+          ],
+          "nr": 2,
+          "nc": 2,
+          "active_real": 1023.9999999999999,
+          "active_imag": -1.231653667943533e-16
+        },
+        {
+          "permutation": [
+            3,
+            1,
+            0,
+            2
+          ],
+          "nr": 2,
+          "nc": 2,
+          "active_real": 1023.9999999999999,
+          "active_imag": -3.382710778154774e-16
+        },
+        {
+          "permutation": [
+            3,
+            1,
+            2,
+            0
+          ],
+          "nr": 1,
+          "nc": 3,
+          "active_real": 1023.9999999999999,
+          "active_imag": -1.231653667943533e-16
+        },
+        {
+          "permutation": [
+            3,
+            2,
+            0,
+            1
+          ],
+          "nr": 1,
+          "nc": 1,
+          "active_real": 115.71570342871924,
+          "active_imag": -2.7755575615628914e-16
+        },
+        {
+          "permutation": [
+            3,
+            2,
+            1,
+            0
+          ],
+          "nr": 2,
+          "nc": 2,
+          "active_real": 115.71570342871924,
+          "active_imag": -2.7755575615628914e-16
+        }
+      ],
+      "rows": [
+        {
+          "d": 4,
+          "spectator_dimension": 1,
+          "correlation_direct": -0.011226811348857823,
+          "correlation_prediction": -0.01122681134885739,
+          "error": 4.3194614551822497e-16
+        },
+        {
+          "d": 8,
+          "spectator_dimension": 2,
+          "correlation_direct": 0.13230353340273818,
+          "correlation_prediction": 0.13230353340273882,
+          "error": 6.38378239159465e-16
+        },
+        {
+          "d": 16,
+          "spectator_dimension": 4,
+          "correlation_direct": 0.19038850306337518,
+          "correlation_prediction": 0.19038850306337574,
+          "error": 5.551115123125783e-16
+        },
+        {
+          "d": 32,
+          "spectator_dimension": 8,
+          "correlation_direct": 0.2069769480745627,
+          "correlation_prediction": 0.20697694807456335,
+          "error": 6.38378239159465e-16
+        },
+        {
+          "d": 64,
+          "spectator_dimension": 16,
+          "correlation_direct": 0.21126881065730288,
+          "correlation_prediction": 0.21126881065730352,
+          "error": 6.38378239159465e-16
+        }
+      ]
+    }
+  ],
+  "cut_identity": {
+    "maximum_crossed_cut_spectrum_error": 0.0,
+    "swap_entropy_sum_error": 0.0
+  },
+  "maximum_correlation_error": 1.2889689315898067e-12,
+  "maximum_ep_invariant_error": 1.1102230246251565e-16,
+  "status": "passed"
+}

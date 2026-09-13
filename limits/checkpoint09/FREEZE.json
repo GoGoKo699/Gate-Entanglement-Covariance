@@ -1,0 +1,13 @@
+{
+  "status": "frozen before circuit/eigenstate generation",
+  "utc": "2026-09-12T13:43:47.961082+00:00",
+  "files": {
+    "PROTOCOL.md": "8f5b5d57bc343090df1c810b57ad57cf2e3b636af122ba11134856fd26529487",
+    "floquet_test.py": "e075d4783c0236d7107859a8d476ed310a5933918b1ec2e7ffa47c18d34b358e",
+    "results/predictions.json": "cd7a7a7300b5b8641d56d385e726ece6ea4e23a99c9dd599683cc96297842fd0",
+    "theory/haar_predictions.py": "bc67f364a577f522436817eaa064df609695d062da3766dbf3be43a719a1cce3",
+    "theory/haar_predictions.json": "3c56c47403428ad5cea088ff0950551975111972663515a876926211d52d0b5a",
+    "theory/PROTOCOL_AND_PREDICTION_REVIEW.md": "59694429d38b5e22ea13b06bc2540b07b5cd5e5997eb212dc77f0f894d3e5215",
+    "reviews/LITERATURE.md": "79c9c2d8ff75e8381e2d4f954303331b3524e73f39c882a1bcf60d2a877e1cf5"
+  }
+}

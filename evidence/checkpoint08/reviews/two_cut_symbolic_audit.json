@@ -1,0 +1,22 @@
+{
+  "status": "All 8 exact sparse-polynomial identities passed.",
+  "checks": [
+    "global Haar4 centering",
+    "sum denominator",
+    "difference denominator",
+    "sum numerator",
+    "difference numerator",
+    "positive denominator",
+    "n1 coefficient reduction",
+    "n1 difference variance zero"
+  ],
+  "method": "Independent exact coefficient comparison after denominator clearing. No sampling.",
+  "same_cut_correlation": "[(D+1)(D a+q^2 b)-4D]/(D-1)^2",
+  "crossed_cut_correlation": "[(D+1)(D b+q^2 a)-4D]/(D-1)^2",
+  "baseline_cut_correlation": "[(D+1)(D/q^2+q^2)-4D]/(D-1)^2",
+  "plus_mode_variance": "4H/[q^2(D+1)^2(D+2)(D+3)]",
+  "minus_mode_variance": "4(D-q^2)(q^2-1)/[q^2(D+1)(D+2)(D+3)]",
+  "plus_increment_second_moment": "8(q+1)^2(D+q^2) ep/[q^2(D+1)(D+2)(D+3)]",
+  "q1_excluded": true,
+  "n1_difference_mode_undefined": true
+}

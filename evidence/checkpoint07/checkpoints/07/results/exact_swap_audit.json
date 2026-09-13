@@ -1,0 +1,747 @@
+{
+  "method": "Integer monomial four-copy Haar traces and exact rational scalar arithmetic; independent physical-factor count for plain SWAP.",
+  "scope": "Finite-d balanced complex-Haar purity moments. No exact finite-d logarithmic-entropy covariance is asserted.",
+  "formulas_D_equals_d_squared": {
+    "SWAP_correlation": "(D^2+D+16)/(4*(D-1)^2)",
+    "phaseSWAP_correlation": "(D^2-7*D+8)/(4*(D-1)^2)",
+    "difference": "2*(D+1)/(D-1)^2"
+  },
+  "results": {
+    "SWAP": {
+      "active_permutation_terms": [
+        {
+          "permutation": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "nr": 2,
+          "nc": 4,
+          "active_integer": 64
+        },
+        {
+          "permutation": [
+            0,
+            1,
+            3,
+            2
+          ],
+          "nr": 3,
+          "nc": 3,
+          "active_integer": 64
+        },
+        {
+          "permutation": [
+            0,
+            2,
+            1,
+            3
+          ],
+          "nr": 1,
+          "nc": 3,
+          "active_integer": 16
+        },
+        {
+          "permutation": [
+            0,
+            2,
+            3,
+            1
+          ],
+          "nr": 2,
+          "nc": 2,
+          "active_integer": 16
+        },
+        {
+          "permutation": [
+            0,
+            3,
+            1,
+            2
+          ],
+          "nr": 2,
+          "nc": 2,
+          "active_integer": 16
+        },
+        {
+          "permutation": [
+            0,
+            3,
+            2,
+            1
+          ],
+          "nr": 1,
+          "nc": 3,
+          "active_integer": 16
+        },
+        {
+          "permutation": [
+            1,
+            0,
+            2,
+            3
+          ],
+          "nr": 3,
+          "nc": 3,
+          "active_integer": 64
+        },
+        {
+          "permutation": [
+            1,
+            0,
+            3,
+            2
+          ],
+          "nr": 4,
+          "nc": 2,
+          "active_integer": 64
+        },
+        {
+          "permutation": [
+            1,
+            2,
+            0,
+            3
+          ],
+          "nr": 2,
+          "nc": 2,
+          "active_integer": 16
+        },
+        {
+          "permutation": [
+            1,
+            2,
+            3,
+            0
+          ],
+          "nr": 3,
+          "nc": 1,
+          "active_integer": 16
+        },
+        {
+          "permutation": [
+            1,
+            3,
+            0,
+            2
+          ],
+          "nr": 3,
+          "nc": 1,
+          "active_integer": 16
+        },
+        {
+          "permutation": [
+            1,
+            3,
+            2,
+            0
+          ],
+          "nr": 2,
+          "nc": 2,
+          "active_integer": 16
+        },
+        {
+          "permutation": [
+            2,
+            0,
+            1,
+            3
+          ],
+          "nr": 2,
+          "nc": 2,
+          "active_integer": 16
+        },
+        {
+          "permutation": [
+            2,
+            0,
+            3,
+            1
+          ],
+          "nr": 3,
+          "nc": 1,
+          "active_integer": 16
+        },
+        {
+          "permutation": [
+            2,
+            1,
+            0,
+            3
+          ],
+          "nr": 1,
+          "nc": 3,
+          "active_integer": 16
+        },
+        {
+          "permutation": [
+            2,
+            1,
+            3,
+            0
+          ],
+          "nr": 2,
+          "nc": 2,
+          "active_integer": 16
+        },
+        {
+          "permutation": [
+            2,
+            3,
+            0,
+            1
+          ],
+          "nr": 2,
+          "nc": 2,
+          "active_integer": 4
+        },
+        {
+          "permutation": [
+            2,
+            3,
+            1,
+            0
+          ],
+          "nr": 1,
+          "nc": 1,
+          "active_integer": 16
+        },
+        {
+          "permutation": [
+            3,
+            0,
+            1,
+            2
+          ],
+          "nr": 3,
+          "nc": 1,
+          "active_integer": 16
+        },
+        {
+          "permutation": [
+            3,
+            0,
+            2,
+            1
+          ],
+          "nr": 2,
+          "nc": 2,
+          "active_integer": 16
+        },
+        {
+          "permutation": [
+            3,
+            1,
+            0,
+            2
+          ],
+          "nr": 2,
+          "nc": 2,
+          "active_integer": 16
+        },
+        {
+          "permutation": [
+            3,
+            1,
+            2,
+            0
+          ],
+          "nr": 1,
+          "nc": 3,
+          "active_integer": 16
+        },
+        {
+          "permutation": [
+            3,
+            2,
+            0,
+            1
+          ],
+          "nr": 1,
+          "nc": 1,
+          "active_integer": 16
+        },
+        {
+          "permutation": [
+            3,
+            2,
+            1,
+            0
+          ],
+          "nr": 2,
+          "nc": 2,
+          "active_integer": 4
+        }
+      ],
+      "numerator_coefficients_in_n_d_over_2": {
+        "2": 32,
+        "4": 264,
+        "6": 256
+      },
+      "numerator_coefficients_in_d": {
+        "2": "8",
+        "4": "33/2",
+        "6": "4"
+      },
+      "rows": [
+        {
+          "d": 2,
+          "D": 4,
+          "numerator_exact": "552",
+          "product_moment_exact": "23/35",
+          "purity_covariance_exact": "3/175",
+          "purity_correlation_exact": "1",
+          "purity_correlation_float": 1.0
+        },
+        {
+          "d": 4,
+          "D": 16,
+          "numerator_exact": "20736",
+          "product_moment_exact": "72/323",
+          "purity_covariance_exact": "8/5491",
+          "purity_correlation_exact": "8/25",
+          "purity_correlation_float": 0.32
+        },
+        {
+          "d": 8,
+          "D": 64,
+          "numerator_exact": "1116672",
+          "product_moment_exact": "2908/47905",
+          "purity_covariance_exact": "348/3113825",
+          "purity_correlation_exact": "116/441",
+          "purity_correlation_float": 0.26303854875283444
+        },
+        {
+          "d": 16,
+          "D": 256,
+          "numerator_exact": "68192256",
+          "product_moment_exact": "44396/2862209",
+          "purity_covariance_exact": "5484/735587713",
+          "purity_correlation_exact": "1828/7225",
+          "purity_correlation_float": 0.25301038062283737
+        },
+        {
+          "d": 32,
+          "D": 1024,
+          "numerator_exact": "4312276992",
+          "product_moment_exact": "233956/60002475",
+          "purity_covariance_exact": "29156/61502536875",
+          "purity_correlation_exact": "29156/116281",
+          "purity_correlation_float": 0.2507374377585332
+        },
+        {
+          "d": 64,
+          "D": 4096,
+          "numerator_exact": "275154763776",
+          "product_moment_exact": "11196076/11470030849",
+          "purity_covariance_exact": "1398444/46992716388353",
+          "purity_correlation_exact": "466148/1863225",
+          "purity_correlation_float": 0.25018341853506687
+        },
+        {
+          "d": 128,
+          "D": 16384,
+          "numerator_exact": "17596615360512",
+          "product_moment_exact": "179002028/733276217345",
+          "purity_covariance_exact": "22370988/12014730821197825",
+          "purity_correlation_exact": "7456996/29822521",
+          "purity_correlation_float": 0.2500457959271787
+        },
+        {
+          "d": 256,
+          "D": 65536,
+          "numerator_exact": "1125970774327296",
+          "product_moment_exact": "954497252/15638930401963",
+          "purity_covariance_exact": "119306468/1024928581753449131",
+          "purity_correlation_exact": "119306468/477204025",
+          "purity_correlation_float": 0.2500114453141924
+        },
+        {
+          "d": 1024,
+          "D": 1048576,
+          "numerator_exact": "4611704160377634816",
+          "product_moment_exact": "733010635436/192154683614691329",
+          "purity_covariance_exact": "91626056364/201488981680642189688833",
+          "purity_correlation_exact": "30542018788/122167725625",
+          "purity_correlation_float": 0.25000071526051215
+        }
+      ],
+      "saved_results_verification": {
+        "available": true,
+        "rows_checked": 9,
+        "max_correlation_error": 0.0,
+        "max_product_moment_error": 0.0,
+        "max_covariance_error": 0.0
+      }
+    },
+    "phaseSWAP": {
+      "active_permutation_terms": [
+        {
+          "permutation": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "nr": 2,
+          "nc": 4,
+          "active_integer": 64
+        },
+        {
+          "permutation": [
+            0,
+            1,
+            3,
+            2
+          ],
+          "nr": 3,
+          "nc": 3,
+          "active_integer": 64
+        },
+        {
+          "permutation": [
+            0,
+            2,
+            1,
+            3
+          ],
+          "nr": 1,
+          "nc": 3,
+          "active_integer": 16
+        },
+        {
+          "permutation": [
+            0,
+            2,
+            3,
+            1
+          ],
+          "nr": 2,
+          "nc": 2,
+          "active_integer": 16
+        },
+        {
+          "permutation": [
+            0,
+            3,
+            1,
+            2
+          ],
+          "nr": 2,
+          "nc": 2,
+          "active_integer": 16
+        },
+        {
+          "permutation": [
+            0,
+            3,
+            2,
+            1
+          ],
+          "nr": 1,
+          "nc": 3,
+          "active_integer": 16
+        },
+        {
+          "permutation": [
+            1,
+            0,
+            2,
+            3
+          ],
+          "nr": 3,
+          "nc": 3,
+          "active_integer": 64
+        },
+        {
+          "permutation": [
+            1,
+            0,
+            3,
+            2
+          ],
+          "nr": 4,
+          "nc": 2,
+          "active_integer": 64
+        },
+        {
+          "permutation": [
+            1,
+            2,
+            0,
+            3
+          ],
+          "nr": 2,
+          "nc": 2,
+          "active_integer": 16
+        },
+        {
+          "permutation": [
+            1,
+            2,
+            3,
+            0
+          ],
+          "nr": 3,
+          "nc": 1,
+          "active_integer": 16
+        },
+        {
+          "permutation": [
+            1,
+            3,
+            0,
+            2
+          ],
+          "nr": 3,
+          "nc": 1,
+          "active_integer": 16
+        },
+        {
+          "permutation": [
+            1,
+            3,
+            2,
+            0
+          ],
+          "nr": 2,
+          "nc": 2,
+          "active_integer": 16
+        },
+        {
+          "permutation": [
+            2,
+            0,
+            1,
+            3
+          ],
+          "nr": 2,
+          "nc": 2,
+          "active_integer": 16
+        },
+        {
+          "permutation": [
+            2,
+            0,
+            3,
+            1
+          ],
+          "nr": 3,
+          "nc": 1,
+          "active_integer": 16
+        },
+        {
+          "permutation": [
+            2,
+            1,
+            0,
+            3
+          ],
+          "nr": 1,
+          "nc": 3,
+          "active_integer": 16
+        },
+        {
+          "permutation": [
+            2,
+            1,
+            3,
+            0
+          ],
+          "nr": 2,
+          "nc": 2,
+          "active_integer": 16
+        },
+        {
+          "permutation": [
+            2,
+            3,
+            0,
+            1
+          ],
+          "nr": 2,
+          "nc": 2,
+          "active_integer": 4
+        },
+        {
+          "permutation": [
+            2,
+            3,
+            1,
+            0
+          ],
+          "nr": 1,
+          "nc": 1,
+          "active_integer": 8
+        },
+        {
+          "permutation": [
+            3,
+            0,
+            1,
+            2
+          ],
+          "nr": 3,
+          "nc": 1,
+          "active_integer": 16
+        },
+        {
+          "permutation": [
+            3,
+            0,
+            2,
+            1
+          ],
+          "nr": 2,
+          "nc": 2,
+          "active_integer": 16
+        },
+        {
+          "permutation": [
+            3,
+            1,
+            0,
+            2
+          ],
+          "nr": 2,
+          "nc": 2,
+          "active_integer": 16
+        },
+        {
+          "permutation": [
+            3,
+            1,
+            2,
+            0
+          ],
+          "nr": 1,
+          "nc": 3,
+          "active_integer": 16
+        },
+        {
+          "permutation": [
+            3,
+            2,
+            0,
+            1
+          ],
+          "nr": 1,
+          "nc": 1,
+          "active_integer": 8
+        },
+        {
+          "permutation": [
+            3,
+            2,
+            1,
+            0
+          ],
+          "nr": 2,
+          "nc": 2,
+          "active_integer": 4
+        }
+      ],
+      "numerator_coefficients_in_n_d_over_2": {
+        "2": 16,
+        "4": 264,
+        "6": 256
+      },
+      "numerator_coefficients_in_d": {
+        "2": "4",
+        "4": "33/2",
+        "6": "4"
+      },
+      "rows": [
+        {
+          "d": 2,
+          "D": 4,
+          "numerator_exact": "536",
+          "product_moment_exact": "67/105",
+          "purity_covariance_exact": "-1/525",
+          "purity_correlation_exact": "-1/9",
+          "purity_correlation_float": -0.1111111111111111
+        },
+        {
+          "d": 4,
+          "D": 16,
+          "numerator_exact": "20672",
+          "product_moment_exact": "2/9",
+          "purity_covariance_exact": "2/2601",
+          "purity_correlation_exact": "38/225",
+          "purity_correlation_float": 0.1688888888888889
+        },
+        {
+          "d": 8,
+          "D": 64,
+          "numerator_exact": "1116416",
+          "product_moment_exact": "8722/143715",
+          "purity_covariance_exact": "914/9341475",
+          "purity_correlation_exact": "914/3969",
+          "purity_correlation_float": 0.23028470647518268
+        },
+        {
+          "d": 16,
+          "D": 256,
+          "numerator_exact": "68191232",
+          "product_moment_exact": "133186/8586627",
+          "purity_covariance_exact": "15938/2206763139",
+          "purity_correlation_exact": "15938/65025",
+          "purity_correlation_float": 0.24510572856593618
+        },
+        {
+          "d": 32,
+          "D": 1024,
+          "numerator_exact": "4312272896",
+          "product_moment_exact": "2105602/540022275",
+          "purity_covariance_exact": "260354/553522831875",
+          "purity_correlation_exact": "260354/1046529",
+          "purity_correlation_float": 0.2487785813866601
+        },
+        {
+          "d": 64,
+          "D": 4096,
+          "numerator_exact": "275154747392",
+          "product_moment_exact": "1975778/2024123091",
+          "purity_covariance_exact": "4187138/140978149165059",
+          "purity_correlation_exact": "4187138/16769025",
+          "purity_correlation_float": 0.24969477951162933
+        },
+        {
+          "d": 128,
+          "D": 16384,
+          "numerator_exact": "17596615294976",
+          "product_moment_exact": "537006082/2199828652035",
+          "purity_covariance_exact": "67080194/36044192463593475",
+          "purity_correlation_exact": "67080194/268402689",
+          "purity_correlation_float": 0.24992370326066293
+        },
+        {
+          "d": 256,
+          "D": 65536,
+          "numerator_exact": "1125970774065152",
+          "product_moment_exact": "8590475266/140750373617667",
+          "purity_covariance_exact": "1073627138/9224357235781042179",
+          "purity_correlation_exact": "1073627138/4294836225",
+          "purity_correlation_float": 0.249980926339048
+        },
+        {
+          "d": 1024,
+          "D": 1048576,
+          "numerator_exact": "4611704160373440512",
+          "product_moment_exact": "129354818018/33909650049651411",
+          "purity_covariance_exact": "274876071938/604466945041926569066499",
+          "purity_correlation_exact": "274876071938/1099509530625",
+          "purity_correlation_float": 0.24999880790642237
+        }
+      ],
+      "saved_results_verification": {
+        "available": true,
+        "rows_checked": 9,
+        "max_correlation_error": 0.0,
+        "max_product_moment_error": 0.0,
+        "max_covariance_error": 0.0
+      }
+    }
+  }
+}

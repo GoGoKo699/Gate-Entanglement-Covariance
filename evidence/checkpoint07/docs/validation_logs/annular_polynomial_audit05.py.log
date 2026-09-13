@@ -1,0 +1,30 @@
+{
+  "status": "exact agreement",
+  "maximum_integer_discrepancy": 0,
+  "leading_pairing_counts": [
+    [
+      1,
+      4,
+      15,
+      56
+    ],
+    [
+      4,
+      18,
+      72,
+      280
+    ],
+    [
+      15,
+      72,
+      300,
+      1200
+    ],
+    [
+      56,
+      280,
+      1200,
+      4900
+    ]
+  ]
+}

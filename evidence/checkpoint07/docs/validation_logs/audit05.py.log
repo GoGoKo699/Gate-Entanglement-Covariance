@@ -1,0 +1,24 @@
+{
+  "observations": 2560,
+  "max_covariance_error_in_rms_product": 2.0872609397276463e-15,
+  "max_commutator_rate_error": 6.650235917504688e-14,
+  "max_commutator_error_in_conditional_rms": 4.854277362346295e-13,
+  "minimum_sv_resolution_ratio": 1109125304342.426,
+  "max_direct_pulse_entropy_change_error": 2.4424906541753444e-15,
+  "orientation": [
+    {
+      "file": "orientation_a4_b16.npz",
+      "draws": 4000,
+      "max_absolute_z": 1.0675211067841257,
+      "max_absolute_mean_in_standard_errors": 1.2673262876463065,
+      "max_stored_covariance_difference": 6.938893903907228e-18
+    },
+    {
+      "file": "orientation_a8_b8.npz",
+      "draws": 4000,
+      "max_absolute_z": 1.7325991570805912,
+      "max_absolute_mean_in_standard_errors": 0.46083162576541875,
+      "max_stored_covariance_difference": 3.469446951953614e-18
+    }
+  ]
+}

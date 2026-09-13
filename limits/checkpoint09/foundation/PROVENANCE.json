@@ -1,0 +1,41 @@
+{
+  "source_archive": "Entanglement-Temporal-Fluctuations-Checkpoint-08.zip",
+  "source_archive_sha256": "cdc0dcf30048f20b21805d5cd86369ae9c967d3ed3943480a2fdec0687eb4eb3",
+  "copied_unchanged": [
+    {
+      "source_checkpoint_08_path": "foundation/GENERAL_GATE_REVIEW.md",
+      "copy": "GENERAL_GATE_REVIEW.md",
+      "sha256": "c84a04d51f7c02752c71ae38838cfc20d1bc0d52940a263b456437e2c43e5443"
+    },
+    {
+      "source_checkpoint_08_path": "foundation/NONSMOOTH_EXTENSION.md",
+      "copy": "NONSMOOTH_EXTENSION.md",
+      "sha256": "9e314de789c620d5cd18603c87a5ae3aebefb373c7e6303c354414ef8aa01719"
+    },
+    {
+      "source_checkpoint_08_path": "foundation/NONSMOOTH_EXTENSION_AUDIT.md",
+      "copy": "NONSMOOTH_EXTENSION_AUDIT.md",
+      "sha256": "8b1b452d1ebd4ee96a80b63a492503977fe50910cf25f0af9a2de04e3ca00a27"
+    },
+    {
+      "source_checkpoint_08_path": "foundation/DIAGONAL_GATE_THEORY.md",
+      "copy": "DIAGONAL_GATE_THEORY.md",
+      "sha256": "f0cc7c148fd6e26d593a4ca0bdc25bbff2275f1d282d0ef4a33c4e45d0ad61bd"
+    },
+    {
+      "source_checkpoint_08_path": "foundation/POLYNOMIAL_KERNEL.md",
+      "copy": "POLYNOMIAL_KERNEL.md",
+      "sha256": "1aa7eaa7e8e452ab6b1455526896cb159471e52cc4c45f2a96216ef8d5d8e840"
+    },
+    {
+      "source_checkpoint_08_path": "foundation/ALL_DEGREE_REVIEW.md",
+      "copy": "ALL_DEGREE_REVIEW.md",
+      "sha256": "02bc20de98776db9b8136a33ccde80a00fd85e86d8ce7cdb1328cb8779f4c536"
+    },
+    {
+      "source_checkpoint_08_path": "finite_purity/EXACT_GLOBAL_PURITY.md",
+      "copy": "EXACT_GLOBAL_PURITY.md",
+      "sha256": "9e658338a544a8f98957e2bb51ddf0b62972ae851976a3c5b8e67e927aa9d613"
+    }
+  ]
+}

@@ -1,0 +1,153 @@
+{
+  "scope": "Entropy covariance is limiting; purity and von Neumann marginal anchors are exact finite d.",
+  "orders": [
+    0.5,
+    1.0,
+    2.0
+  ],
+  "gates": {
+    "identity": {
+      "operator_weights": [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "entropy": [
+        {
+          "order": 0.5,
+          "scaled_variance": 0.125,
+          "scaled_covariance": 0.125,
+          "correlation": 1.0,
+          "scaled_msd": 0.0
+        },
+        {
+          "order": 1.0,
+          "scaled_variance": 0.25,
+          "scaled_covariance": 0.25,
+          "correlation": 1.0,
+          "scaled_msd": 0.0
+        },
+        {
+          "order": 2.0,
+          "scaled_variance": 0.5,
+          "scaled_covariance": 0.5,
+          "correlation": 1.0,
+          "scaled_msd": 0.0
+        }
+      ]
+    },
+    "SWAP": {
+      "operator_weights": [
+        0.25,
+        0.25,
+        0.25,
+        0.25
+      ],
+      "entropy": [
+        {
+          "order": 0.5,
+          "scaled_variance": 0.125,
+          "scaled_covariance": 0.021540274813276864,
+          "correlation": 0.1723221985062149,
+          "scaled_msd": 0.20691945037344628
+        },
+        {
+          "order": 1.0,
+          "scaled_variance": 0.25,
+          "scaled_covariance": 0.0569331096269542,
+          "correlation": 0.2277324385078168,
+          "scaled_msd": 0.3861337807460916
+        },
+        {
+          "order": 2.0,
+          "scaled_variance": 0.5,
+          "scaled_covariance": 0.125,
+          "correlation": 0.25,
+          "scaled_msd": 0.75
+        }
+      ]
+    },
+    "phaseSWAP": {
+      "operator_weights": [
+        0.25,
+        0.25,
+        0.25,
+        0.25
+      ],
+      "entropy": [
+        {
+          "order": 0.5,
+          "scaled_variance": 0.125,
+          "scaled_covariance": 0.021540274813276864,
+          "correlation": 0.1723221985062149,
+          "scaled_msd": 0.20691945037344628
+        },
+        {
+          "order": 1.0,
+          "scaled_variance": 0.25,
+          "scaled_covariance": 0.0569331096269542,
+          "correlation": 0.2277324385078168,
+          "scaled_msd": 0.3861337807460916
+        },
+        {
+          "order": 2.0,
+          "scaled_variance": 0.5,
+          "scaled_covariance": 0.125,
+          "correlation": 0.25,
+          "scaled_msd": 0.75
+        }
+      ]
+    }
+  },
+  "finite": {
+    "8": {
+      "d": 16,
+      "purity_mean": 0.1245136186770428,
+      "purity_variance": 2.9466234436680974e-05,
+      "von_neumann_mean": 2.2748659695882876,
+      "von_neumann_variance": 0.0009664453608574479,
+      "gates": {
+        "identity": {
+          "correlation": 1.0,
+          "covariance": 2.9466234436680974e-05,
+          "msd": 0.0
+        },
+        "SWAP": {
+          "correlation": 0.25301038062283737,
+          "covariance": 7.455263190346411e-06,
+          "msd": 4.4021942492669125e-05
+        },
+        "phaseSWAP": {
+          "correlation": 0.24510572856593618,
+          "covariance": 7.222342859697368e-06,
+          "msd": 4.448778315396721e-05
+        }
+      }
+    },
+    "10": {
+      "d": 32,
+      "purity_mean": 0.0624390243902439,
+      "purity_variance": 1.8906699773431093e-06,
+      "von_neumann_mean": 2.9663054768416144,
+      "von_neumann_variance": 0.000243505710400568,
+      "gates": {
+        "identity": {
+          "correlation": 1.0,
+          "covariance": 1.8906699773431093e-06,
+          "msd": 0.0
+        },
+        "SWAP": {
+          "correlation": 0.2507374377585332,
+          "covariance": 4.740617457659952e-07,
+          "msd": 2.833216463154228e-06
+        },
+        "phaseSWAP": {
+          "correlation": 0.2487785813866601,
+          "covariance": 4.703581948337675e-07,
+          "msd": 2.8406235650186836e-06
+        }
+      }
+    }
+  }
+}
