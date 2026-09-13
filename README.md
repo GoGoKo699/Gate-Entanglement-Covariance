@@ -20,9 +20,25 @@ The curves are analytical large-d predictions for a boundary ZZ gate. Horizontal
 
 ## Read the story
 
+**One background tutorial:** James A. Mingo and Roland Speicher,
+*Free Probability and Random Matrices* (2017). The [selected passages and reading
+map](docs/START_HERE.md#selected-reading) use the verified author PDF, not
+published-book page numbers. The repository supplies the quantum-information
+dictionary and the gate-dependent argument. Primary research sources remain
+credited proof inputs, not additional prerequisite tutorials.
+
+| Route | Where to go |
+|---|---|
+| **LEARN** | [Physical setup and selected reading](docs/START_HERE.md) → [book-to-project bridge](docs/TUTORIAL_BRIDGE.md) → [complete gate calculation](docs/WORKED_EXAMPLE.md) → [results and evidence](docs/RESULTS.md) |
+| **CHECK** | Go directly to [the theorem](theory/THEOREM.md), [derivation and hypotheses](theory/PROOF.md), [claim ledger](CLAIM_LEDGER.md), [primary attribution](docs/REFERENCES.md), and [evidence](docs/RESULTS.md). No educational detour is required. |
+| **REPRODUCE** | Run the [focused commands](REPRODUCE.md) to check maintained calculations and frozen evidence and regenerate the analytical figure. |
+
+For a specific question:
+
 | Question | Read |
 |---|---|
 | What is being compared, and why is it interesting? | [Start here](docs/START_HERE.md) |
+| How does Wishart fluctuation theory become a quantum entropy prediction? | [Tutorial bridge](docs/TUTORIAL_BRIDGE.md) |
 | What happens for an actual two-qubit gate? | [Worked example](docs/WORKED_EXAMPLE.md) |
 | What exactly is the theorem? | [Setting and result](theory/THEOREM.md) |
 | Why does the operator Schmidt spectrum appear? | [Technical derivation and proof dependencies](theory/PROOF.md) |

@@ -96,14 +96,14 @@ listed as an additional author-issued erratum here.
 
 ## Document roles and preserved assumptions
 
-The entrance will expose LEARN, CHECK and REPRODUCE. `docs/START_HERE.md` owns the
+The entrance exposes LEARN, CHECK and REPRODUCE. `docs/START_HERE.md` owns the
 selected reading map; the new `docs/TUTORIAL_BRIDGE.md` owns the quantum-to-matrix
 dictionary and conceptual transitions. `docs/WORKED_EXAMPLE.md` retains the
 complete boundary-qubit calculation and existing analytical figure. Theorem and
 proof remain canonical in `theory/`. Results and the claim ledger retain the
 distinction between identities, asymptotic results, deterministic calculations,
 finite-size samples and unsuccessful extensions. References separate the sole
-tutorial from primary proof inputs. Maintenance and reproduction documents will
+tutorial from primary proof inputs. Maintenance and reproduction documents
 point to these homes rather than create parallel guides.
 
 The preserved scope is balanced complex Haar, fixed active dimensions, fixed

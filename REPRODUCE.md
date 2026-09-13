@@ -2,6 +2,8 @@
 
 The default run verifies the imported records, checks maintained formulas against independent analytical references, reruns six existing deterministic calculations, and regenerates the analytical reader figure. It creates no new random-state cohort.
 
+This is the **REPRODUCE** route. For the physical meaning of the outputs, use **LEARN** in [Start here](docs/START_HERE.md), which gives the selected Mingo and Speicher passages and the local reading map. For the mathematical statement and its dependencies, use **CHECK** in [the theorem](theory/THEOREM.md) and [proof](theory/PROOF.md). The reproduction does not require reading the tutorial first.
+
 ## One entry point
 
 From the repository root, use Python 3.12 and the pinned dependencies:
@@ -9,6 +11,7 @@ From the repository root, use Python 3.12 and the pinned dependencies:
 ```sh
 python -m pip install -r requirements.txt
 python scripts/reproduce.py
+python scripts/check_repository.py
 ```
 
 The root requirements pin NumPy 2.3.5, SciPy 1.17.0, and Matplotlib 3.10.8. No GPU is needed. The scripts set one numerical-library thread for the focused run.
@@ -23,6 +26,8 @@ The root requirements pin NumPy 2.3.5, SciPy 1.17.0, and Matplotlib 3.10.8. No G
 | `figures/entropy_memory.png`, `figures/entropy_memory.svg` | Analytical correlation curves shown on the README |
 
 New outputs are kept outside the preserved records. The inherited calculations run in a temporary copy; their saved inputs and results are checked again afterwards. The committed reader references are [results/reader_examples.json](results/reader_examples.json) and [figures/entropy_memory.png](figures/entropy_memory.png). A numerical tolerance comparison checks the table; image pixels are not a cross-platform scientific equality test.
+
+The uninterrupted identity, ZZ, and active-SWAP calculation in [the worked example](docs/WORKED_EXAMPLE.md) uses that same reader table. The [tutorial bridge](docs/TUTORIAL_BRIDGE.md) explains the coefficient-matrix dictionary, common trace normalization, and fluctuation modes used by the calculation. Neither document introduces a new sample cohort or a separate numerical pipeline.
 
 To reproduce into a separate directory, including from another working directory, use an absolute script path:
 
@@ -52,6 +57,28 @@ print(correlation(2, 2, eta, cutoff=4))  # 1/2
 
 For two observations at gates `U_l` and `U_m`, pass the operator probabilities of `U_l @ U_m.conj().T`. The core also accepts abstract normalized probability vectors for algebraic calculations; this does not establish that every vector is realized by a gate at specified dimensions.
 
+### Check the equal-purity comparison
+
+The [worked example's two-pair gate witness](docs/WORKED_EXAMPLE.md#same-operator-purity-different-higher-order-covariance) has an exact order-three covariance difference. To check it separately from the default three-gate table, run this from the repository root:
+
+```sh
+python - <<'PY'
+from math import sqrt
+from gate_covariance import covariance
+
+p = (1 + sqrt(sqrt(2) - 1)) / 2
+q = 1 - p
+eta_a, eta_c = [0.5, 0.5], [p*p, p*q, p*q, q*q]
+assert abs(sum(x*x for x in eta_c) - 0.5) < 1e-14
+actual = covariance(3, 3, eta_c, cutoff=3) - covariance(3, 3, eta_a, cutoff=3)
+exact = 9 * (3 - 2*sqrt(2)) / 800
+assert abs(actual - exact) < 1e-14
+print(f"Rescaled covariance difference: {actual:.12f}")
+PY
+```
+
+The output is `Rescaled covariance difference: 0.001930194847`. The independently derived radical follows from the exact $F_3$ difference in the worked example. Order three terminates at $k=3$, so this calculation has floating-point roundoff but no omitted series terms. It evaluates a large-$d$ coefficient, not a finite-dimensional sample.
+
 ## What the default checks establish
 
 The six inherited checks cover exact moment inversion, finite-dimensional purity identities, two subsystem assignments, and a gate-design example. [Results and evidence](docs/RESULTS.md) maps each program to its saved output and qualification. Five historical JSON outputs match byte for byte; the sixth uses its documented floating-point tolerance.
@@ -66,7 +93,7 @@ python verify_project.py --output-dir build/validation
 python scripts/check_repository.py
 ```
 
-The last command checks local file destinations in the maintained Markdown reading route. It does not fetch external references or audit historical links. GitHub Actions runs the navigation check and complete default reproduction, then verifies the legacy tree identity.
+The last command checks local paths, image destinations, and Markdown section anchors linked from the maintained reading route, including same-page anchors. It does not fetch external references or crawl historical navigation. GitHub Actions runs the navigation check and complete default reproduction, then verifies the legacy tree identity. Source verification and the documentation walkthrough are recorded separately in [the reader-route implementation record](reviews/mingo-speicher-reader-route/IMPLEMENTATION.md); they are not independent scientific replication or external peer review.
 
 ## Existing Haar samples
 

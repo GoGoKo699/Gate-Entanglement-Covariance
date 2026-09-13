@@ -4,6 +4,12 @@
 
 [Results and evidence](docs/RESULTS.md) maps these claims to proofs, code, saved outputs, and numerical limitations. [The derivation](theory/PROOF.md) provides the current technical reading route.
 
+The [LEARN route](docs/START_HERE.md) uses selected Mingo–Speicher passages and
+the local [tutorial bridge](docs/TUTORIAL_BRIDGE.md) to explain these existing
+claims. Its examples evaluate the maintained theorem. The educational redesign
+adds no claim, proof certification or empirical support; CHECK remains the
+canonical theorem, derivation and evidence route.
+
 | Claim | Current status | Necessary qualification |
 |---|---|---|
 | The operator Schmidt probabilities of a relative boundary gate determine the limiting cross-covariance of all fixed positive Rényi orders | Central derived theorem, independently re-examined internally | Complex-Haar input, balanced growing halves, deterministic fixed active support, fixed finite gate set and fixed orders |

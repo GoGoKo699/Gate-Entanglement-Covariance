@@ -4,11 +4,20 @@ The central result is a derived asymptotic theorem: for a balanced complex-Haar 
 
 Throughout this page, `d` is the dimension of each half, entropies use natural logarithms, and order `1/2` is pure-state logarithmic negativity. Absolute entropy covariances vanish as `d⁻²`. See the [precise theorem](../theory/THEOREM.md) for the fixed-support, fixed-order, and finite-family assumptions, and the [claim ledger](../CLAIM_LEDGER.md) for current exclusions.
 
+On **LEARN**, this page follows the [tutorial bridge](TUTORIAL_BRIDGE.md) and
+[worked calculation](WORKED_EXAMPLE.md): they explain what the kernel predicts;
+the sections below separate its derivation from deterministic evaluations,
+finite-size observations and the failed extension. On **CHECK**, start from the
+[maintained proof](../theory/PROOF.md), then use the linked records to inspect a
+specific dependency or comparison. No checkpoint chronology is needed to read
+the current result. The [sole tutorial and primary citations](REFERENCES.md)
+have separate educational and attribution roles.
+
 ## What has been derived
 
 | Result | Proof and evidence | What the result permits |
 |---|---|---|
-| The relative gate's operator Schmidt probabilities determine every fixed positive-order entropy cross-covariance and the fixed finite-family Gaussian limit | [General-gate proof](../evidence/checkpoint08/foundation/GENERAL_GATE_REVIEW.md), [low-regularity entropy transfer](../evidence/checkpoint08/foundation/NONSMOOTH_EXTENSION.md), [transfer audit](../evidence/checkpoint08/foundation/NONSMOOTH_EXTENSION_AUDIT.md), and [current proof assessment](../reviews/PROOF_ASSESSMENT.md) | The theorem includes non-diagonal gates. It gives no growing-support, shrinking-time, or sample-path convergence statement. |
+| The relative gate's operator Schmidt probabilities determine every fixed positive-order entropy cross-covariance and the fixed finite-family Gaussian limit | [Maintained derivation](../theory/PROOF.md), with inherited [general-gate argument](../evidence/checkpoint08/foundation/GENERAL_GATE_REVIEW.md), [low-regularity entropy transfer](../evidence/checkpoint08/foundation/NONSMOOTH_EXTENSION.md), [transfer audit](../evidence/checkpoint08/foundation/NONSMOOTH_EXTENSION_AUDIT.md), and [current proof assessment](../reviews/PROOF_ASSESSMENT.md) | The theorem includes non-diagonal gates. It gives no growing-support, shrinking-time, or sample-path convergence statement. |
 | Fixed spatial access leaves positive limiting same-order entropy correlation; dual-unitary gates attain the bound for equal active dimensions | [Theorem and convexity argument](../theory/THEOREM.md), [general-gate report](../evidence/checkpoint07/checkpoints/07/REPORT.md), and [algebraic review](../evidence/checkpoint07/checkpoints/07/reviews/ADDITIONAL_COROLLARY_AUDIT.md) | The minimum correlations for one active qubit on each side are approximately `0.17232220`, `0.22773244`, and `0.25` at orders `1/2`, `1`, and `2`. These are limiting correlations, not bounds at every finite dimension. |
 | Equal operator purity can coexist with different entropy covariance at other orders | [Explicit diagonal-gate pair and proof](../evidence/checkpoint08/foundation/DIAGONAL_GATE_THEORY.md), [saved series evaluations](../evidence/checkpoint07/numerics/operator_results/equal_purity_analytic.json); a stronger second-moment comparison is given by the [exact gate-design audit](../evidence/checkpoint08/reviews/DESIGN_PAIR_INDEPENDENT_AUDIT.md) and [design-pair results](../evidence/checkpoint08/results/design_pair.json) | The distinction is analytical. The design example concerns gate 2-designs on the active qubits; it does not replace the initial Haar ensemble by a state 2-design. |
 | Ideal integer-order covariances identify a finite-rank operator Schmidt spectrum | [Moment-inversion proof](../evidence/checkpoint08/inverse/INVERSE_MEMORY_NOTE.md), [code](../evidence/checkpoint08/inverse/inverse_moments.py), and [exact results](../evidence/checkpoint08/inverse/inverse_results.json) | Known finite rank gives triangular moment inversion and Newton reconstruction. The qubit correlation-to-moment error amplification factors are `1`, `49`, and `2401` before root recovery. There is no efficient tomography claim or recovery of Schmidt bases. |
