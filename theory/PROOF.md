@@ -18,7 +18,7 @@ Let $G$ have independent standard complex Gaussian entries, with $\mathbb E|G_{a
 ```math
 G_\ell[ai,bj]=\sum_{c,e}(U_\ell)_{ab,ce}G[ci,ej],\qquad
 W_\ell=G_\ell G_\ell^\dagger/d,\qquad
-T=\operatorname{Tr}W_\ell=\|G\|_F^2/d.
+T=\mathop{\mathrm{Tr}}\nolimits W_\ell=\|G\|_F^2/d.
 ```
 
 The normalized coefficient array gives the Haar state, and its reduced density matrix after the gate is $\rho_\ell=W_\ell/T$. The same $T$ is shared exactly by every gate. Unitarity gives the joint covariance
@@ -39,7 +39,7 @@ Use the realignment convention
 \qquad F_k(V)=\sum_h\eta_h(V)^k.
 ```
 
-Matrix units are Hilbert–Schmidt orthonormal, so these eigenvalues are the normalized squared operator Schmidt coefficients. Their sum is $\operatorname{Tr}(VV^\dagger)/(rs)=1$.
+Matrix units are Hilbert–Schmidt orthonormal, so these eigenvalues are the normalized squared operator Schmidt coefficients. Their sum is $\mathop{\mathrm{Tr}}\nolimits (VV^\dagger)/(rs)=1$.
 
 ## 2. Connected contractions and the surviving cycle
 
@@ -74,7 +74,7 @@ For a backbone with $k$ row and $k$ column vertices, its two faces run in opposi
 \prod_{h=1}^k
 V_{a_hb_h,c_he_h}
 \overline{V_{a_{h+1}b_h,c_{h+1}e_h}}
-=\operatorname{Tr}\!\left[(\mathcal R(V)\mathcal R(V)^\dagger)^k\right].
+=\mathop{\mathrm{Tr}}\nolimits \!\left[(\mathcal R(V)\mathcal R(V)^\dagger)^k\right].
 ```
 
 The backbone spectator sums and its $2k$ Wishart factors contribute $(d/r)^k(d/s)^kd^{-2k}=(rs)^{-k}$. Its weight is exactly $F_k(V)$. The displayed orientation gives realignment; it does not produce a partial-transpose term. Fixed support is essential to the preceding power counting.
@@ -91,12 +91,12 @@ q_{m,k}=\binom{2m}{m-k}
 There are $k$ compatible cyclic gluings. Consequently
 
 ```math
-\lim_{d\to\infty}\operatorname{Cov}
-(\operatorname{Tr}W_\ell^m,\operatorname{Tr}W_n^j)
+\lim_{d\to\infty}\mathop{\mathrm{Cov}}\nolimits 
+(\mathop{\mathrm{Tr}}\nolimits W_\ell^m,\mathop{\mathrm{Tr}}\nolimits W_n^j)
 =\sum_{k=1}^{\min(m,j)}kq_{m,k}q_{j,k}F_k(V_{\ell n}).
 ```
 
-Define $\Gamma_k(x)=2T_k((x-2)/2)$, where $T_k$ is the first-kind Chebyshev polynomial, $T_k(\cos\theta)=\cos(k\theta)$. This is $C_k(x-2)$ in the book's convention, the square case of its Example 42. All covariances here use unnormalized $\operatorname{Tr}$ and exact mean centering; normalized $\mathrm{tr}=d^{-1}\operatorname{Tr}$ describes empirical spectral averages instead. The exact triangular identity
+Define $\Gamma_k(x)=2T_k((x-2)/2)$, where $T_k$ is the first-kind Chebyshev polynomial, $T_k(\cos\theta)=\cos(k\theta)$. This is $C_k(x-2)$ in the book's convention, the square case of its Example 42. All covariances here use unnormalized $\mathop{\mathrm{Tr}}\nolimits $ and exact mean centering; normalized $\mathrm{tr}=d^{-1}\mathop{\mathrm{Tr}}\nolimits $ describes empirical spectral averages instead. The exact triangular identity
 
 ```math
 x^m=\binom{2m}{m}+\sum_{k=1}^m q_{m,k}\Gamma_k(x)
@@ -153,7 +153,7 @@ For a bounded smooth upper cutoff of $x^\alpha$, equal to that power near $[0,4]
 
 The mixed edge corners are integrable and the function is smooth near $4$. The same regularity check holds for $x\log x$, defined as zero at zero. A cutoff beyond the upper edge is removed in $L^2$ using the Gaussian operator-norm tail and fixed polynomial moments. Thus the bounded-function theorem is not being applied directly to an unbounded power.
 
-Let $X_d(f,\ell)=\operatorname{Tr}f(W_\ell)-\mathbb E\operatorname{Tr}f(W_\ell)$. Polynomial approximation in $\mathcal V$ gives
+Let $X_d(f,\ell)=\mathop{\mathrm{Tr}}\nolimits f(W_\ell)-\mathbb E\mathop{\mathrm{Tr}}\nolimits f(W_\ell)$. Polynomial approximation in $\mathcal V$ gives
 
 ```math
 \lim_{M\to\infty}\limsup_{d\to\infty}
@@ -163,7 +163,7 @@ Let $X_d(f,\ell)=\operatorname{Tr}f(W_\ell)-\mathbb E\operatorname{Tr}f(W_\ell)$
 Cut off the approximating polynomials when invoking Hu, then remove their cutoffs as above. The triangle inequality controls every fixed linear combination over gates, and Cauchy–Schwarz controls covariance errors. Independence between gates is unnecessary. Taking dimension first and approximation degree second transfers the polynomial Gaussian limit and gives
 
 ```math
-\lim_{d\to\infty}\operatorname{Cov}(X_d(f,\ell),X_d(h,n))
+\lim_{d\to\infty}\mathop{\mathrm{Cov}}\nolimits (X_d(f,\ell),X_d(h,n))
 =\frac14\sum_{k\ge1}k\,a_k(f)a_k(h)F_k(V_{\ell n}).
 ```
 
@@ -171,7 +171,7 @@ Absolute convergence follows from Cauchy–Schwarz and $0\le F_k\le1$.
 
 ## 5. Normalization and exact mean centering
 
-For $\alpha\ne1$, put $Y_\alpha=\operatorname{Tr}W_\ell^\alpha$, $\mu_{\alpha,d}=\mathbb EY_\alpha$, $X_\alpha=Y_\alpha-\mu_{\alpha,d}$ and $Z=T-d$. The Marchenko–Pastur moment is
+For $\alpha\ne1$, put $Y_\alpha=\mathop{\mathrm{Tr}}\nolimits W_\ell^\alpha$, $\mu_{\alpha,d}=\mathbb EY_\alpha$, $X_\alpha=Y_\alpha-\mu_{\alpha,d}$ and $Z=T-d$. The Marchenko–Pastur moment is
 
 ```math
 \frac{\mu_{\alpha,d}}d\longrightarrow
@@ -190,7 +190,7 @@ d(S_\alpha-\mathbb ES_\alpha)
 -\frac{\alpha}{1-\alpha}Z+o_{L^2}(1).
 ```
 
-At order one let $Y=\operatorname{Tr}(W_\ell\log W_\ell)$, $X=Y-\mathbb EY$, $m_d=\mathbb EY/d\to1/2$, $q=Z/d$ and $s_{0,d}=\log d-m_d$. Exact algebra gives
+At order one let $Y=\mathop{\mathrm{Tr}}\nolimits (W_\ell\log W_\ell)$, $X=Y-\mathbb EY$, $m_d=\mathbb EY/d\to1/2$, $q=Z/d$ and $s_{0,d}=\log d-m_d$. Exact algebra gives
 
 ```math
 d(S_1-s_{0,d})=(1+m_d)Z-X
@@ -205,7 +205,7 @@ d(S_1-\mathbb ES_1)=\frac32Z-X+o_{L^2}(1).
 
 ## 6. Entropy coefficients and final kernel
 
-The first cosine coefficient of $x^\alpha$ is $2\alpha M_\alpha$. Thus the trace term cancels mode one. At order one, $x\log x$ has first coefficient $3$, matching $(3/2)x$. This removes the shared radial fluctuation, for which $F_1=1$ and $\operatorname{Var}T=1$ exactly.
+The first cosine coefficient of $x^\alpha$ is $2\alpha M_\alpha$. Thus the trace term cancels mode one. At order one, $x\log x$ has first coefficient $3$, matching $(3/2)x$. This removes the shared radial fluctuation, for which $F_1=1$ and $\mathop{\mathrm{Var}}\nolimits T=1$ exactly.
 
 For $k\ge2$, the remaining entropy coefficients are
 
@@ -221,7 +221,7 @@ c_{\alpha,k+1}=c_{\alpha,k}\frac{\alpha-k}{\alpha+k+1}.
 Use the continuous limit at $\alpha=1$; reciprocal Gamma zeros give termination at integer orders at least two. The recurrence avoids the removable singularity. Combining the preceding steps yields
 
 ```math
-\lim_{d\to\infty}d^2\operatorname{Cov}
+\lim_{d\to\infty}d^2\mathop{\mathrm{Cov}}\nolimits 
 \bigl(S_\alpha(U_\ell\psi),S_\beta(U_n\psi)\bigr)
 =\frac14\sum_{k\ge2}k\,c_{\alpha,k}c_{\beta,k}F_k(U_\ell U_n^\dagger).
 ```

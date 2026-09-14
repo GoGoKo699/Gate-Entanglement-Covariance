@@ -11,12 +11,12 @@ A complex-Haar pure state is uniformly distributed on the unit sphere, with an i
 The three related observables are
 
 ```math
-\operatorname{Cov}(X,Y)=\mathbb E[(X-\mathbb EX)(Y-\mathbb EY)],\qquad
-\operatorname{Corr}(X,Y)=\frac{\operatorname{Cov}(X,Y)}{\operatorname{Var}X},
+\mathop{\mathrm{Cov}}\nolimits (X,Y)=\mathbb E[(X-\mathbb EX)(Y-\mathbb EY)],\qquad
+\mathop{\mathrm{Corr}}\nolimits (X,Y)=\frac{\mathop{\mathrm{Cov}}\nolimits (X,Y)}{\mathop{\mathrm{Var}}\nolimits X},
 ```
 
 ```math
-\mathbb E[(Y-X)^2]=2\operatorname{Var}X-2\operatorname{Cov}(X,Y).
+\mathbb E[(Y-X)^2]=2\mathop{\mathrm{Var}}\nolimits X-2\mathop{\mathrm{Cov}}\nolimits (X,Y).
 ```
 
 The correlation formula uses the equal, nonzero marginal variances. Covariance retains the fluctuation scale; correlation divides it out; the mean-square increment measures a typical squared change. Independently resampling the second input would instead give zero covariance. “Memory” here means this ensemble correlation, with no storage protocol or general time-decay law implied. The gate need not belong to a time evolution.
@@ -27,7 +27,7 @@ Choose bases for two halves of equal dimension $d$ and write
 
 ```math
 |\psi\rangle=\sum_{A,B=1}^d C_{AB}|A\rangle|B\rangle,
-\qquad \operatorname{Tr}(CC^\dagger)=1.
+\qquad \mathop{\mathrm{Tr}}\nolimits (CC^\dagger)=1.
 ```
 
 Tracing out the second half means summing its matching basis index: $(\rho_A)_{AA'}=\sum_B C_{AB}\overline{C_{A'B}}$. Hence $\rho_A=CC^\dagger$. Its eigenvalues $\lambda_j$ are the squared singular values of $C$, or **state Schmidt probabilities**. They sum to one. Entanglement of this pure state is measured by a spectral function:
@@ -48,7 +48,7 @@ W_\ell=G_\ell G_\ell^\dagger/d,\qquad
 ```
 
 ```math
-T=\operatorname{Tr}W_\ell=\|G\|_F^2/d.
+T=\mathop{\mathrm{Tr}}\nolimits W_\ell=\|G\|_F^2/d.
 ```
 
 Here $T$ is a scalar trace; the spectator subsystem labelled $T$ in the setup and worked example is a separate use of the letter. Unitarity makes the shared $T$ exact, not an asymptotic replacement by its mean $d$. Each $G_\ell$ separately is an iid standard complex Gaussian matrix; each $W_\ell$ is square Wishart. The book's $XX^*/N$ in Section 4.5.1 matches our $W$ when $N=d$ and the aspect ratio is one. Its limiting empirical density is
@@ -71,10 +71,10 @@ The Kronecker deltas identify matching spectator indices. The joint family is a 
 
 ## 3. Fluctuation modes separate the spectral contributions
 
-The book distinguishes normalized $\mathrm{tr}=d^{-1}\operatorname{Tr}$ for a limiting eigenvalue distribution from unnormalized $\operatorname{Tr}$ for fluctuations. Our centered statistic is
+The book distinguishes normalized $\mathrm{tr}=d^{-1}\mathop{\mathrm{Tr}}\nolimits $ for a limiting eigenvalue distribution from unnormalized $\mathop{\mathrm{Tr}}\nolimits $ for fluctuations. Our centered statistic is
 
 ```math
-X_d(f,\ell)=\operatorname{Tr}f(W_\ell)-\mathbb E\operatorname{Tr}f(W_\ell).
+X_d(f,\ell)=\mathop{\mathrm{Tr}}\nolimits f(W_\ell)-\mathbb E\mathop{\mathrm{Tr}}\nolimits f(W_\ell).
 ```
 
 Its typical size is order one for the fixed test functions used here. A central limit theorem for these traces concerns spectral fluctuations around the mean, not the order-$d$ trace itself.
@@ -106,7 +106,7 @@ To read its weight, **realign** the active gate matrix by grouping its first-hal
 Q(V)=\mathcal R(V)\mathcal R(V)^\dagger/(rs).
 ```
 
-Realignment is a rearrangement into an $r^2\times s^2$ matrix, not a partial trace of the input state. Unitarity gives $\operatorname{Tr}Q=\|V\|_F^2/(rs)=1$. Its nonzero eigenvalues $\eta_h$ are the **operator Schmidt probabilities** of the gate. Equivalently, in Hilbert–Schmidt orthonormal operator bases,
+Realignment is a rearrangement into an $r^2\times s^2$ matrix, not a partial trace of the input state. Unitarity gives $\mathop{\mathrm{Tr}}\nolimits Q=\|V\|_F^2/(rs)=1$. Its nonzero eigenvalues $\eta_h$ are the **operator Schmidt probabilities** of the gate. Equivalently, in Hilbert–Schmidt orthonormal operator bases,
 
 ```math
 V=\sqrt{rs}\sum_h\sqrt{\eta_h}\,A_h\otimes B_h.
@@ -124,13 +124,13 @@ For one link of the cycle, summing the second-half indices gives
 Closing $k$ such links takes a matrix trace. The spectator normalization supplies $(rs)^{-k}$, leaving
 
 ```math
-F_k(V)=\operatorname{Tr}Q(V)^k=\sum_h\eta_h(V)^k.
+F_k(V)=\mathop{\mathrm{Tr}}\nolimits Q(V)^k=\sum_h\eta_h(V)^k.
 ```
 
 The familiar tree count and the additional gate contraction therefore combine as
 
 ```math
-\lim_{d\to\infty}\operatorname{Cov}
+\lim_{d\to\infty}\mathop{\mathrm{Cov}}\nolimits 
 \left(X_d(\Gamma_j,\ell),X_d(\Gamma_k,m)\right)
 =\delta_{jk}\,kF_k(V_{\ell m}).
 ```
@@ -158,7 +158,7 @@ Now use the exact shared trace. For $\alpha\ne1$,
 
 ```math
 S_\alpha=\frac{\log Y_\alpha-\alpha\log T}{1-\alpha},\qquad
-Y_\alpha=\operatorname{Tr}W_\ell^\alpha.
+Y_\alpha=\mathop{\mathrm{Tr}}\nolimits W_\ell^\alpha.
 ```
 
 Both $Y_\alpha$ and $T$ are order $d$, with centered fluctuations of order one. Let $M_\alpha=\lim_d\mathbb EY_\alpha/d$ and $Z=T-d$. The controlled logarithmic expansion gives
@@ -169,7 +169,7 @@ d(S_\alpha-\mathbb ES_\alpha)
 -\frac{\alpha}{1-\alpha}Z+o_{L^2}(1).
 ```
 
-Mode one is precisely $X_d(\Gamma_1,\ell)=Z$, common to all gates with $F_1=1$. Its coefficient in $x^\alpha$ is $2\alpha M_\alpha$ in the cosine convention, so it cancels in the displayed entropy combination. This is the radial Gaussian-norm fluctuation: normalizing the state removes it. At order one, $S_1=\log T-\operatorname{Tr}(W_\ell\log W_\ell)/T$ gives $d(S_1-\mathbb ES_1)=(3/2)Z-X_d(x\log x,\ell)+o_{L^2}(1)$, with the same cancellation.
+Mode one is precisely $X_d(\Gamma_1,\ell)=Z$, common to all gates with $F_1=1$. Its coefficient in $x^\alpha$ is $2\alpha M_\alpha$ in the cosine convention, so it cancels in the displayed entropy combination. This is the radial Gaussian-norm fluctuation: normalizing the state removes it. At order one, $S_1=\log T-\mathop{\mathrm{Tr}}\nolimits (W_\ell\log W_\ell)/T$ gives $d(S_1-\mathbb ES_1)=(3/2)Z-X_d(x\log x,\ell)+o_{L^2}(1)$, with the same cancellation.
 
 The $L^2$ remainder requires more than formal Taylor expansion. The proof uses variance convergence for uniform integrability and bounds the combined normalized entropy on exceptional events by $0\le S_\alpha\le\log d$. Subtracting its exact finite-$d$ mean preserves the vanishing remainder; replacing that mean by only its leading asymptotic value is unnecessary.
 
@@ -177,7 +177,7 @@ The surviving cosine coefficients are the $c_{\alpha,k}$ defined canonically in 
 
 ```math
 K_{\alpha\beta}(V)=\frac14\sum_{k\ge2}k c_{\alpha,k}c_{\beta,k}F_k(V)
-=\lim_{d\to\infty}d^2\operatorname{Cov}(S_\alpha(U_\ell\psi),S_\beta(U_m\psi)).
+=\lim_{d\to\infty}d^2\mathop{\mathrm{Cov}}\nolimits (S_\alpha(U_\ell\psi),S_\beta(U_m\psi)).
 ```
 
 Centered entropies scale as $1/d$, hence the $d^2$ covariance scaling. A finite normalized correlation concerns shrinking absolute fluctuations.

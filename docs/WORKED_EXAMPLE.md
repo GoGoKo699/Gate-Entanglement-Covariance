@@ -22,7 +22,7 @@ Y=\begin{pmatrix}0&-i\\i&0\end{pmatrix},\qquad
 Z=\begin{pmatrix}1&0\\0&-1\end{pmatrix}.
 ```
 
-They obey $\operatorname{Tr}(P^\dagger Q)=2\delta_{PQ}$ for $P,Q\in\{I,X,Y,Z\}$. Thus $P/\sqrt2$ form an orthonormal operator basis. Every two-qubit unitary has Hilbert-Schmidt norm $\sqrt{\operatorname{Tr}(U^\dagger U)}=2$. The operator Schmidt probabilities $\eta_h$ are its squared Schmidt coefficients divided by $4$. They describe the **gate**, not the input state's reduced-state eigenvalues.
+They obey $\mathop{\mathrm{Tr}}\nolimits (P^\dagger Q)=2\delta_{PQ}$ for $P,Q\in\{I,X,Y,Z\}$. Thus $P/\sqrt2$ form an orthonormal operator basis. Every two-qubit unitary has Hilbert-Schmidt norm $\sqrt{\mathop{\mathrm{Tr}}\nolimits (U^\dagger U)}=2$. The operator Schmidt probabilities $\eta_h$ are its squared Schmidt coefficients divided by $4$. They describe the **gate**, not the input state's reduced-state eigenvalues.
 
 **Identity.** The gate is one product operator. Its normalized operator Schmidt spectrum is $(1)$, hence $F_k=1$. Every state's entropy is unchanged.
 
@@ -49,9 +49,9 @@ The four coefficient magnitudes in those bases are all $1$, giving probabilities
 For reduced-state probabilities $\lambda_j$, $S_2=-\log\sum_j\lambda_j^2$. At this order the coefficient sequence in the [theorem](../theory/THEOREM.md) has only one nonzero term: $c_{2,2}=-1$. Consequently,
 
 ```math
-\lim_{d\to\infty}d^2\operatorname{Var}[S_2(\psi)]=\frac12,
+\lim_{d\to\infty}d^2\mathop{\mathrm{Var}}\nolimits [S_2(\psi)]=\frac12,
 \qquad
-\lim_{d\to\infty}d^2\operatorname{Cov}[S_2(U\psi),S_2(\psi)]
+\lim_{d\to\infty}d^2\mathop{\mathrm{Cov}}\nolimits [S_2(U\psi),S_2(\psi)]
 =\frac12F_2(U).
 ```
 
