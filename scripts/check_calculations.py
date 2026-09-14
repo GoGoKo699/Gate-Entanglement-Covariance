@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Check maintained calculations against independent analytical references.
 
-No sampling and no changes to imported evidence. These checks exercise the
+No sampling and no changes to reference data. These checks exercise the
 implementation; they do not replace the theorem's proof or its review.
 """
 from fractions import Fraction
@@ -16,13 +16,14 @@ sys.path.insert(0, str(ROOT))
 import numpy as np
 from gate_covariance import coefficients, covariance, correlation, operator_schmidt_probabilities
 from gate_covariance.examples import active_swap, reader_examples, zz_gate
+from verify_project import safe_output_directory
 
 
 def run_checks(reference=None):
     errors = {}
     # Frozen values were produced by exact binomial and Fraction arithmetic,
     # independent of the maintained floating-point recurrence.
-    saved = json.loads((ROOT/"evidence/checkpoint08/inverse/inverse_results.json").read_text())
+    saved = json.loads((ROOT/"checks/inverse/inverse_results.json").read_text())
     rational_errors = []
     for witness in saved["exact_witnesses"].values():
         eta = [float(Fraction(x)) for x in witness["spectrum"]]
@@ -113,6 +114,9 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--output", type=Path, help="Optional JSON report path.")
     args = parser.parse_args()
+    if args.output:
+        args.output = args.output.resolve()
+        safe_output_directory(args.output.parent)
     report = run_checks(ROOT/"results/reader_examples.json")
     if args.output:
         args.output.parent.mkdir(parents=True, exist_ok=True)

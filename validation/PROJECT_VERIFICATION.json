@@ -1,9 +1,0 @@
-{
-  "status": "passed",
-  "imported_files_verified": 193,
-  "python": "3.12.14",
-  "deterministic_checks": 6,
-  "new_random_states": 0,
-  "original_inputs_unchanged": true,
-  "scope": "Input integrity and six checkpoint-08 deterministic checks only; earlier sampling and proof audits are inherited evidence."
-}

@@ -37,12 +37,12 @@ gate power sums, normalized entropy covariance, and spatial-access consequences.
 
 **CHECK:** go straight to the [canonical theorem](../theory/THEOREM.md) and
 [proof](../theory/PROOF.md). They state the assumptions, indexed contraction,
-analytic input and normalization. The [claim ledger](../CLAIM_LEDGER.md),
+analytic input and normalization. The [scope and claims](SCOPE.md),
 [references](REFERENCES.md), and [results](RESULTS.md) provide status, attribution
 and evidence. You need not complete LEARN first.
 
 **REPRODUCE:** the [focused reproduction](../REPRODUCE.md) evaluates the maintained
-example, verifies frozen inputs, and runs six inherited deterministic checks.
+example, verifies reference inputs, and runs six deterministic checks.
 Historical files are supporting records, not prerequisite reading. Neither a
 manuscript nor an earlier conversation is needed.
 
@@ -57,8 +57,8 @@ pagination. No published-page equivalence is assumed here.
 
 The table separately names physical PDF pages (counted from one) and printed
 author-PDF folios. They coincide at these verified locations. The source was
-retrieved on 13 September 2026; its hash, errata review and source cautions are
-in the [implementation record](../reviews/mingo-speicher-reader-route/IMPLEMENTATION.md).
+retrieved on 13 September 2026; its hash, errata and source cautions are
+in the [implementation record](TUTORIAL_SOURCE.md).
 These are short selections, not whole-chapter assignments. Skip any selection
 whose concept you already know.
 
@@ -94,7 +94,7 @@ Apply the author's correction to Exercise 7: its reference is to Exercise 6(ii),
 not 6(iii). The GUE through-pairs in Remark 43 are an intuition for diagram
 organization; our Wishart mode `k` is the half-length of an alternating row/column
 cycle. The local proof gives that adaptation. Exercises 11–12 and Figure 5.6
-are not assigned; see the [source cautions](../reviews/mingo-speicher-reader-route/IMPLEMENTATION.md#source-caveats)
+are not assigned; see the [source cautions](TUTORIAL_SOURCE.md#source-caveats)
 before using nearby formulas with different normalization or centering.
 
 Three roles remain distinct throughout: the book teaches background; primary
@@ -113,9 +113,9 @@ A=aR,\qquad B=bT,\qquad
 \qquad \dim a=r,\quad\dim b=s.
 ```
 
-The gate acts on $a b$ and is the identity on $R T$. The limit increases $d$ while keeping $r$, $s$, and the gate fixed. The input is globally Haar; the active factors need not start unentangled with their spectators. The entropy orders and the finite collection of gates under comparison also stay fixed.
+The gate acts on $`a b`$ and is the identity on $`R T`$. The limit increases $`d`$ while keeping $`r`$, $`s`$, and the gate fixed. The input is globally Haar; the active factors need not start unentangled with their spectators. The entropy orders and the finite collection of gates under comparison also stay fixed.
 
-For each fixed positive order, entropy fluctuations around the ensemble mean have size $1/d$. Their covariance has size $1/d^2$. We therefore study the finite limits of $d^2\mathop{\mathrm{Cov}}\nolimits (Y_\alpha,X_\beta)$ and of the normalized correlation. A nonzero limiting correlation describes the relation between these small fluctuations. It is not a finite fraction of the total entropy retained by the gate.
+For each fixed positive order, entropy fluctuations around the ensemble mean have size $`1/d`$. Their covariance has size $`1/d^2`$. We therefore study the finite limits of $`d^2\mathop{\mathrm{Cov}}\nolimits (Y_\alpha,X_\beta)`$ and of the normalized correlation. A nonzero limiting correlation describes the relation between these small fluctuations. It is not a finite fraction of the total entropy retained by the gate.
 
 ## Why the operator Schmidt spectrum appears
 
@@ -125,12 +125,12 @@ covariance. The [bridge](TUTORIAL_BRIDGE.md) defines both spectra and realignmen
 before using them. The entropy orders provide universal coefficients; the gate
 enters through its operator power sums.
 
-The proof explains why. Haar input can be represented by a normalized Gaussian coefficient matrix. After averaging the paired spectral observables, the leading connected contractions reduce to a cycle carrying the gate's realigned operator spectrum. Its degree-$k$ weight is $F_k$. The shared state normalization cancels the radial mode. Established Wishart fluctuation and low-regularity approximation results then transfer the calculation to actual entropies. The [proof](../theory/PROOF.md) gives the steps and their dependencies; the [references](REFERENCES.md) distinguish the inherited methods from the proposed gate-to-entropy relation.
+The proof explains why. Haar input can be represented by a normalized Gaussian coefficient matrix. After averaging the paired spectral observables, the leading connected contractions reduce to a cycle carrying the gate's realigned operator spectrum. Its weight at degree $`k`$ is $`F_k`$. The shared state normalization cancels the radial mode. Established Wishart fluctuation and low-regularity approximation results then transfer the calculation to actual entropies. The [proof](../theory/PROOF.md) gives the steps and their dependencies; the [references](REFERENCES.md) distinguish established methods from the gate-to-entropy relation developed here.
 
 ## Three consequences
 
 1. **Limited spatial access leaves a positive correlation.** Fixed active dimensions bound the number of operator Schmidt probabilities. Their power sums cannot all approach zero. This imposes a positive floor on the limiting same-order entropy correlation. For equal active dimensions, gates with a flat operator Schmidt spectrum attain it.
-2. **Operator purity gives only part of the answer.** Rényi-2 correlation depends only on $F_2$. Other entropy orders also weight higher power sums, so equal operator purity can coexist with unequal entropy covariance.
+2. **Operator purity gives only part of the answer.** Rényi-2 correlation depends only on $`F_2`$. Other entropy orders also weight higher power sums, so equal operator purity can coexist with unequal entropy covariance.
 3. **Ideal covariance data contain spectral information.** A finite integer-order hierarchy determines a finite-rank operator Schmidt spectrum. The inversion is poorly conditioned and does not identify the operator Schmidt bases or provide an efficient tomography method.
 
 The [worked example](WORKED_EXAMPLE.md) makes the gate spectrum and correlation floor concrete for a single boundary qubit pair. The [theorem statement](../theory/THEOREM.md) gives the exact assumptions, coefficients, and consequences.
@@ -141,4 +141,4 @@ The theorem is asymptotic. Existing finite-dimensional Haar samples provide mode
 
 A tested extension to Floquet eigenstates failed its declared Haar comparison. The theorem is therefore retained as a Haar benchmark. It does not currently establish a law for generic prepared states, growing gate support, or a uniform shrinking-time limit. A whole-half SWAP also lies outside the fixed-support limit.
 
-Continue with [the worked example](WORKED_EXAMPLE.md), [results and their limitations](RESULTS.md), or [reproduction instructions](../REPRODUCE.md). The [claim ledger](../CLAIM_LEDGER.md) records the current status of each claim.
+Continue with [the worked example](WORKED_EXAMPLE.md), [results and their limitations](RESULTS.md), or [reproduction instructions](../REPRODUCE.md). The [scope and claims](SCOPE.md) records the current status of each claim.

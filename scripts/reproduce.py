@@ -2,8 +2,8 @@
 """Run focused validation and regenerate the analytical reader examples.
 
 All new outputs go below --output-dir (default: build/reproduction in the
-repository). Frozen imports and committed example artifacts stay untouched.
-No historical Haar or Floquet sample generation is rerun.
+repository). Committed reference data and example artifacts stay untouched.
+No Haar or Floquet sample generation is rerun.
 """
 from pathlib import Path
 import argparse
@@ -21,13 +21,14 @@ for variable in ["OPENBLAS_NUM_THREADS", "OMP_NUM_THREADS", "MKL_NUM_THREADS"]:
 
 from gate_covariance.examples import reader_examples
 from gate_covariance.plotting import plot_entropy_memory
+from verify_project import safe_output_directory
 
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--output-dir", type=Path, default=ROOT/"build/reproduction")
     args = parser.parse_args()
-    output = args.output_dir.resolve()
+    output = safe_output_directory(args.output_dir)
     output.mkdir(parents=True, exist_ok=True)
     subprocess.run([sys.executable, str(ROOT/"verify_project.py"),
                     "--output-dir", str(output/"validation")], check=True)

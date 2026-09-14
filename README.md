@@ -30,8 +30,8 @@ credited proof inputs, not additional prerequisite tutorials.
 | Route | Where to go |
 |---|---|
 | **LEARN** | [Physical setup and selected reading](docs/START_HERE.md) → [book-to-project bridge](docs/TUTORIAL_BRIDGE.md) → [complete gate calculation](docs/WORKED_EXAMPLE.md) → [results and evidence](docs/RESULTS.md) |
-| **CHECK** | Go directly to [the theorem](theory/THEOREM.md), [derivation and hypotheses](theory/PROOF.md), [claim ledger](CLAIM_LEDGER.md), [primary attribution](docs/REFERENCES.md), and [evidence](docs/RESULTS.md). No educational detour is required. |
-| **REPRODUCE** | Run the [focused commands](REPRODUCE.md) to check maintained calculations and frozen evidence and regenerate the analytical figure. |
+| **CHECK** | Go directly to [the theorem](theory/THEOREM.md), [derivation and hypotheses](theory/PROOF.md), [scope and claims](docs/SCOPE.md), [primary attribution](docs/REFERENCES.md), and [evidence](docs/RESULTS.md). No educational detour is required. |
+| **REPRODUCE** | Run the [focused commands](REPRODUCE.md) to check the formula implementation and reference data and regenerate the analytical figure. |
 
 For a specific question:
 
@@ -43,10 +43,10 @@ For a specific question:
 | What exactly is the theorem? | [Setting and result](theory/THEOREM.md) |
 | How do product gates, SWAP, local basis changes, and different times fit? | [Gate controls and limiting cases](theory/CONTROLS.md) |
 | Why does the operator Schmidt spectrum appear? | [Technical derivation and proof dependencies](theory/PROOF.md) |
-| What supports each claim, and where does the theory fail? | [Results and evidence](docs/RESULTS.md), [claim ledger](CLAIM_LEDGER.md) |
+| What supports each claim, and where does the theory fail? | [Results and evidence](docs/RESULTS.md), [scope and claims](docs/SCOPE.md) |
 | Which parts build on prior work? | [References and attribution](docs/REFERENCES.md) |
 
-This is a standalone research repository. The explanatory route does not require a manuscript or earlier conversations. The theorem and its supporting arguments have received internal review; the numerical checks illustrate and calibrate the result within their recorded limits.
+The repository contains the theorem and its derivation, worked gate examples, supporting calculations, and the code and data for the numerical comparisons. The scope is the fixed-support Haar covariance law. Its limitations and the unsuccessful extension to Floquet eigenstates are part of the scientific account.
 
 ## Run the focused reproduction
 
@@ -57,18 +57,17 @@ python -m pip install -r requirements.txt
 python scripts/reproduce.py
 ```
 
-The command checks the maintained calculations against saved exact results, verifies the imported evidence, runs the six existing deterministic checks, and generates the reader figure and table under `build/reproduction/`. The frozen research records stay unchanged. [Reproduction details](REPRODUCE.md) distinguish this default calculation from optional sampling and figure scripts.
+The command checks the maintained calculations against saved exact results, verifies the scientific reference files, runs the six existing deterministic checks, and generates the reader figure and table under `build/reproduction/`. Reference data and study implementations are checked by SHA-256 before and after the run. [Reproduction details](REPRODUCE.md) distinguish this default calculation from optional sampling and figure scripts.
 
-## Work with the repository
+## Repository contents
 
-| Location | Role |
+| Location | Contents |
 |---|---|
-| `docs/`, `theory/` | Maintained explanation, theorem, derivation, and evidence map |
-| `gate_covariance/`, `scripts/` | Maintained calculations and reproduction entry points |
-| `figures/`, `results/` | Small reference outputs for the reader example |
-| `evidence/`, `limits/` | Frozen supporting research and the unsuccessful extension |
-| `provenance/`, `reviews/`, `legacy/` | Source records, internal assessments, and preserved repository history |
+| [docs/](docs/) | Physical explanation, tutorial bridge, results, scope and references |
+| [theory/](theory/) | Covariance theorem and proof, gate controls, moment inversion, finite-purity identities, two-cut modes and gate designs |
+| [gate_covariance/](gate_covariance/) | Reusable gate realignment and entropy-covariance formulas |
+| [checks/](checks/) | Six deterministic calculations with reference results |
+| [studies/](studies/) | Haar samples, non-diagonal gate tests and the Floquet comparison, with methods, code and data |
+| [figures/](figures/), [results/](results/) | Analytical reader figure and its numerical values |
 
-See the [repository map](docs/REPOSITORY_MAP.md) for exact responsibilities and the [handover](HANDOVER.md) for future work. [The roadmap](NEXT.md) puts repository refurnishing before manuscript preparation; [the paper outline](PAPER_OUTLINE.md) is reserved for the final phase.
-
-The current GitHub name is **Entangling-successions**. Its former subset-state work was upgraded into [Subset-states](https://github.com/GoGoKo699/Subset-states), and this repository now hosts one active covariance project. The former contents are preserved, with the transition documented in [provenance](provenance/REPOSITORY_TRANSITION.md). A subset-ensemble extension of the covariance theorem remains unproved.
+The [repository map](docs/REPOSITORY_MAP.md) identifies the document or calculation for each question. The [reproduction guide](REPRODUCE.md) separates the quick deterministic run from optional sample regeneration.
