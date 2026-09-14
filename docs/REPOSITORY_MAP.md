@@ -10,6 +10,7 @@ Choose **LEARN** in [Start here](START_HERE.md), **CHECK** in [the theorem](../t
 | Book-to-project bridge | [TUTORIAL_BRIDGE.md](TUTORIAL_BRIDGE.md) | Quantum-to-matrix dictionary, mode conventions, gate contraction, normalization, and interpretation |
 | Concrete gate example | [WORKED_EXAMPLE.md](WORKED_EXAMPLE.md) | Connect the formula to identity, ZZ, and active SWAP gates |
 | Precise statement | [THEOREM.md](../theory/THEOREM.md) | Definitions, limits, coefficients, and consequences |
+| Gate controls and limiting cases | [CONTROLS.md](../theory/CONTROLS.md) | Typeset product, SWAP, local-basis, rank, and relative-time checks from the preserved general-gate review |
 | Technical reasoning | [PROOF.md](../theory/PROOF.md) | One derivation route with its mathematical dependencies |
 | Claim-to-evidence map | [RESULTS.md](RESULTS.md), [CLAIM_LEDGER.md](../CLAIM_LEDGER.md) | Distinguish theorem, exact calibration, sampled evidence, and exclusions |
 | Literature attribution | [REFERENCES.md](REFERENCES.md) | Explain which external results enter the argument |

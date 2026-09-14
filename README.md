@@ -41,6 +41,7 @@ For a specific question:
 | How does Wishart fluctuation theory become a quantum entropy prediction? | [Tutorial bridge](docs/TUTORIAL_BRIDGE.md) |
 | What happens for an actual two-qubit gate? | [Worked example](docs/WORKED_EXAMPLE.md) |
 | What exactly is the theorem? | [Setting and result](theory/THEOREM.md) |
+| How do product gates, SWAP, local basis changes, and different times fit? | [Gate controls and limiting cases](theory/CONTROLS.md) |
 | Why does the operator Schmidt spectrum appear? | [Technical derivation and proof dependencies](theory/PROOF.md) |
 | What supports each claim, and where does the theory fail? | [Results and evidence](docs/RESULTS.md), [claim ledger](CLAIM_LEDGER.md) |
 | Which parts build on prior work? | [References and attribution](docs/REFERENCES.md) |

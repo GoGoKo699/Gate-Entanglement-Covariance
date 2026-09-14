@@ -24,6 +24,16 @@ sigma sim simeq sin sqrt sum tau text tfrac theta times to varepsilon widehat xi
 """.split())
 COMMAND = re.compile(r"\\([A-Za-z]+)")
 TOKEN = re.compile(r"\\(?:[A-Za-z]+|[^\n])|\$\$|\$|[{}]")
+# High-confidence formula fragments in this English-language reading route.
+# This is not a complete detector for mathematics written in prose.
+RAW_MATH = re.compile(
+    r"(?<![\w/])(?:[A-Za-zΑ-Ωα-ω]|eta|rho|Gamma|delta)(?:\\?[_^])[{(\w+-]"
+    r"|\b(?:sqrt|min|max|exp)\("
+    r"|[)\]]\^[{(\w+-]"
+    r"|(?<![\w/])[A-Za-zΑ-Ωα-ω]\s*(?:=|>=|<=|≥|≤)\s*[A-Za-zΑ-Ωα-ω0-9(]"
+    r"|[Α-Ωα-ω†²³⁻≥≤]"
+    r"|\\[A-Za-z]+"
+)
 
 
 def mask_code(text: str) -> str:
@@ -59,6 +69,7 @@ def inspect(text: str) -> tuple[list[str], list[tuple[int, str, bool]]]:
         if re.match(r"^ {0,3}#{1,6}\s", line) and "$" in line:
             errors.append(f"line {number}: use a plain-text heading and put the equation in the body")
     opening = None
+    math_spans = []
     for token in TOKEN.finditer(source):
         if token[0] not in {"$", "$$"}:
             continue
@@ -72,9 +83,19 @@ def inspect(text: str) -> tuple[list[str], list[tuple[int, str, bool]]]:
             if token[0] == "$" and "\n" in tex:
                 errors.append(f"line {line}: inline math crosses a line; use display math")
             expressions.append((line, tex, token[0] == "$$"))
+            math_spans.append((opening.start(), token.end()))
             opening = None
     if opening is not None:
         errors.append(f"line {line_at(opening.start())}: unclosed math delimiter {opening[0]}")
+    prose = list(source)
+    for start, end in math_spans:
+        prose[start:end] = ["\n" if c == "\n" else " " for c in source[start:end]]
+    prose = "".join(prose)
+    # Destinations, bare URLs and filenames are not mathematical notation.
+    blank = lambda m: re.sub(r"[^\n]", " ", m[0])
+    prose = re.sub(r"\]\([^\n)]*\)|https?://\S+|\b[\w./-]+\.(?:md|py|json|npz|png|svg|txt)\b", blank, prose)
+    for match in RAW_MATH.finditer(prose):
+        errors.append(f"line {line_at(match.start())}: formula fragment {match[0]!r} outside math; use $...$ or fenced math")
     for line, tex, _ in expressions:
         for token in TOKEN.finditer(tex):
             command = COMMAND.fullmatch(token[0])
@@ -111,6 +132,10 @@ def self_test() -> None:
         assert inspect(bad)[0], bad
     assert not inspect(r"$\{x\} + \$1$")[0]
     assert not inspect(r"$\begin{pmatrix}0&-i\\i&0\end{pmatrix}$")[0]
+    for bad in ("every F_k=1", r"every F\_k=1", "sqrt(rs)", "q^(2-2k)", "U(t)U(s)^dagger", "η_h", "r=s=d", "R=min(r²,s²)", r"\eta=(1)"):
+        assert any("outside math" in error for error in inspect(bad)[0]), bad
+    assert not inspect("See [the proof](theory/THEOREM.md#x_y) and AGENTS.md. Run `F_k = sqrt(rs)`.\n```python\nq**2\n```\n")[0]
+    assert not inspect("**Rank bound.** $F_k\\ge\\min(r^2,s^2)^{1-k}$.\n```math\nU(t)U(s)^\\dagger\n```\n")[0]
     print("Markdown math self-test passed")
 
 

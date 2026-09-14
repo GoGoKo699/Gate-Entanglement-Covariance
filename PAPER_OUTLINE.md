@@ -12,13 +12,13 @@ Open with the question: how much of the entanglement fluctuation of an equilibri
 
 ## 1. Question, setting, and nearest antecedents
 
-Define a complex Haar pure state on equal halves of dimension d, with a deterministic unitary acting only on fixed active factors of dimensions r and s. Both observations use the same input state. Natural-log entropy means are stationary; absolute entropy fluctuations vanish as d grows. “Memory” denotes ensemble correlation of those fluctuations.
+Define a complex Haar pure state on equal halves of dimension $d$, with a deterministic unitary acting only on fixed active factors of dimensions $r$ and $s$. Both observations use the same input state. Natural-log entropy means are stationary; absolute entropy fluctuations vanish as $d$ grows. “Memory” denotes ensemble correlation of those fluctuations.
 
 Explain why operator entanglement is a natural candidate, while citing its established relation to entangling power and bipartite OTOCs. Identify weighted annular Wishart fluctuations, Chebyshev diagonalization, and block-Gaussian second-order covariance as mathematical antecedents. The addition is their explicit gate-spectrum reduction and conversion into actual entropy covariance at every fixed positive order.
 
 ## 2. Main covariance theorem
 
-State one theorem with all hypotheses. Define normalized operator Schmidt probabilities η and their moments F_k. Present the covariance series
+State one theorem with all hypotheses. Define normalized operator Schmidt probabilities $\eta$ and their moments $F_k$. Present the covariance series
 
 ```math
 \lim_{d\to\infty}d^2\mathop{\mathrm{Cov}}\nolimits 
@@ -32,7 +32,7 @@ Provide a readable proof overview: Gaussian coefficient blocks, spectator topolo
 
 ## 3. Fixed access limits decorrelation
 
-Derive the correlation bound from the rank constraint R ≤ min(r²,s²) and F_k ≥ R^(1−k). Explain why dual-unitary gates attain it for equal active dimensions. Give the existing active-qubit values for orders one half, one, and two; the Rényi-2 minimum is 1/4.
+Derive the correlation bound from the rank constraint $R\le\min(r^2,s^2)$ and $F_k\ge R^{1-k}$. Explain why dual-unitary gates attain it for equal active dimensions. Give the existing active-qubit values for orders one half, one, and two; the Rényi-2 minimum is $1/4$.
 
 Use the existing boundary SWAP/phase-SWAP comparison to explain what one-cut memory omits. Distinguish active product-input entangling power from entangling power on product states of the whole halves. Include the exact finite-dimensional purity identity as a calibration, expressly separating purity from logarithmic purity. Whole-half SWAP lies outside the growing-spectator theorem.
 
