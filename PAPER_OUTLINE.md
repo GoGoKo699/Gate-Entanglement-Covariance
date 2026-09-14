@@ -20,11 +20,11 @@ Explain why operator entanglement is a natural candidate, while citing its estab
 
 State one theorem with all hypotheses. Define normalized operator Schmidt probabilities η and their moments F_k. Present the covariance series
 
-\[
-\lim_{d\to\infty}d^2\operatorname{Cov}
+```math
+\lim_{d\to\infty}d^2\mathop{\mathrm{Cov}}\nolimits 
  [S_\alpha(U\psi),S_\beta(\psi)]
 =\frac14\sum_{k\ge2}k c_{\alpha k}c_{\beta k}F_k(U).
-\]
+```
 
 Give the explicit coefficient formula, its integer truncations, and continuous order-one value. Extend the statement to a fixed finite collection of gates using the relative gate and the joint Gaussian limit. Emphasize that separate gate spectra do not determine relative spectra.
 

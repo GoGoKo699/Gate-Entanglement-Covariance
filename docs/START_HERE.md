@@ -20,7 +20,7 @@ Both entries have the same marginal distribution, so
 ```math
 \mathbb E Y_\alpha=\mathbb E X_\alpha,
 \qquad
-\operatorname{Var}Y_\alpha=\operatorname{Var}X_\alpha.
+\mathop{\mathrm{Var}}\nolimits Y_\alpha=\mathop{\mathrm{Var}}\nolimits X_\alpha.
 ```
 
 The covariance asks whether an input with slightly above-average entropy tends to remain above average after the gate. A product of local unitaries preserves every pair exactly. A crossing gate can change the entropy of an individual state even though its ensemble mean stays fixed. Using two independently drawn states for the before and after entries would remove the correlation we want to measure.
@@ -115,7 +115,7 @@ A=aR,\qquad B=bT,\qquad
 
 The gate acts on $a b$ and is the identity on $R T$. The limit increases $d$ while keeping $r$, $s$, and the gate fixed. The input is globally Haar; the active factors need not start unentangled with their spectators. The entropy orders and the finite collection of gates under comparison also stay fixed.
 
-For each fixed positive order, entropy fluctuations around the ensemble mean have size $1/d$. Their covariance has size $1/d^2$. We therefore study the finite limits of $d^2\operatorname{Cov}(Y_\alpha,X_\beta)$ and of the normalized correlation. A nonzero limiting correlation describes the relation between these small fluctuations. It is not a finite fraction of the total entropy retained by the gate.
+For each fixed positive order, entropy fluctuations around the ensemble mean have size $1/d$. Their covariance has size $1/d^2$. We therefore study the finite limits of $d^2\mathop{\mathrm{Cov}}\nolimits (Y_\alpha,X_\beta)$ and of the normalized correlation. A nonzero limiting correlation describes the relation between these small fluctuations. It is not a finite fraction of the total entropy retained by the gate.
 
 ## Why the operator Schmidt spectrum appears
 

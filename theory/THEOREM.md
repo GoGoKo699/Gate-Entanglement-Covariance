@@ -45,7 +45,7 @@ This recurrence also defines the continuous order-one coefficients, and automati
 The central result is
 
 ```math
-\lim_{d\to\infty}d^2\operatorname{Cov}
+\lim_{d\to\infty}d^2\mathop{\mathrm{Cov}}\nolimits 
 \bigl(S_\alpha(U_l\psi),S_\beta(U_m\psi)\bigr)
 =\frac14\sum_{k\ge2}k\,c_{\alpha,k}c_{\beta,k}F_k(V_{lm}).
 ```

@@ -12,6 +12,7 @@ From the repository root, use Python 3.12 and the pinned dependencies:
 python -m pip install -r requirements.txt
 python scripts/reproduce.py
 python scripts/check_repository.py
+python scripts/check_markdown_math.py --self-test
 ```
 
 The root requirements pin NumPy 2.3.5, SciPy 1.17.0, and Matplotlib 3.10.8. No GPU is needed. The scripts set one numerical-library thread for the focused run.
@@ -94,6 +95,8 @@ python scripts/check_repository.py
 ```
 
 The last command checks local paths, image destinations, and Markdown section anchors linked from the maintained reading route, including same-page anchors. It does not fetch external references or crawl historical navigation. GitHub Actions runs the navigation check and complete default reproduction, then verifies the legacy tree identity. Source verification and the documentation walkthrough are recorded separately in [the reader-route implementation record](reviews/mingo-speicher-reader-route/IMPLEMENTATION.md); they are not independent scientific replication or external peer review.
+
+For math-source checks, run `python scripts/check_markdown_math.py --self-test`. CI also runs this check across the maintained root, `docs/`, and `theory/` pages. It covers inline and fenced math, a reviewed command inventory, delimiter and grouping balance, and plain-text headings. Named operators use `\mathop{\mathrm{Tr}}\nolimits` and the same form for other names. Put equations in the body beneath a plain-text heading. These are source checks, not live GitHub rendering tests; frozen historical records are excluded under `AGENTS.md`.
 
 ## Existing Haar samples
 
