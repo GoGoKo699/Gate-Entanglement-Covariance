@@ -2,11 +2,13 @@ cff-version: 1.2.0
 message: "If you use this work, please cite this repository and identify the commit used."
 type: software
 title: "Gate Entanglement Covariance"
+version: "1.0.0"
+date-released: "2026-09-14"
 authors:
   - family-names: Lin
     given-names: Ruge
-repository-code: "https://github.com/GoGoKo699/Entangling-successions"
-url: "https://github.com/GoGoKo699/Entangling-successions"
+repository-code: "https://github.com/GoGoKo699/Gate-Entanglement-Covariance"
+url: "https://github.com/GoGoKo699/Gate-Entanglement-Covariance"
 license: MIT
 abstract: >-
   Entanglement covariance of Haar-random states under fixed boundary gates,
