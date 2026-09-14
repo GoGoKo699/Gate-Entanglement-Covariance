@@ -1,8 +1,6 @@
-# Reproduce the repository
+# Reproduce the calculations
 
-The default run verifies the imported records, checks maintained formulas against independent analytical references, reruns six existing deterministic calculations, and regenerates the analytical reader figure. It creates no new random-state cohort.
-
-This is the **REPRODUCE** route. For the physical meaning of the outputs, use **LEARN** in [Start here](docs/START_HERE.md), which gives the selected Mingo and Speicher passages and the local reading map. For the mathematical statement and its dependencies, use **CHECK** in [the theorem](theory/THEOREM.md) and [proof](theory/PROOF.md). The reproduction does not require reading the tutorial first.
+The default run checks scientific reference hashes, verifies the formula implementation against analytical anchors, runs six deterministic calculations, and regenerates the reader figure and table. It creates no random-state cohort.
 
 ## One entry point
 
@@ -10,41 +8,54 @@ From the repository root, use Python 3.12 and the pinned dependencies:
 
 ```sh
 python -m pip install -r requirements.txt
-python scripts/reproduce.py
 python scripts/check_repository.py
 python scripts/check_markdown_math.py --self-test
+python scripts/reproduce.py
 ```
 
-The root requirements pin NumPy 2.3.5, SciPy 1.17.0, and Matplotlib 3.10.8. No GPU is needed. The scripts set one numerical-library thread for the focused run.
+The requirements pin NumPy 2.3.5, SciPy 1.17.0 and Matplotlib 3.10.8. No GPU is needed. The small deterministic calculations use one numerical-library thread.
 
-| Generated output under `build/reproduction/` | Meaning |
+| Output below `build/reproduction/` | Meaning |
 |---|---|
-| `validation/PROJECT_VERIFICATION.json` | Integrity of all 193 imported files and status of the six inherited deterministic programs |
-| `validation/CHECKPOINT08_REPRODUCTION.json` | Per-program reference comparisons and their tolerances |
-| `validation/deterministic_reproduction.log` | Complete output of those programs |
-| `validation/maintained_calculations.json` | Maintained-code comparison with exact rational witnesses, known gate spectra, and the saved reader table |
-| `results/reader_examples.json` | Operator probabilities, covariance matrices, correlations, and increments for identity, ZZ, and active SWAP |
-| `figures/entropy_memory.png`, `figures/entropy_memory.svg` | Analytical correlation curves shown on the README |
+| `validation/PROJECT_VERIFICATION.json` | Reference-file integrity and status of the six deterministic calculations |
+| `validation/DETERMINISTIC_REPRODUCTION.json` | Per-program comparisons, byte identity and numerical tolerances |
+| `validation/deterministic_reproduction.log` | Output of the deterministic runner |
+| `validation/maintained_calculations.json` | Analytical gates, rational witnesses, coefficient and inversion checks |
+| `results/reader_examples.json` | Operator probabilities, covariance matrices, correlations and increments |
+| `figures/entropy_memory.png`, `figures/entropy_memory.svg` | Analytical reader figure |
 
-New outputs are kept outside the preserved records. The inherited calculations run in a temporary copy; their saved inputs and results are checked again afterwards. The committed reader references are [results/reader_examples.json](results/reader_examples.json) and [figures/entropy_memory.png](figures/entropy_memory.png). A numerical tolerance comparison checks the table; image pixels are not a cross-platform scientific equality test.
+The [integrity manifest](reference_integrity.json) covers 95 reference files: study implementations, protocol text, recorded arrays and results, deterministic inputs, and analytical reference outputs. Hashes are checked before and after the six programs run in a temporary copy. The reference files are not rewritten. The working copy restores original protocol filenames where a numerical program records their hashes.
 
-The uninterrupted identity, ZZ, and active-SWAP calculation in [the worked example](docs/WORKED_EXAMPLE.md) uses that same reader table. The [tutorial bridge](docs/TUTORIAL_BRIDGE.md) explains the coefficient-matrix dictionary, common trace normalization, and fluctuation modes used by the calculation. Neither document introduces a new sample cohort or a separate numerical pipeline.
-
-To reproduce into a separate directory, including from another working directory, use an absolute script path:
+The command also works from another directory when given an absolute script path:
 
 ```sh
 python /path/to/Entangling-successions/scripts/reproduce.py --output-dir /tmp/gate-covariance-reproduction
 ```
 
-Replace `/path/to/Entangling-successions` with the actual checkout path. Source lookup is relative to the script, not the shell's working directory.
+Replace `/path/to/Entangling-successions` with the actual clone path. Within the repository, generated outputs must be under `build/`; external output directories are also accepted. The wrapper rejects output paths that would overwrite scientific reference directories.
+
+## What the default checks establish
+
+The [six deterministic programs](checks/README.md) check moment inversion, the four-copy Haar purity identity, two subsystem assignments, exact symbolic identities, independent purity/product-input contractions and an exact gate-design pair. Each has internal assertions. The runner requires matching JSON structure and labels, with relative tolerance `1e-10` and absolute tolerance `5e-11` for numerical comparison. Byte identity is reported separately. These computations check finite identities; the all-degree entropy law rests on [the proof](theory/PROOF.md).
+
+The [formula checks](scripts/check_calculations.py) use independent exact-rational witnesses, known gate spectra, the closed order-one coefficient formula and the integer-order inverse. The generated reader table is compared with [its committed reference](results/reader_examples.json). Image pixels are not used as a cross-platform scientific equality test.
+
+For a narrower run:
+
+```sh
+python scripts/check_calculations.py
+python verify_project.py --output-dir build/validation
+```
+
+The navigation checker covers local links, images and heading anchors throughout reader Markdown. The math checker requires protected inline math: `$` followed by a backtick, the formula, a backtick and `$`; alternatively use a fenced `math` block. It flags formulas attached to prose, unsupported project commands, missing delimiters and raw formula fragments. The conventions follow [GitHub's math documentation](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions). These are source checks; compiling the extracted TeX alone does not test GitHub's Markdown parsing. Plain-text protocol records retain their original bytes for their recorded hashes.
 
 ## Numerical approximation and the scientific limit
 
-The maintained formulas in [gate_covariance/core.py](gate_covariance/core.py) evaluate the theorem with explicit coefficient cutoff `K`. The reader example uses `K=65536` and records changes on doubling to `131072`. At the showcased orders `1/2`, `1`, `2`, `3`, and `4`, the displayed correlations change by less than `1e-9` in that diagnostic. Integer orders 2, 3, and 4 terminate exactly at modes 2, 3, and 4. A different order can converge more slowly and needs its own justified cutoff.
+The library evaluates the theorem using an explicit coefficient cutoff `K`. The reader example uses `65536` and records the change on doubling to `131072`. At the showcased orders $`1/2`$, $`1`$, $`2`$, $`3`$ and $`4`$, the tabulated correlations change by less than $`10^{-9}`$. Integer orders $`2`$, $`3`$ and $`4`$ terminate at modes $`2`$, $`3`$ and $`4`$.
 
-The cutoff comparison is a numerical diagnostic, not a certified bound on omitted terms. It also says nothing about finite-dimensional bias. These are calculations of the balanced-Haar, fixed-active-support limit; they are not finite-state simulations or fitted estimates. [The worked example](docs/WORKED_EXAMPLE.md) explains the quantities and units.
+Cutoff doubling is a numerical diagnostic, not a certified remainder bound. It does not bound finite-dimensional bias. These are evaluations of the balanced-Haar limit at fixed support and fixed order. A different order can converge more slowly and requires its own cutoff assessment.
 
-For example, from the repository root:
+For example:
 
 ```python
 import numpy as np
@@ -56,11 +67,11 @@ print(eta)  # two nonzero probabilities, both 1/2, up to SVD roundoff
 print(correlation(2, 2, eta, cutoff=4))  # 1/2
 ```
 
-For two observations at gates `U_l` and `U_m`, pass the operator probabilities of `U_l @ U_m.conj().T`. The core also accepts abstract normalized probability vectors for algebraic calculations; this does not establish that every vector is realized by a gate at specified dimensions.
+For two observations at gates `U_l` and `U_m`, pass the probabilities of `U_l @ U_m.conj().T`. Abstract probability vectors are accepted for algebraic calculations; this does not show that every vector is realized by a gate of specified dimensions.
 
 ### Check the equal-purity comparison
 
-The [worked example's two-pair gate witness](docs/WORKED_EXAMPLE.md#same-operator-purity-different-higher-order-covariance) has an exact order-three covariance difference. To check it separately from the default three-gate table, run this from the repository root:
+The [worked example](docs/WORKED_EXAMPLE.md#same-operator-purity-different-higher-order-covariance) has an exact order-three covariance difference:
 
 ```sh
 python - <<'PY'
@@ -78,55 +89,58 @@ print(f"Rescaled covariance difference: {actual:.12f}")
 PY
 ```
 
-The output is `Rescaled covariance difference: 0.001930194847`. The independently derived radical follows from the exact $F_3$ difference in the worked example. Order three terminates at $k=3$, so this calculation has floating-point roundoff but no omitted series terms. It evaluates a large-$d$ coefficient, not a finite-dimensional sample.
+The output is `Rescaled covariance difference: 0.001930194847`. Order three terminates, so this evaluation has floating-point roundoff but no omitted series terms.
 
-## What the default checks establish
+## Optional sample regeneration
 
-The six inherited checks cover exact moment inversion, finite-dimensional purity identities, two subsystem assignments, and a gate-design example. [Results and evidence](docs/RESULTS.md) maps each program to its saved output and qualification. Five historical JSON outputs match byte for byte; the sixth uses its documented floating-point tolerance.
+The [study pages](studies/README.md) define every cohort and its interpretation. The following commands reproduce the specified saved studies and can take substantially longer than the default run. Execute each block from the repository root; each creates an independent working copy. The temporary protocol aliases preserve the original recorded hashes. Keep the repository's reference files for comparison.
 
-The maintained calculations are checked against those independently generated rational witnesses, exact spectra of specific gates, a closed order-one coefficient expression, and the integer-order moment inverse. They also compare the regenerated reader table with its committed reference. Neither the reference agreement nor the inherited finite-degree checks replace the all-degree entropy derivation.
-
-For a narrower run:
+### Non-diagonal Haar samples
 
 ```sh
-python scripts/check_calculations.py
-python verify_project.py --output-dir build/validation
-python scripts/check_repository.py
+study_work=$(mktemp -d)
+cp -a studies/non_diagonal/. "$study_work/"
+cp "$study_work/protocol.txt" "$study_work/PROTOCOL.md"
+cd "$study_work"
+python numerics/entropy_pilot.py
 ```
 
-The last command checks local paths, image destinations, and Markdown section anchors linked from the maintained reading route, including same-page anchors. It does not fetch external references or crawl historical navigation. GitHub Actions runs the navigation check and complete default reproduction, then verifies the legacy tree identity. Source verification and the documentation walkthrough are recorded separately in [the reader-route implementation record](reviews/mingo-speicher-reader-route/IMPLEMENTATION.md); they are not independent scientific replication or external peer review.
+This regenerates the same 96 inputs at each of dimensions $`32`$ and $`64`$. Compare the arrays in `results/pilot_d32.npz` and `results/pilot_d64.npz`, and the numerical values in `results/pilot_summary.json`, with the [saved references](studies/non_diagonal/results/). Compressed NPZ byte identity is not an array-equality criterion. Paired gates and orders share each initial state; standard errors describe sampling variation only.
 
-For math-source checks, run `python scripts/check_markdown_math.py --self-test`. CI also runs this check across the maintained root, `docs/`, and `theory/` pages. It covers inline and fenced math, a reviewed command inventory, delimiter and grouping balance, and plain-text headings. It also flags likely formulas outside math delimiters, including raw subscripts, powers, Greek symbols, and expressions such as `sqrt(rs)` or `U(t)U(s)^dagger`. This heuristic does not recognize every possible unformatted formula. Ordinary code examples, file paths, and link destinations are excluded. Named operators use `\mathop{\mathrm{Tr}}\nolimits` and the same form for other names. Put equations in the body beneath a plain-text heading. These are source checks, not live GitHub rendering tests; frozen historical records are excluded under `AGENTS.md`. The six controls from the original general-gate review have a [typeset maintained version](theory/CONTROLS.md).
-
-## Existing Haar samples
-
-The saved [non-diagonal pilot summary](evidence/checkpoint07/checkpoints/07/results/pilot_summary.json) and its NPZ arrays support the finite-size table in [Results](docs/RESULTS.md). Earlier cohorts remain separate. No cohort is regenerated by the default command.
-
-[The inherited reproduction guide](evidence/checkpoint07/REPRODUCE.md) gives the original commands for finite-purity, contraction, and sampling studies. Run them in a writable copy of that checkpoint to retain its reference arrays. Some commands are longer calculations and are not needed to reproduce the new analytical figure. Compare NPZ array values rather than compressed archive bytes; retain each original protocol and tolerance.
-
-## Optional failed Floquet extension
-
-[limits/checkpoint09/](limits/checkpoint09/) contains the frozen protocol, code, predictions, summaries, figures, and validation records. Two large regenerable files are omitted from Git: `results/cohort_N8.npz` and `results/cohort_N10.npz`. Their original hashes and sizes are listed in [OMITTED_GENERATED_FILES.json](provenance/OMITTED_GENERATED_FILES.json). The complete original checkpoint archive was retained before the repository migration.
-
-The original `reproduce.py` there expects the omitted reference files. To regenerate without that archive, copy `limits/checkpoint09/` to a separate writable directory and preserve another copy of its summary JSON files. In the writable copy run:
+### Haar response, finite-time and diagonal samples
 
 ```sh
-python -m pip install -r requirements-reproduction.txt
+study_work=$(mktemp -d)
+cp -a studies/haar/. "$study_work/"
+cp "$study_work/protocol.txt" "$study_work/numerics/PROTOCOL.md"
+cp "$study_work/diagonal_protocol.txt" "$study_work/numerics/OPERATOR_PLAN.md"
+cp "$study_work/finite_time_protocol.txt" "$study_work/numerics/FOLLOWUP_PLAN.md"
+cd "$study_work/numerics"
+python run_experiment.py
+python analyze.py
+python finite_time_followup.py
+python operator_memory.py
+python plot_followup.py
+python plot_operator_memory.py
+```
+
+These are separate cohorts, detailed in [Haar studies](studies/haar/README.md). The diagonal comparison's adverse deviations remain part of the result. Neither rerunning its fixed samples nor the displayed error bars resolves the split between sampling error and finite-size bias. Compare numerical arrays and summaries under `numerics/results/`, `numerics/followup_results/` and `numerics/operator_results/` separately.
+
+### Floquet eigenstate comparison
+
+The two eigenvector arrays are regenerable and omitted from Git. [Their original sizes and hashes](studies/floquet/omitted_arrays.json) identify them. All predictions and scalar summaries are retained. The following sequence regenerates the fixed eight-spin and ten-spin cases, independently checks the outputs and redraws their figure:
+
+```sh
+study_work=$(mktemp -d)
+cp -a studies/floquet/. "$study_work/"
+cp "$study_work/protocol.txt" "$study_work/PROTOCOL.md"
+mkdir -p "$study_work/history" "$study_work/reviews"
+cp "$study_work/serialization_reference.txt" "$study_work/history/floquet_test_initial.py"
+cd "$study_work"
 python theory/haar_predictions.py
 python floquet_test.py
-python reviews/independent_audit.py
+python verification/independent_audit.py
 python plot_results.py
 ```
 
-These commands regenerate the two frozen-size cohorts, audit them, and redraw their figure. Compare summary values with the preserved summaries, excluding wall time; the original comparison uses relative tolerance `1e-9` and absolute tolerance `1e-11`. This optional calculation was not rerun during refurnishing. Its original manifest lists the two omitted archives; the current import manifest describes the actual Git files.
-
-## Preserved repository history
-
-In a normal Git clone, the following commands should both return `ffb13b5f01c8c8ad18c80b521feefd3383a34e34`:
-
-```sh
-git rev-parse HEAD:legacy/subset-development
-git rev-parse origin/legacy/subset-development-2026-09-13^{tree}
-```
-
-The second command requires the historical remote branch to have been fetched, as in a normal full clone. These checks establish exact preservation of the former tree. The active validation does not execute historical subset-state scripts. The [repository map](docs/REPOSITORY_MAP.md) distinguishes maintained content from those records.
+The source-serialization record allows the independent verifier to check the recorded NumPy JSON conversion without changing the scientific implementation. Compare the regenerated summaries with [the references](studies/floquet/results/), excluding wall time, at relative tolerance `1e-9` and absolute tolerance `1e-11`. The [Floquet study](studies/floquet/README.md) explains the dependent cohorts, descriptive criteria and exact crossing-gate obstruction. The default reproduction does not regenerate these eigenstates.

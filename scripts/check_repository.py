@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """Check local navigation in the maintained scientific reading route.
 
-Historical checkpoint documents and external URLs are outside this check.
-The immutable-data and scientific-calculation checks have separate commands.
+External URLs and raw protocol records are outside this check.
+Reference integrity and scientific calculations have separate checks.
 """
 from pathlib import Path
 from html import unescape
@@ -77,9 +77,8 @@ def local_targets(contents):
 
 
 def check_repository():
-    pages = sorted(ROOT.glob('*.md'))
-    pages += sorted((ROOT / 'docs').glob('*.md'))
-    pages += sorted((ROOT / 'theory').glob('*.md'))
+    from check_markdown_math import markdown_paths
+    pages = markdown_paths(ROOT)
     checked = 0
     fragments_checked = 0
     anchor_cache = {}
@@ -109,7 +108,7 @@ def check_repository():
             'local_markdown_fragments_checked': fragments_checked,
             'scope': 'Local paths, image targets, and Markdown section anchors linked '
                      'from maintained Markdown, including same-page anchors. External '
-                     'URLs and navigation originating in historical records are not audited.'}
+                     'URLs and raw protocol records are not audited.'}
 
 
 if __name__ == '__main__':

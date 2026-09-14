@@ -1,6 +1,7 @@
-"""Verify immutable inputs and reproduce only the six checkpoint-08 checks.
+"""Verify reference integrity and reproduce six deterministic calculations.
 
-The imported checkpoints are never modified. No Haar sampling is rerun.
+Calculations run in a temporary copy. Committed inputs are checked before and
+after execution. No state sampling is rerun.
 """
 from pathlib import Path
 import argparse
@@ -14,10 +15,34 @@ import sys
 import tempfile
 
 ROOT = Path(__file__).resolve().parent
+MANIFEST = ROOT / 'reference_integrity.json'
 
 
 def sha256(path):
     return hashlib.sha256(path.read_bytes()).hexdigest()
+
+
+def safe_output_directory(path):
+    """Resolve an output directory without allowing writes into reference data."""
+    output = Path(path).resolve()
+    if output == ROOT or ROOT in output.parents:
+        build = ROOT / 'build'
+        if output != build and build not in output.parents:
+            raise SystemExit('Within the repository, outputs must be under build/.')
+    return output
+
+
+def verify_references(files):
+    failures = []
+    for name, digest in files.items():
+        relative = Path(name)
+        path = (ROOT / relative).resolve()
+        if relative.is_absolute() or '..' in relative.parts or ROOT not in path.parents:
+            raise SystemExit(f'Invalid reference path: {name}')
+        if not path.is_file() or sha256(path) != digest:
+            failures.append(name)
+    if failures:
+        raise SystemExit('Reference file mismatch: ' + ', '.join(failures))
 
 
 def main():
@@ -25,47 +50,51 @@ def main():
     parser.add_argument('--output-dir', type=Path, default=ROOT / 'build/validation',
                         help='Directory for new validation reports (default: build/validation).')
     args = parser.parse_args()
-    imports = json.loads((ROOT / 'provenance/IMPORTS.json').read_text())
-    files = imports['imported_files']
-    failures = [name for name, digest in files.items()
-                if not (ROOT / name).is_file() or sha256(ROOT / name) != digest]
-    if failures:
-        raise SystemExit('Imported file mismatch: ' + ', '.join(failures))
-    print(f'Imported files verified: {len(files)}', flush=True)
-    output = args.output_dir.resolve()
-    protected = [ROOT / name for name in ('evidence', 'limits', 'legacy', 'validation')]
-    if any(output == path or path in output.parents for path in protected):
-        raise SystemExit('Choose an output directory outside preserved research records.')
+    output = safe_output_directory(args.output_dir)
+    manifest_digest = sha256(MANIFEST)
+    files = json.loads(MANIFEST.read_text())['files']
+    if not isinstance(files, dict) or not files:
+        raise SystemExit('Reference integrity manifest must contain a nonempty files mapping.')
+    verify_references(files)
+    print(f'Reference files verified: {len(files)}', flush=True)
     output.mkdir(parents=True, exist_ok=True)
     env = os.environ.copy()
     env.update(OPENBLAS_NUM_THREADS='1', OMP_NUM_THREADS='1', MKL_NUM_THREADS='1')
-    with tempfile.TemporaryDirectory(prefix='entropy_quantum_verify_') as tmp:
-        work = Path(tmp) / 'checkpoint08'
-        shutil.copytree(ROOT / 'evidence/checkpoint08', work)
-        process = subprocess.run([sys.executable, 'reproduce.py'], cwd=work, env=env,
-                                 stdout=subprocess.PIPE, stderr=subprocess.STDOUT,
-                                 text=True)
-        (output / 'deterministic_reproduction.log').write_text(process.stdout)
-        print(process.stdout, end='', flush=True)
-        reproduction = work / 'REPRODUCTION.json'
-        if reproduction.exists():
-            shutil.copy2(reproduction, output / 'CHECKPOINT08_REPRODUCTION.json')
-        if process.returncode:
-            raise SystemExit(process.returncode)
-        result = json.loads(reproduction.read_text())
-        if result['status'] != 'passed':
-            raise SystemExit('Deterministic reproduction did not pass')
-    # Check that the reproduction really left every imported reference untouched.
-    assert all(sha256(ROOT / name) == digest for name, digest in files.items())
-    report = dict(status='passed', imported_files_verified=len(files),
+    try:
+        with tempfile.TemporaryDirectory(prefix='entropy_covariance_verify_') as tmp:
+            work = Path(tmp) / 'checks'
+            shutil.copytree(ROOT / 'checks', work)
+            # The original numerical implementation includes the protocol's
+            # byte hash in its result and expects this local filename.
+            shutil.copy2(work / 'protocol.txt', work / 'PROTOCOL.md')
+            process = subprocess.run([sys.executable, 'reproduce.py'], cwd=work, env=env,
+                                     stdout=subprocess.PIPE, stderr=subprocess.STDOUT,
+                                     text=True)
+            (output / 'deterministic_reproduction.log').write_text(process.stdout)
+            print(process.stdout, end='', flush=True)
+            reproduction = work / 'REPRODUCTION.json'
+            if reproduction.exists():
+                shutil.copy2(reproduction, output / 'DETERMINISTIC_REPRODUCTION.json')
+            if process.returncode:
+                raise SystemExit(process.returncode)
+            result = json.loads(reproduction.read_text())
+            if result['status'] != 'passed' or len(result['checks']) != 6:
+                raise SystemExit('Six deterministic calculations did not pass')
+    finally:
+        verify_references(files)
+        if sha256(MANIFEST) != manifest_digest:
+            raise SystemExit('Reference integrity manifest changed during reproduction.')
+    report = dict(status='passed', reference_files_verified=len(files),
+                  reference_manifest_sha256=manifest_digest,
                   python=platform.python_version(),
                   deterministic_checks=len(result['checks']),
                   new_random_states=0,
-                  original_inputs_unchanged=True,
-                  scope='Input integrity and six checkpoint-08 deterministic checks only; '
-                        'earlier sampling and proof audits are inherited evidence.')
+                  reference_inputs_unchanged=True,
+                  scope='Reference integrity and six deterministic calculations. '
+                        'Saved sampling results are checked for integrity; '
+                        'their sampling campaigns and the proof review are not rerun.')
     (output / 'PROJECT_VERIFICATION.json').write_text(json.dumps(report, indent=2)+'\n')
-    print('Imported evidence and deterministic reproduction passed.', flush=True)
+    print('Reference integrity and deterministic reproduction passed.', flush=True)
 
 
 if __name__ == '__main__':

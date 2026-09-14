@@ -24,7 +24,5 @@ jobs:
         run: python scripts/check_repository.py
       - name: Check maintained Markdown math
         run: python scripts/check_markdown_math.py --self-test
-      - name: Verify research and regenerate reader outputs
+      - name: Verify reference integrity and reproduce deterministic calculations
         run: python scripts/reproduce.py
-      - name: Verify preserved legacy tree
-        run: test "$(git rev-parse HEAD:legacy/subset-development)" = ffb13b5f01c8c8ad18c80b521feefd3383a34e34
