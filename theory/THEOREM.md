@@ -1,6 +1,6 @@
 # The scientific core
 
-This is the precise statement used throughout the repository. [The derivation](PROOF.md) fixes the conventions and explains its proof dependencies; [the worked example](../docs/WORKED_EXAMPLE.md) evaluates it for a boundary qubit pair. Natural logarithms are used.
+This is the precise statement used throughout the repository. [The derivation](PROOF.md) fixes the conventions and explains its proof dependencies; [the worked example](../docs/WORKED_EXAMPLE.md) evaluates it for a boundary qubit pair. [Gate controls](CONTROLS.md) covers product gates, both SWAP limits, local basis changes, the rank bound, and different observation times. Natural logarithms are used.
 
 This is the **CHECK** entrance. The result below requires no educational detour.
 For translations from the selected Mingo–Speicher passages, use the
@@ -9,29 +9,29 @@ proof inputs and project-specific steps are distinguished in the proof map below
 
 ## Setting
 
-Fix positive integers r and s. Let d tend to infinity through common multiples of r and s, with
+Fix positive integers $r$ and $s$. Let $d$ tend to infinity through common multiples of $r$ and $s$, with
 
 ```math
 \mathcal H_A=\mathbb C^r\otimes\mathbb C^{d/r},\qquad
 \mathcal H_B=\mathbb C^s\otimes\mathbb C^{d/s}.
 ```
 
-Let ψ be a complex-Haar pure state on the balanced d by d bipartition. A fixed finite list of deterministic unitaries U_l acts on the r by s active factors, with identity action on the spectators. The entropy orders are fixed and positive. Write S_α(U_l ψ) for the Rényi entropy across A|B, with the continuous order-one definition.
+Let $\psi$ be a complex-Haar pure state on the balanced $d\times d$ bipartition. A fixed finite list of deterministic unitaries $U_l$ acts on the $r\times s$ active factors, with identity action on the spectators. The entropy orders are fixed and positive. Write $S_\alpha(U_l\psi)$ for the Rényi entropy across $A\mid B$, with the continuous order-one definition.
 
-For a relative gate V_lm=U_l U_m†, define realignment by
+For a relative gate $V_{lm}=U_l U_m^\dagger$, define realignment by
 
 ```math
 \mathcal R(V)_{(a,c),(b,e)}=V_{ab,ce}.
 ```
 
-Its normalized operator Schmidt probabilities η_h are the nonzero eigenvalues of
+Its normalized operator Schmidt probabilities $\eta_h$ are the nonzero eigenvalues of
 
 ```math
 \mathcal R(V)\mathcal R(V)^\dagger/(rs),\qquad
 \sum_h\eta_h=1.
 ```
 
-Let F_k(V)=Σ_h η_h(V)^k. Define coefficients for k≥2 by
+Let $F_k(V)=\sum_h\eta_h(V)^k$. Define coefficients for $k\ge2$ by
 
 ```math
 c_{\alpha,2}=-\frac{2\alpha}{\alpha+2},\qquad
@@ -50,7 +50,7 @@ The central result is
 =\frac14\sum_{k\ge2}k\,c_{\alpha,k}c_{\beta,k}F_k(V_{lm}).
 ```
 
-The series is absolutely convergent. Any fixed finite family of exact-mean-centered entropies multiplied by d converges jointly to a mean-zero Gaussian vector with these covariances. Degenerate covariance matrices are allowed.
+The series is absolutely convergent. Any fixed finite family of exact-mean-centered entropies multiplied by $d$ converges jointly to a mean-zero Gaussian vector with these covariances. Degenerate covariance matrices are allowed.
 
 Each gate preserves the Haar marginal distribution. Thus the same-order mean-square increment satisfies
 
@@ -60,11 +60,11 @@ Each gate preserves the Haar marginal distribution. Thus the same-order mean-squ
 =\frac12\sum_{k\ge2}k c_{\alpha,k}^2[1-F_k(U)].
 ```
 
-The unscaled fluctuations vanish with d. This theorem describes their covariance, not a large absolute entropy change.
+The unscaled fluctuations vanish with $d$. This theorem describes their covariance, not a large absolute entropy change.
 
 ## Spatial-access consequence
 
-Let ρ_α(U) denote the limiting correlation of the same-order entropies before and after U. Then
+Let $\rho_\alpha(U)$ denote the limiting correlation of the same-order entropies before and after $U$. Then
 
 ```math
 \rho_\alpha(U)=
@@ -72,7 +72,7 @@ Let ρ_α(U) denote the limiting correlation of the same-order entropies before 
 {\sum_{k\ge2}k c_{\alpha,k}^2}.
 ```
 
-The number of nonzero operator Schmidt probabilities is at most R=min(r²,s²). Convexity gives F_k≥R^{1-k}, hence
+The number of nonzero operator Schmidt probabilities is at most $R=\min(r^2,s^2)$. Convexity gives $F_k\ge R^{1-k}$, hence
 
 ```math
 \rho_\alpha(U)\ge
@@ -80,13 +80,13 @@ The number of nonzero operator Schmidt probabilities is at most R=min(r²,s²). 
 {\sum_{k\ge2}k c_{\alpha,k}^2}>0.
 ```
 
-For equal active dimensions q, dual-unitary gates have q² flat probabilities and attain the bound. For a boundary qubit pair the minimum correlations at orders 1/2, 1, and 2 are approximately 0.17232220, 0.22773244, and 0.25. Pure-state logarithmic negativity is order 1/2 in this convention.
+For equal active dimensions $q$, dual-unitary gates have $q^2$ flat probabilities and attain the bound. For a boundary qubit pair the minimum correlations at orders $1/2$, $1$, and $2$ are approximately 0.17232220, 0.22773244, and 0.25. Pure-state logarithmic negativity is order $1/2$ in this convention.
 
 Fixed active support is essential. A SWAP of the entire growing halves preserves entanglement exactly and lies outside this limit. A SWAP of only the fixed active factors generally changes the global entanglement and saturates the bound.
 
 ## What the hierarchy identifies
 
-At integer order n≥2, the series contains F_2 through F_n with a nonzero coefficient of F_n. For known finite rank R, orders 2 through R therefore determine F_2 through F_R successively; F_1=1 and Newton identities determine the multiset of probabilities. Rank one is trivial. This is exact information content, not a practical inference guarantee.
+At integer order $n\ge2$, the series contains $F_2$ through $F_n$ with a nonzero coefficient of $F_n$. For known finite rank $R$, orders $2$ through $R$ therefore determine $F_2$ through $F_R$ successively; $F_1=1$ and Newton identities determine the multiset of probabilities. Rank one is trivial. This is exact information content, not a practical inference guarantee.
 
 For a boundary qubit pair the normalized same-order correlations give
 
@@ -99,11 +99,11 @@ The corresponding worst-case amplification of bounded input errors is 1, 49, and
 
 ## Proof map and attribution
 
-1. Represent ψ by a normalized complex Gaussian coefficient matrix. Each transformed matrix is marginally an iid Gaussian matrix; their entry cross-covariance contains V_lm and spectator Kronecker deltas.
+1. Represent $\psi$ by a normalized complex Gaussian coefficient matrix. Each transformed matrix is marginally an iid Gaussian matrix; their entry cross-covariance contains $V_{lm}$ and spectator Kronecker deltas.
 2. Connected spectator Wick graphs give the usual orientable Wishart power counting. The leading two-trace graph is planar and unicyclic. Every attached bridge is paired within a single trace, so same-gate unitarity removes all tree decorations.
-3. The active contraction on the remaining cycle is Tr[(R(V)R(V)†)^k]/(rs)^k=F_k(V). Ordinary Wishart tree counts diagonalize the covariance in Γ_k(x)=2T_k((x−2)/2), with mode covariance δ_jk k F_k. Higher connected cumulants vanish for a fixed finite family.
-4. The low-regularity square-LUE approximation of Henry Hu transfers centered polynomial limits to x^α for every fixed α>0 and to x log x. Marginal L² approximation and Cauchy–Schwarz suffice for cross-covariances; the different gates need not be independent.
-5. Normalize the shared Gaussian trace. The exact-mean-centered L² entropy delta method cancels the conserved k=1 radial mode, leaving the displayed k≥2 law. Exceptional events are bounded using the combined normalized entropy, not separate logarithms.
+3. The active contraction on the remaining cycle is $\mathop{\mathrm{Tr}}\nolimits[(\mathcal R(V)\mathcal R(V)^\dagger)^k]/(rs)^k=F_k(V)$. Ordinary Wishart tree counts diagonalize the covariance in $\Gamma_k(x)=2T_k((x-2)/2)$, with mode covariance $\delta_{jk}\,kF_k$. Higher connected cumulants vanish for a fixed finite family.
+4. The low-regularity square-LUE approximation of Henry Hu transfers centered polynomial limits to $x^\alpha$ for every fixed $\alpha>0$ and to $x\log x$. Marginal $L^2$ approximation and Cauchy–Schwarz suffice for cross-covariances; the different gates need not be independent.
+5. Normalize the shared Gaussian trace. The exact-mean-centered $L^2$ entropy delta method cancels the conserved $k=1$ radial mode, leaving the displayed $k\ge2$ law. Exceptional events are bounded using the combined normalized entropy, not separate logarithms.
 
 The [consolidated derivation](PROOF.md) gives the indexed Wick convention, cycle contraction, nonpolynomial transfer, shared normalization, and explicit order-one remainder in one route. The detailed inherited [all-degree argument](../evidence/checkpoint08/foundation/GENERAL_GATE_REVIEW.md), [nonpolynomial transfer](../evidence/checkpoint08/foundation/NONSMOOTH_EXTENSION.md), [transfer audit](../evidence/checkpoint08/foundation/NONSMOOTH_EXTENSION_AUDIT.md), and [independent internal proof assessment](../reviews/PROOF_ASSESSMENT.md) remain available as source records.
 
