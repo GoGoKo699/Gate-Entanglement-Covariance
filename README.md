@@ -1,5 +1,7 @@
 # Gate Entanglement Covariance
 
+Entanglement covariance of Haar-random states under fixed boundary gates, with operator Schmidt formulas, proofs, and reproducible calculations.
+
 **How much of a state's entanglement fluctuation survives a gate acting across a small boundary?**
 
 Take a random pure state of two large quantum systems. Apply a fixed gate to a small part of each system, then compare the entanglement before and after the gate. Averaging over Haar-random input states gives the same mean entropy at both times. The question is whether a state that starts above the mean tends to remain above it.
@@ -71,3 +73,9 @@ The command checks the maintained calculations against saved exact results, veri
 | [figures/](figures/), [results/](results/) | Analytical reader figure and its numerical values |
 
 The [repository map](docs/REPOSITORY_MAP.md) identifies the document or calculation for each question. The [reproduction guide](REPRODUCE.md) separates the quick deterministic run from optional sample regeneration.
+
+## License and citation
+
+The original code, documentation, figures and accompanying data in this repository are available under the [MIT License](LICENSE), copyright 2026 Ruge Lin. External publications and separately installed dependencies retain their own licenses; the [references](docs/REFERENCES.md) credit the scientific sources.
+
+To cite this work, use [CITATION.cff](CITATION.cff) and identify the commit used for your calculations. Scientific attribution and the license terms are separate: the citation request adds no condition to the MIT License.

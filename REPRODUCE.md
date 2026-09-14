@@ -29,10 +29,10 @@ The [integrity manifest](reference_integrity.json) covers 95 reference files: st
 The command also works from another directory when given an absolute script path:
 
 ```sh
-python /path/to/Entangling-successions/scripts/reproduce.py --output-dir /tmp/gate-covariance-reproduction
+python /path/to/Gate-Entanglement-Covariance/scripts/reproduce.py --output-dir /tmp/gate-covariance-reproduction
 ```
 
-Replace `/path/to/Entangling-successions` with the actual clone path. Within the repository, generated outputs must be under `build/`; external output directories are also accepted. The wrapper rejects output paths that would overwrite scientific reference directories.
+Replace `/path/to/Gate-Entanglement-Covariance` with the actual clone path. Within the repository, generated outputs must be under `build/`; external output directories are also accepted. The wrapper rejects output paths that would overwrite scientific reference directories.
 
 ## What the default checks establish
 

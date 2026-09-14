@@ -7,7 +7,7 @@ This study compares the fixed-support entropy-covariance prediction with two non
 Each input is complex Haar on a balanced bipartition with half dimension $`d=32`$ or $`d=64`$. There are 96 independent inputs at each size. A gate acts on one boundary qubit in each half, leaving spectator dimensions $`d/2`$ unchanged. The two gates are boundary SWAP and
 
 ```math
-U_{mathrm C}=\exp[-i(0.37X\otimes X+0.23Y\otimes Y+0.11Z\otimes Z)].
+U_{\mathrm{C}}=\exp[-i(0.37X\otimes X+0.23Y\otimes Y+0.11Z\otimes Z)].
 ```
 
 For each input, both gates are applied to the same original state. All three entropy orders $`\alpha=1/2,1,2`$ are measured, with natural logarithms. Order one is von Neumann entropy; order one-half equals the pure-state logarithmic negativity. The recorded difference is
