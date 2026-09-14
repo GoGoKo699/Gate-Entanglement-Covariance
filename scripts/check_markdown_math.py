@@ -26,6 +26,7 @@ otimes overline partial phi pi pm prod propto psi quad qquad rangle rho right rm
 sigma sim simeq sin sqrt sum tau text tfrac theta times to varepsilon widehat xi
 """.split())
 COMMAND = re.compile(r"\\([A-Za-z]+)")
+BARE_FORMAT_COMMAND = re.compile(r"(?<![\\A-Za-z])(?:mathrm|mathbb|mathcal|mathop|mathbf|boldsymbol)\b")
 TOKEN = re.compile(r"\\(?:[A-Za-z]+|[^\n])|\$\$|\$|[{}]")
 # High-confidence formula fragments in this English-language reading route.
 # This is not a complete detector for mathematics written in prose.
@@ -117,6 +118,8 @@ def inspect(text: str) -> tuple[list[str], list[tuple[int, str, bool]]]:
     for match in RAW_MATH.finditer(prose):
         errors.append(f"line {line_at(match.start())}: formula fragment {match[0]!r} outside math; use $`...`$ or fenced math")
     for line, tex, _ in expressions:
+        for match in BARE_FORMAT_COMMAND.finditer(tex):
+            errors.append(f"line {line}: formatting command {match[0]!r} is missing its TeX backslash")
         for token in TOKEN.finditer(tex):
             command = COMMAND.fullmatch(token[0])
             if command and command[1] not in COMMANDS:
@@ -166,6 +169,8 @@ def self_test() -> None:
         assert any(expected in error for error in inspect(bad)[0]), (bad, inspect(bad)[0])
     assert not inspect(r"$`\{x\} + \$1`$")[0]
     assert not inspect(r"$`\begin{pmatrix}0&-i\\i&0\end{pmatrix}`$")[0]
+    assert any("missing its TeX backslash" in error for error in inspect(r"$`U_{mathrm C}`$")[0])
+    assert not inspect(r"$`U_{\mathrm{C}}`$")[0]
     for bad in ("every F_k=1", r"every F\_k=1", "sqrt(rs)", "q^(2-2k)", "U(t)U(s)^dagger", "η_h", "r=s=d", "R=min(r²,s²)", r"\eta=(1)"):
         assert any("outside math" in error for error in inspect(bad)[0]), bad
     assert not inspect("See [the proof](theory/THEOREM.md#x_y) and AGENTS.md. Run `F_k = sqrt(rs)`.\n```python\nq**2\n```\n")[0]

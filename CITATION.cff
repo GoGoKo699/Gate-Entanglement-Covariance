@@ -1,0 +1,22 @@
+cff-version: 1.2.0
+message: "If you use this work, please cite this repository and identify the commit used."
+type: software
+title: "Gate Entanglement Covariance"
+authors:
+  - family-names: Lin
+    given-names: Ruge
+repository-code: "https://github.com/GoGoKo699/Entangling-successions"
+url: "https://github.com/GoGoKo699/Entangling-successions"
+license: MIT
+abstract: >-
+  Entanglement covariance of Haar-random states under fixed boundary gates,
+  with operator Schmidt formulas, proofs, and reproducible calculations.
+keywords:
+  - quantum-information
+  - quantum-entanglement
+  - random-matrix-theory
+  - haar-random-states
+  - renyi-entropy
+  - operator-entanglement
+  - quantum-gates
+  - reproducible-research
