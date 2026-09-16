@@ -74,6 +74,10 @@ The command checks the maintained calculations against saved exact results, veri
 
 The [repository map](docs/REPOSITORY_MAP.md) identifies the document or calculation for each question. The [reproduction guide](REPRODUCE.md) separates the quick deterministic run from optional sample regeneration.
 
+## Collaboration
+
+Manuscript writing is currently on hold. Researchers interested in collaborating on this project are welcome to contact Ruge Lin at [gogoko699@gmail.com](mailto:gogoko699@gmail.com).
+
 ## License and citation
 
 The original code, documentation, figures and accompanying data in this repository are available under the [MIT License](LICENSE), copyright 2026 Ruge Lin. External publications and separately installed dependencies retain their own licenses; the [references](docs/REFERENCES.md) credit the scientific sources.
