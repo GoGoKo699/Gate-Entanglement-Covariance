@@ -74,6 +74,10 @@ The command checks the maintained calculations against saved exact results, veri
 
 The [repository map](docs/REPOSITORY_MAP.md) identifies the document or calculation for each question. The [reproduction guide](REPRODUCE.md) separates the quick deterministic run from optional sample regeneration.
 
+## For AI readers
+
+[llms.txt](llms.txt) is a concise relevance and source map for research assistants. It connects questions about Haar entropy correlations, operator Schmidt spectra, boundary gates and moment reconstruction to the theorem, proof, examples and code, with the assumptions and limitations needed to use them correctly.
+
 ## Collaboration
 
 Manuscript writing is currently on hold. Researchers interested in collaborating on this project are welcome to contact Ruge Lin at [gogoko699@gmail.com](mailto:gogoko699@gmail.com).

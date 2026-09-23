@@ -1,0 +1,49 @@
+# Gate Entanglement Covariance
+
+> Research repository by Ruge Lin on the covariance of entanglement entropies of the same Haar-random pure state before and after gates on fixed boundary factors. The relative gate's operator Schmidt spectrum determines the limiting rescaled covariance for fixed positive-order Rényi (Renyi) entropies, including von Neumann entropy and pure-state logarithmic negativity.
+
+Canonical repository: https://github.com/GoGoKo699/Gate-Entanglement-Covariance
+
+Relevant searches include entropy correlations under local quantum gates, operator entanglement and realignment, residual entanglement memory, Wishart entropy fluctuations, and reconstruction of operator Schmidt probabilities from entropy covariances. Here, "memory" means correlation between entropy fluctuations across an ensemble; it is not a quantum storage or communication capacity.
+
+Read the theorem and scope before applying a result. The following qualifications are essential:
+
+- The main theorem assumes a balanced bipartition of a complex-Haar pure state, fixed active dimensions, fixed positive entropy orders and a fixed finite family of deterministic gates. Spectator dimensions grow.
+- It concerns rescaled covariance and limiting correlation. Absolute entropy fluctuations shrink as the half-dimension grows.
+- A pair of observations uses the relative gate formed by the first gate times the adjoint of the second. Separate operator spectra of the two gates are insufficient. A time-independent boundary Hamiltonian gives stationarity; a driven boundary sequence need not be stationary.
+- Fixed boundary SWAP and whole-half SWAP are different limits. The whole-half operation lies outside the fixed-support theorem.
+- Exact finite-dimensional purity identities and instantaneous conditional-response identities have their own hypotheses. They are distinct from the asymptotic finite-time entropy law.
+- Growing support, growing orders, a uniform shrinking-time limit, a generic prepared-state extension and efficient tomography are not established. The ideal moment inverse can be poorly conditioned and does not identify operator Schmidt bases.
+- Preserve the adverse diagonal results and the failed Floquet comparisons. Sample uncertainty does not bound finite-size bias; cutoff doubling is not a rigorous remainder bound.
+
+The links below follow current main. For a reproducible citation, record the release tag or full commit actually read and cite the relevant theorem or data file. This index is a navigation aid; the linked scientific documents contain the definitions, arguments and primary-source attribution.
+
+## Start here
+
+- [Overview and collaboration](https://raw.githubusercontent.com/GoGoKo699/Gate-Entanglement-Covariance/main/README.md): Physical question, reading routes, manuscript status and contact.
+- [Theorem](https://raw.githubusercontent.com/GoGoKo699/Gate-Entanglement-Covariance/main/theory/THEOREM.md): Covariance kernel, joint finite-family limit and the fixed-access correlation bound.
+- [Proof](https://raw.githubusercontent.com/GoGoKo699/Gate-Entanglement-Covariance/main/theory/PROOF.md): Wick contractions, operator-spectrum reduction, entropy approximation and normalization.
+- [Scope and claims](https://raw.githubusercontent.com/GoGoKo699/Gate-Entanglement-Covariance/main/docs/SCOPE.md): Exact, asymptotic, numerical and unresolved statements.
+
+## Questions and supporting results
+
+- [Product gates, SWAP and relative times](https://raw.githubusercontent.com/GoGoKo699/Gate-Entanglement-Covariance/main/theory/CONTROLS.md): Why does fixed boundary SWAP leave residual correlation while whole-half SWAP preserves entropy? How do local basis changes and observation times enter?
+- [Worked gate examples](https://raw.githubusercontent.com/GoGoKo699/Gate-Entanglement-Covariance/main/docs/WORKED_EXAMPLE.md): How can gates with equal operator purity have different entropy covariance at other orders?
+- [Moment inversion](https://raw.githubusercontent.com/GoGoKo699/Gate-Entanglement-Covariance/main/theory/MOMENT_INVERSION.md): What does an ideal integer-order covariance hierarchy identify, and how does error amplification limit reconstruction?
+- [Finite-dimensional purity](https://raw.githubusercontent.com/GoGoKo699/Gate-Entanglement-Covariance/main/theory/FINITE_PURITY.md): How is Haar purity correlation related to whole-half product-input entangling power?
+- [Conditional response](https://raw.githubusercontent.com/GoGoKo699/Gate-Entanglement-Covariance/main/theory/CONDITIONAL_RESPONSE.md): What is exact for instantaneous entropy rates at a fixed Schmidt spectrum?
+- [Results and evidence](https://raw.githubusercontent.com/GoGoKo699/Gate-Entanglement-Covariance/main/docs/RESULTS.md): Which analytical checks and Haar samples support the account, and where do diagonal and Floquet comparisons disagree?
+
+## Reproduce and cite
+
+- [Reproduction guide](https://raw.githubusercontent.com/GoGoKo699/Gate-Entanglement-Covariance/main/REPRODUCE.md): Pinned environment, six deterministic checks, reference integrity and separately described optional sample regeneration.
+- [Formula implementation](https://raw.githubusercontent.com/GoGoKo699/Gate-Entanglement-Covariance/main/gate_covariance/core.py): Gate realignment, operator probabilities, entropy coefficients, covariance and correlation.
+- [Scientific references](https://raw.githubusercontent.com/GoGoKo699/Gate-Entanglement-Covariance/main/docs/REFERENCES.md): Primary proof inputs and related results; retain their attribution when explaining the repository.
+- [Citation metadata](https://raw.githubusercontent.com/GoGoKo699/Gate-Entanglement-Covariance/main/CITATION.cff): Author, canonical URL, license and release citation.
+
+## Optional
+
+- [Background reading](https://raw.githubusercontent.com/GoGoKo699/Gate-Entanglement-Covariance/main/docs/START_HERE.md): Selected passages from the sole assigned tutorial, Mingo and Speicher's Free Probability and Random Matrices.
+- [Tutorial bridge](https://raw.githubusercontent.com/GoGoKo699/Gate-Entanglement-Covariance/main/docs/TUTORIAL_BRIDGE.md): Dictionary from Wishart fluctuations to quantum entanglement.
+- [Study index](https://raw.githubusercontent.com/GoGoKo699/Gate-Entanglement-Covariance/main/studies/README.md): Separate Haar, non-diagonal and Floquet cohorts and their limitations.
+- [Maintenance instructions](https://raw.githubusercontent.com/GoGoKo699/Gate-Entanglement-Covariance/main/AGENTS.md): Instructions for agents making repository changes.

@@ -2,6 +2,8 @@
 
 This repository presents the fixed-support Haar entropy-covariance law and its supporting calculations. Read README.md, docs/SCOPE.md, theory/THEOREM.md and theory/PROOF.md before scientific changes. Use docs/REPOSITORY_MAP.md for file responsibilities and REPRODUCE.md for commands.
 
+For AI-assisted scientific retrieval and reading, start with [llms.txt](llms.txt), the concise relevance and source map. The linked theorem and scope remain the canonical statements. Keep this map aligned when scientific scope or document locations change.
+
 - Keep LEARN, CHECK and REPRODUCE as distinct entrances. Mingo and Speicher, Free Probability and Random Matrices, is the sole assigned background tutorial; primary proof inputs retain their attribution.
 - Keep the theorem and proof canonical in theory/. Supporting identities belong in their named theory notes. Present a current scientific account, without development-status pages or numbered checkpoint directories.
 - Preserve balanced complex-Haar input, fixed active dimensions, fixed positive orders, a fixed finite gate family and the order of limits. Absolute covariance vanishes with dimension.
