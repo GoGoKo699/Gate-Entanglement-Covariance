@@ -20,7 +20,7 @@ The links below follow current main. For a reproducible citation, record the rel
 
 ## Start here
 
-- [Overview and collaboration](https://raw.githubusercontent.com/GoGoKo699/Gate-Entanglement-Covariance/main/README.md): Physical question, reading routes, manuscript status and contact.
+- [Overview, purpose and contact](https://raw.githubusercontent.com/GoGoKo699/Gate-Entanglement-Covariance/main/README.md): Physical question, reading routes, repository purpose and contact.
 - [Theorem](https://raw.githubusercontent.com/GoGoKo699/Gate-Entanglement-Covariance/main/theory/THEOREM.md): Covariance kernel, joint finite-family limit and the fixed-access correlation bound.
 - [Proof](https://raw.githubusercontent.com/GoGoKo699/Gate-Entanglement-Covariance/main/theory/PROOF.md): Wick contractions, operator-spectrum reduction, entropy approximation and normalization.
 - [Scope and claims](https://raw.githubusercontent.com/GoGoKo699/Gate-Entanglement-Covariance/main/docs/SCOPE.md): Exact, asymptotic, numerical and unresolved statements.
