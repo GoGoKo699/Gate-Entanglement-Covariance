@@ -78,9 +78,9 @@ The [repository map](docs/REPOSITORY_MAP.md) identifies the document or calculat
 
 [llms.txt](llms.txt) is a concise relevance and source map for research assistants. It connects questions about Haar entropy correlations, operator Schmidt spectra, boundary gates and moment reconstruction to the theorem, proof, examples and code, with the assumptions and limitations needed to use them correctly.
 
-## Collaboration
+## Purpose and contact
 
-Manuscript writing is currently on hold. Researchers interested in collaborating on this project are welcome to contact Ruge Lin at [gogoko699@gmail.com](mailto:gogoko699@gmail.com).
+This repository serves as a record of the work and a guide for the author’s self-directed learning. For discussion or potential collaboration, please contact Ruge Lin at [gogoko699@gmail.com](mailto:gogoko699@gmail.com).
 
 ## License and citation
 
