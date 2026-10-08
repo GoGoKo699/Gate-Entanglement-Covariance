@@ -108,5 +108,3 @@ The corresponding worst-case amplification of bounded input errors is 1, 49, and
 The [derivation](PROOF.md) gives the indexed Wick convention, cycle contraction, nonpolynomial transfer, shared normalization and explicit order-one remainder in one route.
 
 These arguments build on annular Wishart fluctuations, Chebyshev diagonalization, block-Gaussian methods, and established LUE regularity results. The result is the gate-spectrum reduction and the full actual-entropy covariance law with its quantum-information consequences. See [References](../docs/REFERENCES.md) for the external inputs and related quantum-information results.
-
-No uniform finite-size error, growing support, growing order, shrinking-time limit, path-space convergence, or generic prepared-state extension is asserted.

@@ -6,7 +6,7 @@ This study applies fixed boundary probes to the complete eigenbases of one neste
 
 The system is an open spin chain with sizes $`N=8,10`$, balanced half dimension $`d=2^{N/2}`$, and sites $`x=-N/2,\ldots,N/2-1`$. The cut lies between sites $`-1`$ and $`0`$. A period first applies two-qubit gates on bonds with odd left coordinate, then those with even left coordinate. Every bond gate is drawn once from complex $`U(4)`$ by phase-corrected complex Gaussian QR and reused every period. Bond $`x`$ uses NumPy `SeedSequence([2026091209, x+100])`. All shared bond gates are identical across the two sizes, including the central gate in the first layer.
 
-Complex Schur decomposition supplies the complete orthonormal eigenbasis, sorted by eigenphase: 256 states at eight spins and 1,024 at ten. These are dependent states of one nested circuit realization, with no independent circuit replication. There are no selected eigenphase windows, gate rejections, seed replacements, imposed symmetries, weak-link truncations, or spectral-tail exclusions.
+Complex Schur decomposition supplies the complete orthonormal eigenbasis, sorted by eigenphase: 256 states at eight spins and 1,024 at ten. These are dependent states of one nested circuit realization. The calculations use the full eigenbases and unmodified circuit gates.
 
 Three probes act on the central qubits, independently of the circuit gates and eigenstates:
 
@@ -99,7 +99,7 @@ Higher correlation coexists here with larger absolute entropy changes. For any f
 +(\mu_{\mathrm{out}}-\mu_{\mathrm{in}})^2.
 ```
 
-Both probes reduce the marginal variance and increase the mean, so stationarity of the transformed ensemble cannot be assumed. This identity explains the coexistence of the statistics; it supplies no microscopic mechanism for the excess variance.
+Both probes reduce the marginal variance and increase the mean, so stationarity of the transformed ensemble cannot be assumed. This identity explains how larger increments coexist with higher correlation.
 
 ## Exact obstruction for the circuit's crossing gate
 
@@ -127,7 +127,7 @@ The numerical anchor uses 16 equally spaced eigenphase indices per size, separat
 
 Circular gap ratios are 0.632345 and 0.604300; scaled computational-basis inverse participation ratios are 2.096150 and 2.039228. Total Z, Z parity, total X flip, and reflection have nonzero normalized commutators with both Floquet operators. No eigenphase degeneracy is numerically unresolved. All bond operator purities are recorded, with maximum 0.520630 at both sizes. Minimum Schmidt probabilities over the primary observations are approximately $`1.90\times10^{-7}`$ and $`4.84\times10^{-9}`$.
 
-These diagnostics describe the two selected finite operators. They do not prove thermodynamic chaos, exclude every hidden symmetry, supply independent-circuit uncertainty, or determine a limiting fluctuation law from two nested sizes. Exact Haar references remove ambiguity in the Haar benchmark while leaving finite-size effects of the Floquet ensemble itself.
+These diagnostics describe the two finite operators. The purity and von Neumann marginal benchmarks use exact Haar formulas; the Floquet values are statistics of one nested circuit realization.
 
 The [recorded independent validation](verification/independent_audit.json) uses [separate code](verification/independent_audit.py) without importing production functions. It rebuilds the circuit with Kronecker embeddings, checks all 1,280 eigenvectors, independently evaluates entropy from reduced-density-matrix eigenvalues on 96 state/probe representatives, and recomputes every scalar summary. Maximum eigenvector residuals are below $`2.6\times10^{-14}`$, orthogonality errors below $`2.5\times10^{-14}`$, independent entropy discrepancies below $`6.3\times10^{-15}`$, and summary discrepancies below $`2.6\times10^{-12}`$.
 

@@ -226,5 +226,3 @@ Use the continuous limit at $`\alpha=1`$; reciprocal Gamma zeros give terminatio
 ```
 
 It also gives the exact-mean-centered finite-family Gaussian limit. Identical Haar marginals turn this covariance into the mean-square increment formula in [the theorem](THEOREM.md). Physical consequences and evidence are separate from these dependencies.
-
-The argument establishes no uniform finite-size error, growing-support or growing-order limit, joint shrinking-time limit, path-space convergence, or extension to prepared-state ensembles. The retained [Floquet test](../studies/floquet/README.md) failed its declared Haar comparisons. Finite-degree contraction checks diagnose implementation errors; they do not replace the all-degree topology or Hu's external approximation theorem.

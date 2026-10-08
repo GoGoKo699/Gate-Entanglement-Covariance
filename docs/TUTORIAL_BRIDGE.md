@@ -188,7 +188,7 @@ For the same entropy order, the kernel is a positive weighted average of the $`F
 
 Order two uses only $`F_2`$, the operator purity. Other orders include further modes. The existing [equal-purity example](WORKED_EXAMPLE.md#same-operator-purity-different-higher-order-covariance) illustrates that these can distinguish gates with the same $`F_2`$. Integer orders successively reveal power sums: with known finite rank, ideal exact hierarchy data determine the probability multiset. This inversion can amplify small errors severely, and recovers neither operator bases nor a complete gate. Its precise conditions are in [Theorem](../theory/THEOREM.md#what-the-hierarchy-identifies).
 
-Continue with the uninterrupted [gate-to-prediction example](WORKED_EXAMPLE.md), then [results and evidence](RESULTS.md). These conclusions assume balanced complex-Haar input, fixed active dimensions, fixed deterministic gates in finite families, and fixed positive orders. The failed Floquet comparison remains a limitation on the tested prepared-state extension. There is no uniform finite-size error, growing-support, growing-order, shrinking-time, or sample-path theorem here.
+Continue with the [gate-to-prediction example](WORKED_EXAMPLE.md), then [results and evidence](RESULTS.md). The [theorem](../theory/THEOREM.md) collects the assumptions and consequences.
 
 ## Self-checks
 

@@ -1,28 +1,8 @@
 # Results and evidence
 
-The central result is a derived asymptotic theorem: for a balanced complex-Haar state, a deterministic gate on fixed boundary factors determines the limiting entropy covariance through its operator Schmidt probabilities. The numerical work checks finite algebraic consequences and illustrates the entropy prediction at modest sizes. It does not replace the all-degree proof or supply a finite-size error theorem.
+The [covariance theorem](../theory/THEOREM.md) and [proof](../theory/PROOF.md) give the asymptotic law. This page collects its finite algebraic checks and numerical comparisons, with sources for the data and calculations.
 
-Throughout this page, $`d`$ is the dimension of each half, entropies use natural logarithms, and order $`1/2`$ is pure-state logarithmic negativity. Absolute entropy covariances vanish as $`d^{-2}`$. See the [precise theorem](../theory/THEOREM.md) for the fixed-support, fixed-order, and finite-family assumptions, and the [scope and claims](SCOPE.md) for current exclusions.
-
-On **LEARN**, this page follows the [tutorial bridge](TUTORIAL_BRIDGE.md) and
-[worked calculation](WORKED_EXAMPLE.md): they explain what the kernel predicts;
-the sections below separate its derivation from deterministic evaluations,
-finite-size observations and the failed extension. On **CHECK**, start from the
-[maintained proof](../theory/PROOF.md), then use the linked records to inspect a
-specific dependency or comparison. The [sole tutorial and primary citations](REFERENCES.md)
-have separate educational and attribution roles.
-
-## What has been derived
-
-| Result | Proof and evidence | What the result permits |
-|---|---|---|
-| The relative gate's operator Schmidt probabilities determine every fixed positive-order entropy cross-covariance and the fixed finite-family Gaussian limit | [Covariance derivation](../theory/PROOF.md) and [entropy transfer](../theory/PROOF.md#4-transfer-to-entropy-test-functions) | The theorem includes non-diagonal gates. It gives no growing-support, shrinking-time, or sample-path convergence statement. |
-| Fixed spatial access leaves positive limiting same-order entropy correlation; dual-unitary gates attain the bound for equal active dimensions | [Theorem and convexity argument](../theory/THEOREM.md), [gate controls](../theory/CONTROLS.md) | The minimum correlations for one active qubit on each side are approximately `0.17232220`, `0.22773244`, and `0.25` at orders $`1/2`$, $`1`$, and $`2`$. These are limiting correlations, not bounds at every finite dimension. |
-| Equal operator purity can coexist with different entropy covariance at other orders | [Explicit diagonal-gate pair and proof](WORKED_EXAMPLE.md#same-operator-purity-different-higher-order-covariance), [saved series evaluations](../studies/haar/numerics/operator_results/equal_purity_analytic.json); a stronger second-moment comparison is given by the [gate-design derivation](../theory/GATE_DESIGNS.md) and [design-pair results](../checks/results/design_pair.json) | The distinction is analytical. The design example concerns gate 2-designs on the active qubits; it does not replace the initial Haar ensemble by a state 2-design. |
-| Ideal integer-order covariances identify a finite-rank operator Schmidt spectrum | [Moment-inversion proof](../theory/MOMENT_INVERSION.md), [code](../checks/inverse/inverse_moments.py), and [exact results](../checks/inverse/inverse_results.json) | Known finite rank gives triangular moment inversion and Newton reconstruction. The qubit correlation-to-moment error amplification factors are $`1`$, `49`, and `2401` before root recovery. There is no efficient tomography claim or recovery of Schmidt bases. |
-| Finite-dimensional Haar purity correlation is exactly related to whole-half product-input entangling power | [Exact identity](../theory/FINITE_PURITY.md), [independent contraction code](../checks/finite_purity/check_exact_global_purity.py), and [saved results](../checks/finite_purity/exact_global_purity_results.json) | Purity is not Rényi-2 entropy at finite dimension. Whole-half product inputs can contain active-spectator entanglement within each half, so they differ from product inputs on the active factors alone. |
-
-Annular Wishart fluctuations, LUE regularity, operator entanglement, entangling power and moment inversion have established antecedents, credited in [References](REFERENCES.md). The numerical checks below test finite identities and illustrate the asymptotic law.
+Throughout this page, $`d`$ is the dimension of each half, entropies use natural logarithms, and order $`1/2`$ is pure-state logarithmic negativity. Absolute entropy covariances vanish as $`d^{-2}`$. See the [precise theorem](../theory/THEOREM.md) for the fixed-support, fixed-order, and finite-family assumptions, and the [scope and claims](SCOPE.md) for the distinction between asymptotic theorems, exact identities and numerical evidence.
 
 ## Direct entropy illustration
 
@@ -39,7 +19,7 @@ The observable below is the rescaled mean-square entropy increment, $`d^2\mathbb
 | Cartan | 1 | 0.169565 | 0.164616 ± 0.021260 | 0.173503 ± 0.024518 |
 | Cartan | 2 | 0.319527 | 0.300049 ± 0.042827 | 0.305910 ± 0.048248 |
 
-The pilot is broadly compatible with the predictions at this resolution. It does not establish convergence with dimension, cover every entropy order, or isolate finite-size bias. Gate and order comparisons sharing an input are correlated; the displayed errors include sampling variation only. Standardized discrepancies are not calibrated significance tests.
+The pilot is broadly compatible with the predictions at these two sizes and three orders. Gate and order comparisons sharing an input are correlated; the displayed errors describe sampling variation and exclude finite-size bias. Standardized discrepancies are not calibrated significance tests.
 
 Sources: [protocol](../studies/non_diagonal/README.md), [fixed predictions](../studies/non_diagonal/results/pilot_frozen.json), [implementation](../studies/non_diagonal/numerics/entropy_pilot.py), [complete summary](../studies/non_diagonal/results/pilot_summary.json), and saved arrays at [32-dimensional halves](../studies/non_diagonal/results/pilot_d32.npz) and [64-dimensional halves](../studies/non_diagonal/results/pilot_d64.npz). The displayed means and standard errors agree with direct recomputation from these arrays.
 
@@ -49,7 +29,7 @@ The ZZ and diagonal-gate cohorts are separate experiments. They are not pooled i
 
 The leading Gaussian contraction calculation checked 68,786 networks across ten gates, including unequal $`2\times3`$ active factors. Mixed Chebyshev degrees through three agreed within about $`4.57\times10^{-13}`$; degree four for eight gates agreed within about $`3.79\times10^{-10}`$, after cancellation of larger monomial terms. This tests low-degree contraction identities in floating-point arithmetic. The all-degree result rests on the proof above. See [code](../studies/non_diagonal/numerics/general_gate_wick.py), [saved contractions](../studies/non_diagonal/numerics/general_gate_wick.json), and the [non-diagonal study](../studies/non_diagonal/README.md).
 
-The focused reproduction reruns the following six existing deterministic programs. The result links contain the reference outputs; no global Haar-state sampling is involved.
+The focused reproduction runs these six deterministic programs. The result links contain their reference outputs.
 
 | Calculation | Scope and recorded result | Code and saved output |
 |---|---|---|
@@ -62,9 +42,9 @@ The focused reproduction reruns the following six existing deterministic program
 
 The two subsystem assignments exchange active factors and need not be contiguous spatial cuts. With no spectator degrees of freedom the difference mode vanishes, so its correlation is undefined. The [two-assignment derivation](../theory/TWO_CUTS.md) states these conditions. Exact rational identities and floating-point checks of exact formulas have different error guarantees. The latter are not certified interval bounds.
 
-The [reproduction guide](../REPRODUCE.md) explains the current entry point. Its analytic reader figure evaluates the formula and adds no random states. Neither that figure nor these six checks independently establishes the all-order entropy theorem.
+The [reproduction guide](../REPRODUCE.md) gives commands and comparison tolerances.
 
-## A failed extension sets a useful boundary
+## Floquet eigenstate comparison
 
 The same predictions were tested on complete eigenbases of one nested local Floquet circuit family. The two sizes contain 256 eigenstates at eight spins and 1,024 at ten. Eigenstates of one operator are a dependent cohort, not independent disorder realizations. Both SWAP and phase-SWAP were chosen independently of the circuit and have the same flat operator Schmidt spectrum.
 
@@ -77,8 +57,4 @@ The same predictions were tested on complete eigenbases of one nested local Floq
 
 All twelve gate/order/size comparisons failed the predeclared descriptive Haar bands. These bands are feasibility tolerances, not statistical critical values. At ten spins the mean von Neumann entropy was within about 1.27% of the Haar mean while its variance was still 5.69 times larger. Agreement of means therefore did not validate the fluctuation law. The two probe correlations were not separated enough to fail their independent equality band, so this experiment does not resolve a failure of operator-spectrum sufficiency between those probes.
 
-This result limits the tested extension to prepared eigenstates. It neither contradicts the Haar theorem nor determines a thermodynamic limit from two sizes. Sources: [full report](../studies/floquet/README.md), [fixed predictions](../studies/floquet/results/predictions.json), [eight-spin summary](../studies/floquet/results/summary_N8.json), [ten-spin summary](../studies/floquet/results/summary_N10.json), and [independent numerical audit](../studies/floquet/verification/independent_audit.json). The two large eigenvector archives are regenerable but omitted from this repository; [their hashes and generating program](../studies/floquet/omitted_arrays.json) and the [reproduction guide](../REPRODUCE.md) record that distinction.
-
-## What remains open
-
-A uniform finite-size error, support growing with system size, orders growing with dimension, shrinking-time limits, and generic prepared-state or subset-state extensions are unproved here. The evidence also supplies no practical gate-spectrum reconstruction guarantee. These are the boundaries of the result, as summarized in [Scope and claims](SCOPE.md).
+These observations concern the two sampled Floquet operators. Sources: [full report](../studies/floquet/README.md), [fixed predictions](../studies/floquet/results/predictions.json), [eight-spin summary](../studies/floquet/results/summary_N8.json), [ten-spin summary](../studies/floquet/results/summary_N10.json), and [independent numerical audit](../studies/floquet/verification/independent_audit.json). The two large eigenvector archives are regenerable but omitted from this repository; [their hashes and generating program](../studies/floquet/omitted_arrays.json) and the [reproduction guide](../REPRODUCE.md) record that distinction.

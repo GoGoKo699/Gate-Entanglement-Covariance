@@ -11,4 +11,4 @@ Run these calculations through `python scripts/reproduce.py` from the repository
 | Independent purity-sum and product-input contractions | [numerics/two_cut_check.py](numerics/two_cut_check.py) | [Two-cut modes](../theory/TWO_CUTS.md) |
 | Exact gate-design pair | [numerics/design_pair.py](numerics/design_pair.py) | [Gate designs](../theory/GATE_DESIGNS.md) |
 
-The scientific implementations, reference JSON files and [original protocol text](protocol.txt) retain their exact bytes. These are finite deterministic checks. They neither generate a Haar-state cohort nor replace the proof of the all-order entropy theorem. The [reproduction guide](../REPRODUCE.md) documents comparison tolerances and generated reports.
+The [reproduction guide](../REPRODUCE.md) documents comparison tolerances and generated reports for these finite deterministic checks.

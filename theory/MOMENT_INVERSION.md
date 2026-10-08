@@ -1,6 +1,6 @@
 # What the entropy covariance hierarchy identifies
 
-The [covariance theorem](THEOREM.md) turns ideal integer-order entropy covariances into operator Schmidt power sums. A finite triangular inversion then determines any spectrum with a known finite rank bound. The reconstruction can be severely ill-conditioned, so this identifiability statement supplies neither an efficient tomography procedure nor a finite-sample guarantee.
+The [covariance theorem](THEOREM.md) turns ideal integer-order entropy covariances into operator Schmidt power sums. A finite triangular inversion then determines any spectrum with a known finite rank bound. Errors are amplified by the moment inversion and by root recovery near degenerate probabilities, as quantified below.
 
 ## Finite information determines the spectrum
 
@@ -148,7 +148,7 @@ The last diagonal coefficient alone in correlation normalization grows as
 \sim\frac{16^m}{4\pi m}.
 ```
 
-Full row norms grow still faster. Redundant mixed-order data, physical constraints or regularization might improve a particular estimator, but no such estimator is analyzed here.
+Full row norms grow still faster.
 
 Recovering polynomial roots adds a second instability. At a simple root,
 
@@ -194,7 +194,7 @@ The rational choice $`(x,y,z)=(1/5,2/5,3/5)`$ gives the physical spectrum $`(9/2
 
 Even exact recovery of the spectrum does not determine the unitary, its operator Schmidt bases, its action on a specified input or its active product-input entangling power. The SWAP and phase-SWAP family in [Two subsystem assignments](TWO_CUTS.md) demonstrates this. The equivalence concerns the complete **limiting before/after entropy covariance family with the identity reference**. It does not imply equality at finite dimension or for relative gates formed with other chosen references.
 
-The theorem gives no uniform finite-dimensional bias bound. Any practical estimator must control that bias, covariance uncertainty and entropy-evaluation precision. Absolute covariance shrinks as $`d^{-2}`$, but this fact alone proves no particular sample-complexity scaling. The underlying operator-spectrum and moment methods are credited in [References](../docs/REFERENCES.md).
+Absolute covariance shrinks as $`d^{-2}`$. The underlying operator-spectrum and moment methods are credited in [References](../docs/REFERENCES.md).
 
 ## Deterministic verification
 

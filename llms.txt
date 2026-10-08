@@ -13,7 +13,7 @@ Read the theorem and scope before applying a result. The following qualification
 - A pair of observations uses the relative gate formed by the first gate times the adjoint of the second. Separate operator spectra of the two gates are insufficient. A time-independent boundary Hamiltonian gives stationarity; a driven boundary sequence need not be stationary.
 - Fixed boundary SWAP and whole-half SWAP are different limits. The whole-half operation lies outside the fixed-support theorem.
 - Exact finite-dimensional purity identities and instantaneous conditional-response identities have their own hypotheses. They are distinct from the asymptotic finite-time entropy law.
-- Growing support, growing orders, a uniform shrinking-time limit, a generic prepared-state extension and efficient tomography are not established. The ideal moment inverse can be poorly conditioned and does not identify operator Schmidt bases.
+- Integer-order inversion identifies operator Schmidt probabilities. Its conditioning worsens rapidly near degenerate spectra; operator Schmidt bases are not determined.
 - Preserve the adverse diagonal results and the failed Floquet comparisons. Sample uncertainty does not bound finite-size bias; cutoff doubling is not a rigorous remainder bound.
 
 The links below follow current main. For a reproducible citation, record the release tag or full commit actually read and cite the relevant theorem or data file. This index is a navigation aid; the linked scientific documents contain the definitions, arguments and primary-source attribution.
@@ -23,7 +23,7 @@ The links below follow current main. For a reproducible citation, record the rel
 - [Overview, purpose and contact](https://raw.githubusercontent.com/GoGoKo699/Gate-Entanglement-Covariance/main/README.md): Physical question, reading routes, repository purpose and contact.
 - [Theorem](https://raw.githubusercontent.com/GoGoKo699/Gate-Entanglement-Covariance/main/theory/THEOREM.md): Covariance kernel, joint finite-family limit and the fixed-access correlation bound.
 - [Proof](https://raw.githubusercontent.com/GoGoKo699/Gate-Entanglement-Covariance/main/theory/PROOF.md): Wick contractions, operator-spectrum reduction, entropy approximation and normalization.
-- [Scope and claims](https://raw.githubusercontent.com/GoGoKo699/Gate-Entanglement-Covariance/main/docs/SCOPE.md): Exact, asymptotic, numerical and unresolved statements.
+- [Scope and claims](https://raw.githubusercontent.com/GoGoKo699/Gate-Entanglement-Covariance/main/docs/SCOPE.md): Theorem assumptions, exact identities and interpretation of numerical evidence.
 
 ## Questions and supporting results
 
