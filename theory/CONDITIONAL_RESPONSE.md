@@ -173,7 +173,7 @@ Thus ordinary sample-variance error bars for an unconditional mean squared rate 
 
 For a rectangular ensemble with dimension difference $`\ell=b-a`$, the small-eigenvalue density contains an additional factor $`\varepsilon^\ell`$. The fixed-dimensional integrability test changes accordingly. A fixed aspect ratio below one and a fixed dimension difference are distinct limits.
 
-These moment cautions concern instantaneous derivatives. Exact finite-pulse entropy differences do not require a spectral cutoff, and agreement with a derivative on sampled states does not give an approximation uniform over the Haar ensemble. No rate Gaussian limit, rigorous large-dimension exponent, exact tail coefficient or shrinking-time theorem is asserted here.
+These moment cautions concern instantaneous derivatives. Exact finite-pulse entropy differences do not require a spectral cutoff, and agreement with a derivative on sampled states does not give an approximation uniform over the Haar ensemble.
 
 ## Verification
 

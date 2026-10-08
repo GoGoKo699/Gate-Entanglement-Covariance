@@ -106,7 +106,7 @@ The figure evaluates the series in the limit as $`d`$ grows with cutoff $`65536`
 
 ### Same operator purity, different higher-order covariance
 
-The [existing equal-purity witness](RESULTS.md) makes the extra information in the higher modes explicit. For this comparison the active region has **two qubits per side**, held fixed as the spectators grow. Use
+The following equal-purity witness makes the extra information in the higher modes explicit. For this comparison the active region has **two qubits per side**, held fixed as the spectators grow. Use
 
 ```math
 U_A=e^{-i\pi Z_{A_1}Z_{B_1}/4},\qquad
@@ -152,4 +152,4 @@ Swapping the **entire halves** $`aR`$ and $`bT`$ instead preserves every Schmidt
 
 The maintained [theorem](../theory/THEOREM.md) and [proof](../theory/PROOF.md) supply the formulas. The underlying operator spectra and SWAP distinction are explained in [Gate controls](../theory/CONTROLS.md). The phase-gate values agree with the [phase-gate predictions](../studies/haar/numerics/operator_results/frozen_prediction.json); the SWAP values agree with the [non-diagonal predictions](../studies/non_diagonal/results/pilot_frozen.json). Those prediction files record scaled increments and variances rather than all the normalized correlations printed here.
 
-See [reproduction](../REPRODUCE.md) for the maintained calculation entry point, [results](RESULTS.md) for the existing finite-size samples, and [references](REFERENCES.md) for prior work. The bridge's [self-checks](TUTORIAL_BRIDGE.md#self-checks) test the distinctions used here. The illustrative table makes no claim of a finite-size error bound, general prepared-state universality, or practical estimation precision.
+See [reproduction](../REPRODUCE.md) for the maintained calculation entry point, [results](RESULTS.md) for the finite-size samples, and [references](REFERENCES.md) for prior work. The bridge's [self-checks](TUTORIAL_BRIDGE.md#self-checks) test the distinctions used here.

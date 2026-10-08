@@ -18,5 +18,3 @@ Use **LEARN** for the physical explanation, **CHECK** for the mathematical state
 | Identify the external proof inputs | [References](REFERENCES.md) |
 | Evaluate the formulas | [gate_covariance/](../gate_covariance/), [reader reference values](../results/reader_examples.json) |
 | Reproduce results and check reference integrity | [Reproduction guide](../REPRODUCE.md), [integrity manifest](../reference_integrity.json) |
-
-The default computation runs six deterministic checks and regenerates the analytical figure and table. It creates no random-state cohort. Study data remain separate by their input ensemble and protocol. New outputs go under build/ or to a separate working directory.

@@ -27,25 +27,6 @@ The covariance asks whether an input with slightly above-average entropy tends t
 
 The word **memory** below means this ensemble correlation. It does not assume a memory device, a stochastic time evolution, or a monotonic decay with time.
 
-## Choose a route
-
-**LEARN:** use the selected reading below as needed, then follow the
-[tutorial bridge](TUTORIAL_BRIDGE.md), the [worked gate example](WORKED_EXAMPLE.md),
-and [results and evidence](RESULTS.md). The progression is the physical
-same-state comparison, correlated Gaussian/Wishart matrices, fluctuation modes,
-gate power sums, normalized entropy covariance, and spatial-access consequences.
-
-**CHECK:** go straight to the [canonical theorem](../theory/THEOREM.md) and
-[proof](../theory/PROOF.md). They state the assumptions, indexed contraction,
-analytic input and normalization. The [scope and claims](SCOPE.md),
-[references](REFERENCES.md), and [results](RESULTS.md) provide status, attribution
-and evidence. You need not complete LEARN first.
-
-**REPRODUCE:** the [focused reproduction](../REPRODUCE.md) evaluates the maintained
-example, verifies reference inputs, and runs six deterministic checks.
-Historical files are supporting records, not prerequisite reading. Neither a
-manuscript nor an earlier conversation is needed.
-
 ## Selected reading
 
 The sole external background tutorial is James A. Mingo and Roland Speicher,
@@ -56,9 +37,8 @@ The [publisher edition](https://doi.org/10.1007/978-1-4939-6942-5) has different
 pagination. No published-page equivalence is assumed here.
 
 The table separately names physical PDF pages (counted from one) and printed
-author-PDF folios. They coincide at these verified locations. The source was
-retrieved on 13 September 2026; its hash, errata and source cautions are
-in the [implementation record](TUTORIAL_SOURCE.md).
+author-PDF folios. They coincide at these verified locations. The source fingerprint, errata
+and reading conventions are in the [source notes](TUTORIAL_SOURCE.md).
 These are short selections, not whole-chapter assignments. Skip any selection
 whose concept you already know.
 
@@ -101,7 +81,7 @@ Three roles remain distinct throughout: the book teaches background; primary
 papers provide credited machinery and the low-regularity approximation theorem;
 this repository defines and derives the additional gate contraction and entropy
 consequences. The [references](REFERENCES.md) are attribution, not an expanded
-prerequisite reading list. Selecting the book implies no endorsement by its authors.
+prerequisite reading list.
 
 ## What grows, and what stays fixed
 
@@ -131,14 +111,14 @@ The proof explains why. Haar input can be represented by a normalized Gaussian c
 
 1. **Limited spatial access leaves a positive correlation.** Fixed active dimensions bound the number of operator Schmidt probabilities. Their power sums cannot all approach zero. This imposes a positive floor on the limiting same-order entropy correlation. For equal active dimensions, gates with a flat operator Schmidt spectrum attain it.
 2. **Operator purity gives only part of the answer.** Rényi-2 correlation depends only on $`F_2`$. Other entropy orders also weight higher power sums, so equal operator purity can coexist with unequal entropy covariance.
-3. **Ideal covariance data contain spectral information.** A finite integer-order hierarchy determines a finite-rank operator Schmidt spectrum. The inversion is poorly conditioned and does not identify the operator Schmidt bases or provide an efficient tomography method.
+3. **Ideal covariance data contain spectral information.** A finite integer-order hierarchy determines a finite-rank operator Schmidt spectrum. The inversion recovers the probabilities and can be poorly conditioned; the operator Schmidt bases are not determined.
 
 The [worked example](WORKED_EXAMPLE.md) makes the gate spectrum and correlation floor concrete for a single boundary qubit pair. The [theorem statement](../theory/THEOREM.md) gives the exact assumptions, coefficients, and consequences.
 
 ## What the evidence establishes
 
-The theorem is asymptotic. Existing finite-dimensional Haar samples provide modest illustrations, with sampling error and finite-size deviations reported separately. Exact purity identities and deterministic contraction checks test specific components; they do not replace the all-order entropy proof.
+The theorem is asymptotic. Finite-dimensional Haar samples provide illustrations, with sampling error and finite-size deviations reported separately. Exact purity identities and deterministic contraction checks test specific components; they do not replace the all-order entropy proof.
 
-A tested extension to Floquet eigenstates failed its declared Haar comparison. The theorem is therefore retained as a Haar benchmark. It does not currently establish a law for generic prepared states, growing gate support, or a uniform shrinking-time limit. A whole-half SWAP also lies outside the fixed-support limit.
+The sampled Floquet eigenstates disagree with the Haar prediction. The [study](../studies/floquet/README.md) reports the comparison and derives an exact obstruction for the circuit’s own crossing gate.
 
-Continue with [the worked example](WORKED_EXAMPLE.md), [results and their limitations](RESULTS.md), or [reproduction instructions](../REPRODUCE.md). The [scope and claims](SCOPE.md) records the current status of each claim.
+Continue with [the worked example](WORKED_EXAMPLE.md), [results and their limitations](RESULTS.md), or [reproduction instructions](../REPRODUCE.md). The [scope and claims](SCOPE.md) distinguishes asymptotic theorems, exact identities and numerical evidence.
