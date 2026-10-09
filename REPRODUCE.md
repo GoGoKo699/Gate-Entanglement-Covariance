@@ -38,7 +38,7 @@ Replace `/path/to/Gate-Entanglement-Covariance` with the actual clone path. With
 
 The [six deterministic programs](checks/README.md) check moment inversion, the four-copy Haar purity identity, two subsystem assignments, exact symbolic identities, independent purity/product-input contractions and an exact gate-design pair. Each has internal assertions. The runner requires matching JSON structure and labels, with relative tolerance `1e-10` and absolute tolerance `5e-11` for numerical comparison. Byte identity is reported separately. These computations check finite identities; the all-degree entropy law rests on [the proof](theory/PROOF.md).
 
-The [formula checks](scripts/check_calculations.py) use independent exact-rational witnesses, known gate spectra, the closed order-one coefficient formula and the integer-order inverse. The generated reader table is compared with [its committed reference](results/reader_examples.json). Image pixels are not used as a cross-platform scientific equality test.
+The [formula checks](scripts/check_calculations.py) use independent exact-rational witnesses, known gate spectra, closed coefficients and the integer-order inverse. They also run [exact telescoping and tail controls](scripts/check_series_bounds.py), including mixed rational orders, integer termination, identity-gate tail defects and the normalization conversion below. Image pixels are not used as a cross-platform scientific equality test.
 
 For a narrower run:
 
@@ -51,20 +51,52 @@ The navigation checker covers local links, images and heading anchors throughout
 
 ## Numerical approximation and the scientific limit
 
-The library evaluates the theorem using an explicit coefficient cutoff `K`. The reader example uses `65536` and records the change on doubling to `131072`. At the showcased orders $`1/2`$, $`1`$, $`2`$, $`3`$ and $`4`$, the tabulated correlations change by less than $`10^{-9}`$. Integer orders $`2`$, $`3`$ and $`4`$ terminate at modes $`2`$, $`3`$ and $`4`$.
+The library evaluates the limiting covariance through mode `N`, including that mode, and normalizes correlations using the exact marginal coefficient $`V_\alpha=\alpha/4`$. It keeps the numerator truncated even at the identity gate. The [telescoping proof](theory/PROOF.md#7-coefficient-telescoping-and-closed-normalization) also gives the closed same-state benchmark $`K_{\alpha,\beta}(I)=\alpha\beta/[2(\alpha+\beta)]`$.
 
-Cutoff doubling is a numerical diagnostic, not a certified remainder bound. It does not bound finite-dimensional bias. These are evaluations of the balanced-Haar limit at fixed support and fixed order. A different order can converge more slowly and requires its own cutoff assessment.
+| API | Returned quantity |
+|---|---|
+| `covariance(a, b, eta, cutoff=N)` | Partial kernel through mode N |
+| `correlation(a, b, eta, cutoff=N)` | Partial kernel divided by the exact marginal standard deviations |
+| `marginal_variance(a)` | Closed limiting coefficient a/4 |
+| `same_state_covariance(a, b)` | Closed covariance of two orders on the same Haar state |
+| `marginal_tail(a, N)` | Exact mathematical omitted marginal series, evaluated in floating point |
+| `covariance_tail_bound(a, b, N)` | Gate-uniform absolute omitted-kernel bound |
+| `correlation_tail_bound(a, b, N)` | The corresponding bound with exact normalization |
+| `spatial_correlation_bound(a, r, s, cutoff=N)` | Partial lower-bound series with exact normalization |
+
+The binary64 implementation accepts positive scalar orders below `2**50` and integer cutoffs from `2` through `1,000,000`. It rejects recurrence underflow, subnormal coefficients, positive results rounded to zero, and higher-precision orders that would round to a terminating integer. Kernel evaluations are limited to `50,000,000` spectrum-entry/mode pairs; spatial-bound ranks are limited to `1,000,000`. These are numerical and resource limits, not restrictions on the fixed-order theorem. A nearby noninteger order never uses integer termination.
+
+For exact coefficients and normalized spectra, the [analytical remainder formulas](theory/PROOF.md#8-exact-marginal-tails-and-kernel-truncation) are
+
+```math
+\tau_\alpha(N)=\frac{(N+1+\alpha)^2}{16\alpha}c_{\alpha,N+1}^2,\qquad
+|K_{\alpha,\beta}-K_{\alpha,\beta}^{(N)}|
+\le\sqrt{\tau_\alpha(N)\tau_\beta(N)},
+```
+
+```math
+|\rho_{\alpha,\beta}-\rho_{\alpha,\beta}^{(N)}|
+\le\frac{4\sqrt{\tau_\alpha(N)\tau_\beta(N)}}{\sqrt{\alpha\beta}}.
+```
+
+At equal orders the partial covariance and correlation underestimate the infinite series. The returned increment estimate is $`2(V_\alpha-K_{\alpha,\alpha}^{(N)})`$; it overestimates the limiting increment by at most $`2\tau_\alpha(N)`$. Mixed-order bounds are two-sided. For identity at a nonterminating order, the correlation defect is $`4\tau_\alpha(N)/\alpha`$ and the increment estimate is $`2\tau_\alpha(N)`$, although the exact physical increment is zero. No clipping or identity override is applied.
+
+The reader example uses `N=65536`. At half order its gate-uniform correlation tail bound is $`9/(2N+1)^2<5.24\times10^{-10}`$; at order one it is $`4/[N^2(N+1)^2]`$. Integer orders $`2`$, $`3`$ and $`4`$ have zero omitted tails at this cutoff. The generated schema-2 table reports the bounds, exact marginal variances, the closed same-state benchmark, and the supplemental change on doubling the cutoff to `131072`.
+
+These are bounds on omitted terms of the limiting mathematical series. The floating-point bound values are not outward-rounded certificates: they exclude roundoff, numerical spectrum error, finite-dimension bias, sampling uncertainty and differences between input ensembles. A series-tail bound therefore does not change the interpretation of the recorded Haar or Floquet comparisons. All statements keep the entropy orders fixed and take dimension to infinity before any further limit.
 
 For example:
 
 ```python
 import numpy as np
-from gate_covariance import operator_schmidt_probabilities, correlation
+from gate_covariance import (operator_schmidt_probabilities, correlation,
+                             correlation_tail_bound)
 
 u = np.diag(np.exp(-1j * np.pi / 4 * np.array([1, -1, -1, 1])))
 eta = operator_schmidt_probabilities(u, r=2, s=2)
 print(eta)  # two nonzero probabilities, both 1/2, up to SVD roundoff
 print(correlation(2, 2, eta, cutoff=4))  # 1/2
+print(correlation_tail_bound(0.5, 0.5, 65536))  # about 5.23861e-10
 ```
 
 For two observations at gates `U_l` and `U_m`, pass the probabilities of `U_l @ U_m.conj().T`. Abstract probability vectors are accepted for algebraic calculations; this does not show that every vector is realized by a gate of specified dimensions.
@@ -90,6 +122,27 @@ PY
 ```
 
 The output is `Rescaled covariance difference: 0.001930194847`. Order three terminates, so this evaluation has floating-point roundoff but no omitted series terms.
+
+## Reference normalization and compatibility
+
+The protected [reader table](results/reader_examples.json) and figure in `figures/` use schema 1: correlations divide by truncated marginal variances and increments sum the truncated difference series. Their bytes and integrity hashes retain that convention. New outputs under `build/reproduction/` use schema 2 and exact marginal normalization. The changes are below the precision displayed in the six-decimal reader tables and figure.
+
+For each fixed cutoff the conversion is analytical:
+
+```math
+V_\alpha^{(N)}=V_\alpha-\tau_\alpha(N),\qquad
+\rho_{\alpha,\beta}^{\mathrm{old},(N)}
+=\rho_{\alpha,\beta}^{(N)}
+\sqrt{\frac{V_\alpha V_\beta}
+{[V_\alpha-\tau_\alpha(N)][V_\beta-\tau_\beta(N)]}},
+```
+
+```math
+D_\alpha^{\mathrm{old},(N)}
+=2[V_\alpha-K_{\alpha,\alpha}^{(N)}]-2\tau_\alpha(N).
+```
+
+The covariance numerator is unchanged. `scripts/check_calculations.py` converts generated quantities to the schema-1 convention for the reference comparison, including the cutoff-doubling fields. It checks every original field and retains `rtol=2e-12`, `atol=2e-14`; the separate six-program reproduction tolerances are unchanged as well. Its report distinguishes normalization changes from residual disagreement after conversion. Original study implementations and prediction records continue to reproduce under their recorded conventions.
 
 ## Optional sample regeneration
 

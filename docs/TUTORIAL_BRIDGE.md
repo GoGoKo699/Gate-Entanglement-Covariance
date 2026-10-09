@@ -180,7 +180,7 @@ K_{\alpha\beta}(V)=\frac14\sum_{k\ge2}k c_{\alpha,k}c_{\beta,k}F_k(V)
 =\lim_{d\to\infty}d^2\mathop{\mathrm{Cov}}\nolimits (S_\alpha(U_\ell\psi),S_\beta(U_m\psi)).
 ```
 
-Centered entropies scale as $`1/d`$, hence the $`d^2`$ covariance scaling. A finite normalized correlation concerns shrinking absolute fluctuations.
+Centered entropies scale as $`1/d`$, hence the $`d^2`$ covariance scaling. Coefficient telescoping gives the marginal coefficient $`V_\alpha=\alpha/4`$ and same-state mixed coefficient $`\alpha\beta/[2(\alpha+\beta)]`$. The [closed normalization and tail proof](../theory/PROOF.md#7-coefficient-telescoping-and-closed-normalization) supplies the calculation. A finite normalized correlation concerns shrinking absolute fluctuations.
 
 ## 6. Return to what boundary access permits
 

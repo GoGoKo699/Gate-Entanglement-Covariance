@@ -2,7 +2,7 @@
 
 This note derives [the covariance theorem](THEOREM.md), with explicit conventions and proof dependencies. It separates the spectator topology, the gate contraction, the nonpolynomial approximation and the entropy normalization. Established external inputs are identified in [References](../docs/REFERENCES.md).
 
-For **CHECK**, proceed directly through Sections 1–6. For **LEARN**, the
+For **CHECK**, Sections 1–6 derive the kernel and Sections 7–8 give its closed normalization and truncation bounds. For **LEARN**, the
 [tutorial bridge](../docs/TUTORIAL_BRIDGE.md) explains the quantum dictionary and
 the book's trace and Chebyshev conventions first. The selected book supplies
 background, R1–R2 supply credited annular-Wishart machinery, and R4 supplies the
@@ -206,7 +206,7 @@ d(S_1-\mathbb ES_1)=\frac32Z-X+o_{L^2}(1).
 
 The first cosine coefficient of $`x^\alpha`$ is $`2\alpha M_\alpha`$. Thus the trace term cancels mode one. At order one, $`x\log x`$ has first coefficient $`3`$, matching $`(3/2)x`$. This removes the shared radial fluctuation, for which $`F_1=1`$ and $`\mathop{\mathrm{Var}}\nolimits T=1`$ exactly.
 
-For $`k\ge2`$, the remaining entropy coefficients are
+For $`k\ge2`$ and $`\alpha\ne1`$, the remaining entropy coefficients have the Gamma representation below; the recurrence on the right applies to every positive order:
 
 ```math
 c_{\alpha,k}=
@@ -217,7 +217,7 @@ c_{\alpha,2}=-\frac{2\alpha}{\alpha+2},\quad
 c_{\alpha,k+1}=c_{\alpha,k}\frac{\alpha-k}{\alpha+k+1}.
 ```
 
-Use the continuous limit at $`\alpha=1`$; reciprocal Gamma zeros give termination at integer orders at least two. The recurrence avoids the removable singularity. Combining the preceding steps yields
+At integer orders at least two, reciprocal Gamma zeros give termination. At $`\alpha=1`$, use the recurrence directly, as evaluated in Section 7, instead of substituting into the singular Gamma expression. Combining the preceding steps yields
 
 ```math
 \lim_{d\to\infty}d^2\mathop{\mathrm{Cov}}\nolimits 
@@ -225,4 +225,151 @@ Use the continuous limit at $`\alpha=1`$; reciprocal Gamma zeros give terminatio
 =\frac14\sum_{k\ge2}k\,c_{\alpha,k}c_{\beta,k}F_k(U_\ell U_n^\dagger).
 ```
 
-It also gives the exact-mean-centered finite-family Gaussian limit. Identical Haar marginals turn this covariance into the mean-square increment formula in [the theorem](THEOREM.md). Physical consequences and evidence are separate from these dependencies.
+It also gives the exact-mean-centered finite-family Gaussian limit. Identical Haar marginals turn this covariance into the mean-square increment formula in [the theorem](THEOREM.md).
+
+
+## 7. Coefficient telescoping and closed normalization
+
+Fix $`\alpha,\beta>0`$ and an integer $`N\ge2`$. Define
+
+```math
+Q_k=\frac{(k+\alpha)(k+\beta)}{2(\alpha+\beta)}
+c_{\alpha,k}c_{\beta,k}.
+```
+
+The recurrence gives, including at a terminating mode,
+
+```math
+\begin{aligned}
+Q_k-Q_{k+1}
+&=\frac{(k+\alpha)(k+\beta)-(\alpha-k)(\beta-k)}{2(\alpha+\beta)}
+c_{\alpha,k}c_{\beta,k}\\
+&=k c_{\alpha,k}c_{\beta,k},\qquad
+Q_2=\frac{2\alpha\beta}{\alpha+\beta}.
+\end{aligned}
+```
+
+Summing this identity proves the finite formula
+
+```math
+\sum_{k=2}^{N}k c_{\alpha,k}c_{\beta,k}
+=\frac{2\alpha\beta}{\alpha+\beta}
+-\frac{(N+1+\alpha)(N+1+\beta)}{2(\alpha+\beta)}
+c_{\alpha,N+1}c_{\beta,N+1}.
+```
+
+The boundary term vanishes for every fixed pair of positive orders. Here are the three cases needed to justify the limit. For a fixed noninteger $`\alpha>0`$, the recurrence has the product representation
+
+```math
+c_{\alpha,k}
+=c_{\alpha,2}(-1)^{k-2}
+\frac{\Gamma(k-\alpha)\Gamma(\alpha+3)}
+{\Gamma(2-\alpha)\Gamma(k+\alpha+1)}
+=O_\alpha(k^{-2\alpha-1}).
+```
+
+The estimate follows from the Gamma-ratio asymptotic at fixed arguments. At order one, induction in the recurrence instead gives explicitly
+
+```math
+c_{1,k}=\frac{4(-1)^{k-1}}{(k-1)k(k+1)}=O(k^{-3}).
+```
+
+For integer $`\alpha=m\ge2`$, the factor at mode $`m`$ is zero, so $`c_{m,k}=0`$ for $`k>m`$. If either sequence terminates, the boundary term is eventually zero. Otherwise its absolute value is $`O_{\alpha,\beta}(N^{-2(\alpha+\beta)})`$, which tends to zero. These are fixed-order estimates; no uniformity near zero, infinity or integer orders, or for orders growing with dimension or cutoff, is used. Dimension tends to infinity before the series cutoff is removed.
+
+For the identity relative gate, $`F_k(I)=1`$. The theorem therefore yields
+
+```math
+K_{\alpha,\beta}(I)
+:=\lim_{d\to\infty}d^2\mathop{\mathrm{Cov}}\nolimits
+(S_\alpha(\psi),S_\beta(\psi))
+=\frac{\alpha\beta}{2(\alpha+\beta)},\qquad
+V_\alpha=K_{\alpha,\alpha}(I)=\frac\alpha4.
+```
+
+Both entropies here are evaluated on the same Haar state. These are exact limiting coefficients, not finite-dimensional covariance identities. Dividing the covariance by the limiting standard deviations gives
+
+```math
+\lim_{d\to\infty}\mathop{\mathrm{Corr}}\nolimits
+(S_\alpha(\psi),S_\beta(\psi))
+=\frac{2\sqrt{\alpha\beta}}{\alpha+\beta}.
+```
+
+For a general relative gate, write $`K_{\alpha,\beta}(U)`$ for the kernel in Section 6. Its correlation and same-order mean-square increment become
+
+```math
+\rho_{\alpha,\beta}(U)=\frac{4K_{\alpha,\beta}(U)}{\sqrt{\alpha\beta}},
+\qquad
+\rho_\alpha(U)=\frac1\alpha\sum_{k\ge2}k c_{\alpha,k}^2F_k(U),
+```
+
+```math
+\lim_{d\to\infty}d^2\mathbb E
+[(S_\alpha(U\psi)-S_\alpha(\psi))^2]
+=2[V_\alpha-K_{\alpha,\alpha}(U)]
+=\frac\alpha2[1-\rho_\alpha(U)].
+```
+
+The entropy order fixes the marginal fluctuation scale, while the gate determines the fraction retained. The established marginal variance for orders above one and the separate von Neumann case is compared with Nadal, Majumdar and Vergassola in [R10](../docs/REFERENCES.md). That predecessor does not replace the gate-covariance transfer or the entropy-normalization argument above.
+
+## 8. Exact marginal tails and kernel truncation
+
+Let the partial covariance include modes $`2`$ through $`N`$:
+
+```math
+K_{\alpha,\beta}^{(N)}(U)
+=\frac14\sum_{k=2}^{N}k c_{\alpha,k}c_{\beta,k}F_k(U),\qquad
+\tau_\alpha(N)=\frac{(N+1+\alpha)^2}{16\alpha}c_{\alpha,N+1}^2.
+```
+
+Set the two orders equal in the finite telescoping identity and subtract it from the infinite identity. This proves the exact omitted marginal variance
+
+```math
+\frac14\sum_{k>N}k c_{\alpha,k}^2=\tau_\alpha(N).
+```
+
+Since the normalized operator Schmidt probabilities satisfy $`0\le F_k(U)\le1`$, all same-order summands are nonnegative and
+
+```math
+0\le K_{\alpha,\alpha}(U)-K_{\alpha,\alpha}^{(N)}(U)
+\le\tau_\alpha(N).
+```
+
+For mixed orders the coefficient products can have either sign. Taking absolute values, then applying Cauchy–Schwarz to the weighted coefficient tails, gives
+
+```math
+\begin{aligned}
+\left|K_{\alpha,\beta}(U)-K_{\alpha,\beta}^{(N)}(U)\right|
+&\le\frac14\sum_{k>N}k|c_{\alpha,k}c_{\beta,k}|\\
+&\le\sqrt{\tau_\alpha(N)\tau_\beta(N)}.
+\end{aligned}
+```
+
+Normalize the partial covariance using the exact marginal variances:
+
+```math
+\rho_{\alpha,\beta}^{(N)}(U)
+=\frac{4K_{\alpha,\beta}^{(N)}(U)}{\sqrt{\alpha\beta}},\qquad
+\left|\rho_{\alpha,\beta}(U)-\rho_{\alpha,\beta}^{(N)}(U)\right|
+\le\frac{4\sqrt{\tau_\alpha(N)\tau_\beta(N)}}{\sqrt{\alpha\beta}}.
+```
+
+At equal orders this is the one-sided bound
+
+```math
+0\le\rho_\alpha(U)-\rho_\alpha^{(N)}(U)
+\le\frac{4\tau_\alpha(N)}\alpha.
+```
+
+For the identity gate the upper bound is attained, so a nonterminating numerator generally returns a correlation below one. Its deficit is exactly $`4\tau_\alpha(N)/\alpha`$; replacing the denominator by a truncated variance would hide this deficit. The mean-square increment estimate $`\alpha[1-\rho_\alpha^{(N)}(U)]/2`$ correspondingly overestimates the limiting increment by a quantity between zero and $`2\tau_\alpha(N)`$.
+
+As a closed example, the recurrence at half order gives
+
+```math
+c_{1/2,k}=\frac{6(-1)^{k-1}}{(2k-1)(2k+1)},\qquad
+\tau_{1/2}(N)=\frac{9}{8(2N+1)^2},\qquad
+\frac{4\tau_{1/2}(N)}{1/2}=\frac9{(2N+1)^2}.
+```
+
+At cutoff $`N=65536`$, the last bound is less than $`5.24\times10^{-10}`$. For integer order $`m\ge2`$, the tail vanishes once $`N\ge m`$; a cutoff below $`m`$ still omits nonzero modes.
+
+These inequalities bound omitted terms of the mathematical limiting series for exact normalized spectra and exact coefficients. They do not enclose floating-point roundoff or underflow, numerical spectrum errors, finite-dimension bias, sampling uncertainty or a change of input ensemble. A floating-point evaluation of the formulas is an evaluation of an analytical bound, not an outward-rounded numerical certificate. The [reproduction guide](../REPRODUCE.md) specifies how the maintained calculations report these separate quantities.

@@ -47,37 +47,54 @@ The central result is
 ```math
 \lim_{d\to\infty}d^2\mathop{\mathrm{Cov}}\nolimits 
 \bigl(S_\alpha(U_l\psi),S_\beta(U_m\psi)\bigr)
-=\frac14\sum_{k\ge2}k\,c_{\alpha,k}c_{\beta,k}F_k(V_{lm}).
+=K_{\alpha,\beta}(V_{lm})
+:=\frac14\sum_{k\ge2}k\,c_{\alpha,k}c_{\beta,k}F_k(V_{lm}).
 ```
 
 The series is absolutely convergent. Any fixed finite family of exact-mean-centered entropies multiplied by $`d`$ converges jointly to a mean-zero Gaussian vector with these covariances. Degenerate covariance matrices are allowed.
 
-Each gate preserves the Haar marginal distribution. Thus the same-order mean-square increment satisfies
+## Closed normalization
+
+For the identity relative gate, $`F_k(I)=1`$. The coefficient telescoping identity in [Proof, Section 7](PROOF.md#7-coefficient-telescoping-and-closed-normalization) gives, for every pair of fixed positive orders,
+
+```math
+K_{\alpha,\beta}(I)
+=\lim_{d\to\infty}d^2\mathop{\mathrm{Cov}}\nolimits
+(S_\alpha(\psi),S_\beta(\psi))
+=\frac{\alpha\beta}{2(\alpha+\beta)},\qquad
+V_\alpha=\lim_{d\to\infty}d^2\mathop{\mathrm{Var}}\nolimits(S_\alpha)=\frac\alpha4,
+```
+
+```math
+\lim_{d\to\infty}\mathop{\mathrm{Corr}}\nolimits
+(S_\alpha(\psi),S_\beta(\psi))
+=\frac{2\sqrt{\alpha\beta}}{\alpha+\beta}.
+```
+
+The two orders are evaluated on the same Haar state. These formulas are exact limiting coefficients; the identity-gate benchmark is not the covariance for an arbitrary relative gate. The established marginal-variance result and its domain are credited in [References, R10](../docs/REFERENCES.md).
+
+Every gate preserves the Haar marginal distribution. Thus the general limiting correlation and same-order mean-square increment are
+
+```math
+\rho_{\alpha,\beta}(U)=\frac{4K_{\alpha,\beta}(U)}{\sqrt{\alpha\beta}},\qquad
+\rho_\alpha(U)=\frac1\alpha\sum_{k\ge2}k c_{\alpha,k}^2F_k(U),
+```
 
 ```math
 \lim_{d\to\infty}d^2\mathbb E
 \left[(S_\alpha(U\psi)-S_\alpha(\psi))^2\right]
-=\frac12\sum_{k\ge2}k c_{\alpha,k}^2[1-F_k(U)].
+=\frac\alpha2[1-\rho_\alpha(U)].
 ```
 
-The unscaled fluctuations vanish with $`d`$. This theorem describes their covariance, not a large absolute entropy change.
+The entropy order fixes the marginal fluctuation scale, while the gate determines the fraction retained. The unscaled fluctuations vanish with $`d`$. [Proof, Section 8](PROOF.md#8-exact-marginal-tails-and-kernel-truncation) gives exact omitted marginal tails and gate-uniform truncation bounds for finite-series evaluations.
 
 ## Spatial-access consequence
-
-Let $`\rho_\alpha(U)`$ denote the limiting correlation of the same-order entropies before and after $`U`$. Then
-
-```math
-\rho_\alpha(U)=
-\frac{\sum_{k\ge2}k c_{\alpha,k}^2 F_k(U)}
-{\sum_{k\ge2}k c_{\alpha,k}^2}.
-```
 
 The number of nonzero operator Schmidt probabilities is at most $`R=\min(r^2,s^2)`$. Convexity gives $`F_k\ge R^{1-k}`$, hence
 
 ```math
 \rho_\alpha(U)\ge
-\frac{\sum_{k\ge2}k c_{\alpha,k}^2 R^{1-k}}
-{\sum_{k\ge2}k c_{\alpha,k}^2}>0.
+\frac1\alpha\sum_{k\ge2}k c_{\alpha,k}^2 R^{1-k}>0.
 ```
 
 For equal active dimensions $`q`$, dual-unitary gates have $`q^2`$ flat probabilities and attain the bound. For a boundary qubit pair the minimum correlations at orders $`1/2`$, $`1`$, and $`2`$ are approximately 0.17232220, 0.22773244, and 0.25. Pure-state logarithmic negativity is order $`1/2`$ in this convention.

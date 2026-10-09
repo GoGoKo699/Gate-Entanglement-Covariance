@@ -19,7 +19,8 @@ the repository's gate-dependent contraction or entropy theorem. Those bridges
 are explained [locally](TUTORIAL_BRIDGE.md), with the [canonical proof](../theory/PROOF.md)
 retaining all external hypotheses. R1–R2 below credit established fluctuation
 machinery; R4 is an actual analytic theorem input. R3 and R5 are comparison
-frameworks, and R6–R9 locate quantum-information antecedents. These primary papers
+frameworks, R6–R9 locate quantum-information antecedents, and R10 gives the
+direct marginal entropy-variance predecessor. These primary papers
 are not additional assigned tutorials. The educational choice implies no author
 endorsement and replaces no primary attribution.
 
@@ -45,6 +46,43 @@ endorsement and replaces no primary attribution.
 
 **R9. Bhargavi Jonnadula, Prabha Mandayam, Karol Życzkowski and Arul Lakshminarayan, _Entanglement measures of bipartite quantum gates and their thermalization under arbitrary interaction strength_.** [arXiv:1909.08139v2](https://arxiv.org/abs/1909.08139v2). Relevant passages: Sections II.1–II.2, Eqs. (5)–(23), entangling power versus gate typicality. Relevant antecedents include realignment and partial-transpose invariants, flat spectra of dual-unitary gates, and SWAP's maximal operator entanglement with zero product-input entangling power. The fixed-factor SWAP used here acts inside growing spectators and is not a whole-half SWAP.
 
+## Entropy-variance predecessor
+
+**R10. Celine Nadal, Satya N. Majumdar and Massimo Vergassola, _Statistical distribution of quantum entanglement for a random bipartite state_.**
+_Journal of Statistical Physics_ **142**, 403–438 (2011),
+[DOI:10.1007/s10955-010-0108-4](https://doi.org/10.1007/s10955-010-0108-4),
+[arXiv:1006.4091v1](https://arxiv.org/abs/1006.4091v1),
+[versioned full text](https://arxiv.org/html/1006.4091v1).
+Section 5, Eq. (86), gives the large-dimension marginal variance for fixed
+Rényi order $`q>1`$ in the balanced case $`c=N/M=1`$:
+
+```math
+\mathop{\mathrm{Var}}\nolimits S_q\sim\frac{q}{2\beta_D N^2}.
+```
+
+Section 5.1 treats von Neumann entropy separately; Eq. (92) gives
+$`\mathop{\mathrm{Var}}\nolimits S_1\sim1/(2\beta_D N^2)`$.
+The notation correspondence is:
+
+| Source convention | Repository convention |
+|---|---|
+| Entropy order $`q`$ | One of $`\alpha,\beta`$ |
+| Dyson index $`\beta_D`$, written $`\beta`$ in the source | $`2`$ for complex Haar states; distinct from entropy order $`\beta`$ |
+| Subsystem dimension $`N=M`$ | Half-dimension $`d`$ |
+| $`\ln`$ in the entropy definition, Eq. (2) | Natural logarithms |
+
+Thus R10 already gives $`d^2\mathop{\mathrm{Var}}\nolimits S_q\to q/4`$
+for $`q>1`$ and separately $`q=1`$. The [closed normalization](../theory/THEOREM.md)
+agrees on that domain. Its all-positive-order coverage, mixed-order covariance
+and gate-dependent kernel follow from the [local proof](../theory/PROOF.md),
+which retains Hu's R4 approximation and the entropy-normalization argument.
+
+The earlier short account by the same authors is _Phase Transitions in the
+Distribution of Bipartite Entanglement of a Random Pure State_,
+_Physical Review Letters_ **104**, 110501 (2010),
+[DOI:10.1103/PhysRevLett.104.110501](https://doi.org/10.1103/PhysRevLett.104.110501).
+The equation numbers and variance comparison above refer to the longer R10 text.
+
 ## Relation to the result
 
-The covariance law developed here combines the gate realignment contraction with entropy fluctuation coefficients. The general fluctuation machinery, operator entanglement, second-moment connection and moment reconstruction are established inputs. The cited block-Gaussian and temporal-Wishart frameworks require their own hypotheses; they are not interchangeable with the fixed-support gate ensemble.
+The covariance law developed here combines the gate realignment contraction with entropy fluctuation coefficients. The general fluctuation machinery, operator entanglement, second-moment connection and moment reconstruction are established inputs; the marginal variance has the direct predecessor R10. The cited block-Gaussian and temporal-Wishart frameworks require their own hypotheses; they are not interchangeable with the fixed-support gate ensemble.
