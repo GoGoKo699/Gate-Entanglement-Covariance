@@ -6,6 +6,8 @@ The result concerns the entanglement of the same globally Haar-random pure state
 |---|---|---|
 | The relative gate's operator Schmidt probabilities determine every fixed positive-order entropy covariance | Asymptotic theorem | Balanced complex-Haar input; fixed active support, orders and finite gate family |
 | Centered entropies multiplied by half-dimension have a joint Gaussian limit | Finite-family theorem | Fixed finite collection of gates and positive entropy orders |
+| Same-state mixed-order covariance and marginal variance have closed forms | Telescoping consequence | Fixed positive orders; limiting coefficients for the same Haar state |
+| Analytical tail formulas bound omitted covariance and correlation series | Exact series identities and inequalities | Exact normalized spectra and coefficients; numerical evaluation is not an outward-rounded certificate |
 | Fixed spatial access leaves positive limiting same-order correlation | Theorem consequence | The absolute entropy fluctuations still shrink |
 | Dual-unitary gates attain the correlation bound | Theorem consequence | Equal active dimensions |
 | Equal operator purity can coexist with unequal memory at other orders | Exact analytical examples | Operator purity is only the second moment |

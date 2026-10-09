@@ -80,11 +80,10 @@ For a general fixed order $`\alpha>0`$, define the limiting same-order correlati
 
 ```math
 \rho_\alpha(U)=
-\frac{\sum_{k\geq2}k c_{\alpha,k}^2F_k(U)}
-{\sum_{k\geq2}k c_{\alpha,k}^2}.
+\frac1\alpha\sum_{k\geq2}k c_{\alpha,k}^2F_k(U).
 ```
 
-Here are deterministic evaluations of that convergent series, rounded to six decimal places:
+The marginal variance coefficient is exactly $`\alpha/4`$, and the same-order increment coefficient is $`\alpha[1-\rho_\alpha(U)]/2`$. Here are deterministic evaluations of the correlation series, rounded to six decimal places:
 
 | Gate | Logarithmic negativity, $`\alpha=1/2`$ | Von Neumann, $`\alpha=1`$ | Rényi-2, $`\alpha=2`$ |
 |---|---:|---:|---:|
@@ -92,7 +91,7 @@ Here are deterministic evaluations of that convergent series, rounded to six dec
 | $`e^{-i\pi ZZ/4}`$ | 0.376423 | 0.467936 | 0.5 |
 | Active SWAP | 0.172322 | 0.227732 | 0.25 |
 
-Unlike order two, the first two columns include higher $`F_k`$. They therefore weight the same gate spectrum differently. These decimals are theorem evaluations, not fitted correlations or uncertainty estimates. The [saved reader calculation](../results/reader_examples.json) uses modes $`2\leq k\leq65536`$ and records a cutoff-doubling diagnostic. That diagnostic checks numerical series convergence; it is not a rigorous remainder bound or a finite-size error estimate. The order-two series terminates exactly.
+Unlike order two, the first two columns include higher $`F_k`$. They therefore weight the same gate spectrum differently. These decimals are theorem evaluations, not fitted correlations or uncertainty estimates. The maintained calculation sums modes $`2\leq k\leq65536`$ and uses exact marginal normalization. The [analytical correlation tail bound](../theory/PROOF.md#8-exact-marginal-tails-and-kernel-truncation) is less than $`5.24\times10^{-10}`$ at half order and equals $`4/[N^2(N+1)^2]`$ at order one; order two terminates exactly. These omitted-series bounds exclude numerical roundoff and finite-size bias. The [preserved reader table](../results/reader_examples.json) uses truncated marginal normalization; the [reproduction guide](../REPRODUCE.md#reference-normalization-and-compatibility) gives the conversion. Both conventions give the displayed six-decimal values. Identity is not forced to one in the maintained partial sum; its analytical defect lies within the stated bound.
 
 The active SWAP attains the lower bound in each column. Any gate on the same two active qubits has at most four nonzero operator Schmidt probabilities, and convexity gives $`F_k\geq4^{1-k}`$. Every coefficient weight $`k c_{\alpha,k}^2`$ in the same-order correlation is nonnegative.
 
@@ -102,7 +101,7 @@ The active SWAP attains the lower bound in each column. Any gate on the same two
 
 Solid curves show $`\rho_\alpha(e^{-i\theta ZZ})`$ for $`\alpha=1/2,1,2`$, using the exact gate probabilities $`(\cos^2\theta,\sin^2\theta)`$ at 161 angles from $`0`$ to $`\pi/2`$. Each is a covariance divided by its gate-independent marginal variance, not an entropy or an unscaled covariance. The dashed horizontal lines show the corresponding active-SWAP values, attained by the flat four-probability spectrum. Both endpoints of each solid curve have correlation $`1`$: at $`\theta=\pi/2`$ the gate is $`-iZ\otimes Z`$, a product of local operators, and every state's entanglement is unchanged.
 
-The figure evaluates the series in the limit as $`d`$ grows with cutoff $`65536`$ through [the maintained plotting function](../gate_covariance/plotting.py). It uses no fitted parameters or random states. The reader calculation's cutoff comparison applies to the tabulated gates and orders; it is not a certified uniform error bound for the whole curve. The figure and its source inputs are reproduced by the [focused command](../REPRODUCE.md#one-entry-point).
+The figure evaluates the series in the limit as $`d`$ grows with cutoff $`65536`$ through [the maintained plotting function](../gate_covariance/plotting.py). It uses no fitted parameters or random states. For exact spectra and coefficients, the analytical omitted-series bound holds at every pulse angle. Floating-point evaluation adds numerical error outside that bound. The displayed protected figure uses the recorded truncated normalization; the [focused command](../REPRODUCE.md#one-entry-point) generates the figure with exact marginal normalization and tail reporting, visually identical at this scale.
 
 ### Same operator purity, different higher-order covariance
 

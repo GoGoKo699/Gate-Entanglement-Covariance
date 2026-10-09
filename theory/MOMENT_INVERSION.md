@@ -102,20 +102,14 @@ Zero roots make the same formulas apply to lower ranks.
 
 ## Correlation normalization and conditioning
 
-For every integer $`m\ge2`$, the limiting marginal variance coefficient is
-
-```math
-V_m=\lim_{d\to\infty}d^2\mathop{\mathrm{Var}}\nolimits(S_m)=m/4.
-```
-
-Indeed, telescoping successive squared binomials gives
+The [closed normalization](PROOF.md#7-coefficient-telescoping-and-closed-normalization) gives $`V_\alpha=\alpha/4`$ for every fixed positive order. Thus $`\rho_m=C_m/V_m=4C_m/m`$ for each integer order used in the inversion. The corresponding finite binomial identity, useful for the polynomial coefficients above, is
 
 ```math
 \sum_{k=1}^{m}k\binom{2m}{m-k}^{\!2}
 =\frac m4\binom{2m}{m}^{\!2}.
 ```
 
-Subtracting the radial term, using $`q_{m,1}=m\mathrm{Cat}_m`$, and dividing by $`(m-1)^2\mathrm{Cat}_m^2`$ yields the variance above. Put $`\rho_m=C_m/V_m=4C_m/m`$. For active qubits,
+It follows by adding the radial term $`q_{m,1}^2=m^2\mathrm{Cat}_m^2`$ to $`(m-1)^2\mathrm{Cat}_m^2 V_m`$. For active qubits,
 
 ```math
 \begin{aligned}
